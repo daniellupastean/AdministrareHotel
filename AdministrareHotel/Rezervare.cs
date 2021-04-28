@@ -8,28 +8,32 @@ namespace AdministrareHotel
 {
     class Rezervare
     {
-        public static int nrRezervari;
-        int id_rezervare;
-        string CNP_client;
-        int id_camera;
-        string checkin_date;
-        string checkout_date;
+        public static int NrRezervari { get; set; }
+        int ID_rezervare { get; set; }
+        string CNP_client { get; set; }
+        int ID_camera { get; set; }
+        string Checkin_date { get; set; }
+        string Checkout_date { get; set; }
 
         public Rezervare(string _date)
         {
 
-            id_rezervare = nrRezervari++;
+            ID_rezervare = NrRezervari++;
 
             string[] dateAsArrayOfStrings = _date.Split(',');
             CNP_client = dateAsArrayOfStrings[0];
-            int.TryParse(dateAsArrayOfStrings[1], out id_camera);
-            checkin_date = dateAsArrayOfStrings[2];
-            checkout_date = dateAsArrayOfStrings[3];
+            int id;
+            if(int.TryParse(dateAsArrayOfStrings[1], out id))
+            {
+                ID_camera = id;
+            }
+            Checkin_date = dateAsArrayOfStrings[2];
+            Checkout_date = dateAsArrayOfStrings[3];
         }
 
         public string ConversieLaSir()
         {
-            string dateForDisplay = $"{id_rezervare}, {CNP_client}, {id_camera}, {checkin_date} - {checkout_date}";
+            string dateForDisplay = $"{ID_rezervare}, {CNP_client}, {ID_camera}, {Checkin_date} - {Checkout_date}";
 
             return dateForDisplay;
         }

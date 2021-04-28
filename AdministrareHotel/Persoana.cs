@@ -8,23 +8,23 @@ namespace AdministrareHotel
 {
     class Persoana
     {
-        protected string nume;
-        protected string prenume;
-        protected string CNP;
+        protected string Nume { get; set; }
+        protected string Prenume { get; set; }
+        protected string CNP { get; set; }
 
         public Persoana(string _date)
         {
             string[] dateAsArrayOfStrings = _date.Split(',');
 
-            nume = dateAsArrayOfStrings[0];
-            prenume = dateAsArrayOfStrings[1];
+            Nume = dateAsArrayOfStrings[0];
+            Prenume = dateAsArrayOfStrings[1];
             CNP = dateAsArrayOfStrings[2];
             
         }
 
         virtual public string ConversieLaSir()
         {
-            string dateForDisplay = $"{CNP}, {nume} {prenume}";
+            string dateForDisplay = $"{CNP}, {Nume} {Prenume}";
 
             return dateForDisplay;
         }

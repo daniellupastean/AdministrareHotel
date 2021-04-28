@@ -10,7 +10,7 @@ namespace AdministrareHotel
     {
         static void Main(string[] args)
         {
-            Camera.nrCamere = 0;
+            Camera.NrCamere = 0;
 
             Camera c1 = new Camera("Room 001,60,1,televizor-internet-baie,dubla,300.5");
             Camera c2 = new Camera("Room 001,50,1,televizor-internet-baie,dubla,300.5");

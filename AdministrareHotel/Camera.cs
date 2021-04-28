@@ -8,40 +8,54 @@ namespace AdministrareHotel
 {
     class Camera
     {
-        public static int nrCamere;
-        int id_camera;
-        string denumire;
-        float dimensiune;
-        int etaj;
-        string[] facilitati;
-        string tip;
-        float pret;
+        public static int NrCamere { get; set; }
+        int ID_camera { get; set; }
+        string Denumire { get; set; }
+        float Dimensiune { get; set; }
+        int Etaj { get; set; }
+        string[] Facilitati { get; set; }
+        string Tip { get; set; }
+        float Pret { get; set; }
 
         public Camera(string _date)
         {
             string[] dateAsArrayOfStrings = _date.Split(',');
 
-            id_camera = nrCamere++;
-            denumire = dateAsArrayOfStrings[0];
-            float.TryParse(dateAsArrayOfStrings[1], out dimensiune);
-            int.TryParse(dateAsArrayOfStrings[2], out etaj);
-            facilitati = dateAsArrayOfStrings[3].Split('-');
-            tip = dateAsArrayOfStrings[4];
-            float.TryParse(dateAsArrayOfStrings[5], out pret);
+            ID_camera = NrCamere++;
+            Denumire = dateAsArrayOfStrings[0];
+            float dimensiune;
+            if(float.TryParse(dateAsArrayOfStrings[1], out dimensiune))
+            {
+                Dimensiune = dimensiune;
+            }
+
+            int etaj;
+            if(int.TryParse(dateAsArrayOfStrings[2], out etaj))
+            {
+                Etaj = etaj;
+            }
+            Facilitati = dateAsArrayOfStrings[3].Split('-');
+            Tip = dateAsArrayOfStrings[4];
+
+            float pret;
+            if(float.TryParse(dateAsArrayOfStrings[5], out pret))
+            {
+                Pret = pret;
+            }
         }
 
         public string ConversieLaSir()
         {
-            string dateForDisplay = $"{id_camera}, ";
-            dateForDisplay += denumire;
-            dateForDisplay += $", {dimensiune}m2";
-            dateForDisplay += $", {etaj}";
+            string dateForDisplay = $"{ID_camera}, ";
+            dateForDisplay += Denumire;
+            dateForDisplay += $", {Dimensiune}m2";
+            dateForDisplay += $", {Etaj}";
             dateForDisplay += ", ";
-            foreach(string facilitate in facilitati)
+            foreach(string facilitate in Facilitati)
                 dateForDisplay += $"{facilitate}+";
             dateForDisplay = dateForDisplay.TrimEnd('+');
-            dateForDisplay += $", {tip}";
-            dateForDisplay += $", {pret} lei";
+            dateForDisplay += $", {Tip}";
+            dateForDisplay += $", {Pret} lei";
 
 
             return dateForDisplay;
@@ -51,7 +65,7 @@ namespace AdministrareHotel
         public static bool operator <(Camera c1, Camera c2)
         {
 
-            if (c1.dimensiune < c2.dimensiune)
+            if (c1.Dimensiune < c2.Dimensiune)
                 return true;
             else
                 return false;
@@ -60,7 +74,7 @@ namespace AdministrareHotel
         public static bool operator >(Camera c1, Camera c2)
         {
 
-            if (c1.dimensiune > c2.dimensiune)
+            if (c1.Dimensiune > c2.Dimensiune)
                 return true;
             else
                 return false;

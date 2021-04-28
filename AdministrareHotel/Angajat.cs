@@ -8,19 +8,24 @@ namespace AdministrareHotel
 {
     class Angajat : Persoana
     {
-        string functie;
-        float salariu;
+        string Functie { get; set; }
+        float Salariu { get; set; }
 
         public Angajat(string _date) : base(_date)
         {
             string[] dateAsArrayOfStrings = _date.Split(',');
-            functie = dateAsArrayOfStrings[3];
-            float.TryParse(dateAsArrayOfStrings[4], out salariu);
+            Functie = dateAsArrayOfStrings[3];
+
+            float salariu;
+            if(float.TryParse(dateAsArrayOfStrings[4], out salariu))
+            {
+                Salariu = salariu;
+            }
         }
 
         public override string ConversieLaSir()
         {
-            string dateForDisplay = $"{CNP}, {nume} {prenume}, {functie}, {salariu}";
+            string dateForDisplay = $"{CNP}, {Nume} {Prenume}, {Functie}, {Salariu}";
 
             return dateForDisplay;
         }

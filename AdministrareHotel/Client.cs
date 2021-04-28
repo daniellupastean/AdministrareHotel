@@ -8,7 +8,7 @@ namespace AdministrareHotel
 {
     class Client : Persoana
     {
-        int[] id_rezervari;
+        int[] ID_rezervari { get; set; }
 
         public Client(string _date) : base(_date)
         {
@@ -17,17 +17,17 @@ namespace AdministrareHotel
             string[] rezervariAsArrayOfStrings = dateAsArrayOfStrings[3].Split('-');
             
 
-            id_rezervari = new int[rezervariAsArrayOfStrings.Length];
-            for(int i = 0; i<id_rezervari.Length;i++)
+            ID_rezervari = new int[rezervariAsArrayOfStrings.Length];
+            for(int i = 0; i<ID_rezervari.Length;i++)
             {
-                id_rezervari[i] = int.Parse(rezervariAsArrayOfStrings[i]);
+                ID_rezervari[i] = int.Parse(rezervariAsArrayOfStrings[i]);
             }
         }
 
         public override string ConversieLaSir()
         {
-            string dateForDisplay = $"{CNP}, {nume} {prenume}, ";
-            foreach(int rezervare in id_rezervari)
+            string dateForDisplay = $"{CNP}, {Nume} {Prenume}, ";
+            foreach(int rezervare in ID_rezervari)
             {
                 
                 dateForDisplay += $"{rezervare}-";
