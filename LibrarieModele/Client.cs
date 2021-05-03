@@ -1,4 +1,9 @@
-﻿namespace LibrarieModele
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using LibrarieModele;
+
+namespace LibrarieModele
 {
     public class Client : Persoana
     {
@@ -61,5 +66,12 @@
                 ID_rezervari[i] = int.Parse(rezervariAsArrayOfStrings[i]);
             }
         }
+
+
+
+
+
+
+
     }
 }

@@ -10,6 +10,7 @@ namespace AdministrareHotel
         private const string NUME_FISIER_ANGAJATI = "NumeFisierAngajati";
         private const string NUME_FISIER_CAMERE = "NumeFisierCamere";
         private const string NUME_FISIER_REZERVARI = "NumeFisierRezervari";
+
         public static IStocareData GetAdministratorStocare()
         {
             var formatSalvare = ConfigurationManager.AppSettings[FORMAT_SALVARE];
@@ -17,6 +18,7 @@ namespace AdministrareHotel
             var numeFisierAngajati = ConfigurationManager.AppSettings[NUME_FISIER_ANGAJATI];
             var numeFisierCamere = ConfigurationManager.AppSettings[NUME_FISIER_CAMERE];
             var numeFisierRezervari = ConfigurationManager.AppSettings[NUME_FISIER_REZERVARI];
+
             if (formatSalvare != null)
             {
                 switch (formatSalvare)

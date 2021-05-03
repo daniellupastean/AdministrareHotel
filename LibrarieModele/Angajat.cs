@@ -2,8 +2,9 @@
 {
     public class Angajat : Persoana
     {
-        string Functie { get; set; }
-        float Salariu { get; set; }
+        public string Functie { get; set; }
+        public float Salariu { get; set; }
+        public static int IdUltimAngajat { get; set; } = 0;
 
         public Angajat(string _date) : base(_date)
         {
@@ -19,6 +20,13 @@
         public override string ConversieLaSir()
         {
             string dateForDisplay = $"{CNP}, {Nume} {Prenume}, {Functie}, {Salariu}";
+
+            return dateForDisplay;
+        }
+
+        public string ConversieLaSir_PentruScriereInFisier()
+        {
+            string dateForDisplay = $"{CNP},{Nume},{Prenume},{Functie},{Salariu}";
 
             return dateForDisplay;
         }
