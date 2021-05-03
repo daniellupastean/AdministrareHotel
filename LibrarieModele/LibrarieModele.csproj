@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BF9C4ACE-8EAE-4B9B-92A0-CD66FE2BC6DC}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>AdministrareHotel</RootNamespace>
-    <AssemblyName>AdministrareHotel</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ProjectGuid>{CE92ED3C-B48C-4310-9A2E-DEA0CDAC07B5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LibrarieModele</RootNamespace>
+    <AssemblyName>LibrarieModele</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,32 +32,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StocareFactory.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Angajat.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Persoana.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LibrarieModele\LibrarieModele.csproj">
-      <Project>{ce92ed3c-b48c-4310-9a2e-dea0cdac07b5}</Project>
-      <Name>LibrarieModele</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NivelAccesDate\NivelAccesDate.csproj">
-      <Project>{abb21ef4-e9d1-486c-808c-496cb2932bcf}</Project>
-      <Name>NivelAccesDate</Name>
-    </ProjectReference>
+    <Compile Include="Rezervare.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

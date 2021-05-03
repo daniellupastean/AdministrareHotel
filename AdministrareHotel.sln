@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdministrareHotel", "AdministrareHotel\AdministrareHotel.csproj", "{BF9C4ACE-8EAE-4B9B-92A0-CD66FE2BC6DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibrarieModele", "LibrarieModele\LibrarieModele.csproj", "{CE92ED3C-B48C-4310-9A2E-DEA0CDAC07B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NivelAccesDate", "NivelAccesDate\NivelAccesDate.csproj", "{ABB21EF4-E9D1-486C-808C-496CB2932BCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{BF9C4ACE-8EAE-4B9B-92A0-CD66FE2BC6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF9C4ACE-8EAE-4B9B-92A0-CD66FE2BC6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF9C4ACE-8EAE-4B9B-92A0-CD66FE2BC6DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE92ED3C-B48C-4310-9A2E-DEA0CDAC07B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE92ED3C-B48C-4310-9A2E-DEA0CDAC07B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE92ED3C-B48C-4310-9A2E-DEA0CDAC07B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE92ED3C-B48C-4310-9A2E-DEA0CDAC07B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB21EF4-E9D1-486C-808C-496CB2932BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB21EF4-E9D1-486C-808C-496CB2932BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB21EF4-E9D1-486C-808C-496CB2932BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB21EF4-E9D1-486C-808C-496CB2932BCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AdministrareHotel
+﻿namespace LibrarieModele
 {
-    class Rezervare
+    public class Rezervare
     {
         public static int NrRezervari { get; set; }
         int ID_rezervare { get; set; }
@@ -22,8 +16,8 @@ namespace AdministrareHotel
 
             string[] dateAsArrayOfStrings = _date.Split(',');
             CNP_client = dateAsArrayOfStrings[0];
-            int id;
-            if(int.TryParse(dateAsArrayOfStrings[1], out id))
+
+            if(int.TryParse(dateAsArrayOfStrings[1], out int id))
             {
                 ID_camera = id;
             }

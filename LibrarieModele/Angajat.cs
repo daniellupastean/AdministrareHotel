@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AdministrareHotel
+﻿namespace LibrarieModele
 {
-    class Angajat : Persoana
+    public class Angajat : Persoana
     {
         string Functie { get; set; }
         float Salariu { get; set; }
@@ -16,8 +10,7 @@ namespace AdministrareHotel
             string[] dateAsArrayOfStrings = _date.Split(',');
             Functie = dateAsArrayOfStrings[3];
 
-            float salariu;
-            if(float.TryParse(dateAsArrayOfStrings[4], out salariu))
+            if (float.TryParse(dateAsArrayOfStrings[4], out float salariu))
             {
                 Salariu = salariu;
             }
@@ -30,6 +23,4 @@ namespace AdministrareHotel
             return dateForDisplay;
         }
     }
-
-    
 }

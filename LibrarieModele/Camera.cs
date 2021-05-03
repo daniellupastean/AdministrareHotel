@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AdministrareHotel
+﻿namespace LibrarieModele
 {
-    class Camera
+    public class Camera
     {
         public static int NrCamere { get; set; }
         int ID_camera { get; set; }
@@ -23,22 +17,19 @@ namespace AdministrareHotel
 
             ID_camera = NrCamere++;
             Denumire = dateAsArrayOfStrings[0];
-            float dimensiune;
-            if(float.TryParse(dateAsArrayOfStrings[1], out dimensiune))
+            if (float.TryParse(dateAsArrayOfStrings[1], out float dimensiune))
             {
                 Dimensiune = dimensiune;
             }
 
-            int etaj;
-            if(int.TryParse(dateAsArrayOfStrings[2], out etaj))
+            if (int.TryParse(dateAsArrayOfStrings[2], out int etaj))
             {
                 Etaj = etaj;
             }
             Facilitati = dateAsArrayOfStrings[3].Split('-');
             Tip = dateAsArrayOfStrings[4];
 
-            float pret;
-            if(float.TryParse(dateAsArrayOfStrings[5], out pret))
+            if (float.TryParse(dateAsArrayOfStrings[5], out float pret))
             {
                 Pret = pret;
             }
@@ -51,7 +42,7 @@ namespace AdministrareHotel
             dateForDisplay += $", {Dimensiune}m2";
             dateForDisplay += $", {Etaj}";
             dateForDisplay += ", ";
-            foreach(string facilitate in Facilitati)
+            foreach (string facilitate in Facilitati)
                 dateForDisplay += $"{facilitate}+";
             dateForDisplay = dateForDisplay.TrimEnd('+');
             dateForDisplay += $", {Tip}";
@@ -79,5 +70,6 @@ namespace AdministrareHotel
             else
                 return false;
         }
+
     }
 }
