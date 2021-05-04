@@ -356,10 +356,10 @@ namespace AdministrareHotel
             Console.Write("Introduceti etaj-ul: ");
             string etaj = Console.ReadLine();
 
-            Console.Write("Introduceti facilitatile sub forma \"televizor-internet-seif\": ");
+            Console.Write("Introduceti facilitatile sub forma \"1-2-16\" [ 0=Niciuna, 1=Televizor, 2=Internet, 4=Seif, 8=Jacuzzi, 16=Frigider ]: ");
             string facilitati = Console.ReadLine();
 
-            Console.Write("Introduceti tipul camerei: ");
+            Console.Write("Introduceti tipul camerei [1-Single, 2 - Dubla, 3-Twin, 4-Matrimoniala, 5-Tripla, 6-Quad] : ");
             string tip = Console.ReadLine();
             
             Console.Write("Introduceti pretul camerei: ");
@@ -432,13 +432,20 @@ namespace AdministrareHotel
                 if (modificari.Contains("f"))
                 {
                     Console.Write("Introdu noile facilitati sub forma \"televizor-internet-seif\": ");
-                    camere[i].Facilitati = Console.ReadLine().Split('-');
+
+                    camere[i].Facilitati = (FacilitatiCamera)0;
+                    string[] facilitati = Console.ReadLine().Split('-');
+
+                    foreach (string facilitate in facilitati)
+                    {
+                        camere[i].Facilitati |= (FacilitatiCamera)int.Parse(facilitate);
+                    }
                 }
 
                 if (modificari.Contains("t"))
                 {
                     Console.Write("Introdu noul tip: ");
-                    camere[i].Tip = Console.ReadLine();
+                    camere[i].Tip = (TipCamera)int.Parse(Console.ReadLine());
                 }
 
                 if (modificari.Contains("p"))

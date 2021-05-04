@@ -7,8 +7,8 @@
         public string Denumire { get; set; }
         public float Dimensiune { get; set; }
         public int Etaj { get; set; }
-        public string[] Facilitati { get; set; }
-        public string Tip { get; set; }
+        public FacilitatiCamera Facilitati { get; set; }
+        public TipCamera Tip { get; set; }
         public float Pret { get; set; }
 
         public Camera(string _date)
@@ -26,8 +26,16 @@
             {
                 Etaj = etaj;
             }
-            Facilitati = dateAsArrayOfStrings[4].Split('-');
-            Tip = dateAsArrayOfStrings[5];
+
+            Facilitati = (FacilitatiCamera)0;
+            string[] facilitati = dateAsArrayOfStrings[4].Split('-');
+
+            foreach(string facilitate in facilitati)
+            {
+                Facilitati |= (FacilitatiCamera)int.Parse(facilitate);
+            }
+
+            Tip = (TipCamera)int.Parse(dateAsArrayOfStrings[5]);
 
             if (float.TryParse(dateAsArrayOfStrings[6], out float pret))
             {
@@ -37,24 +45,14 @@
 
         public string ConversieLaSir()
         {
-            string dateForDisplay = $"{ID_camera}, {Denumire}, {Dimensiune}m2, {Etaj}, ";
-
-            foreach (string facilitate in Facilitati)
-                dateForDisplay += $"{facilitate}-";
-            dateForDisplay = dateForDisplay.TrimEnd('-');
-            dateForDisplay += $", {Tip}, {Pret} lei";
-
+            string dateForDisplay = $"{ID_camera}, {Denumire}, {Dimensiune}m2, {Etaj}, <{Facilitati}>, {Tip}, {Pret} lei";
+            
             return dateForDisplay;
         }
 
         public string ConversieLaSir_PentruScriereInFisier()
         {
-            string dateForDisplay = $"{ID_camera},{Denumire},{Dimensiune},{Etaj},";
-
-            foreach (string facilitate in Facilitati)
-                dateForDisplay += $"{facilitate}-";
-            dateForDisplay = dateForDisplay.TrimEnd('-');
-            dateForDisplay += $",{Tip},{Pret}";
+            string dateForDisplay = $"{ID_camera},{Denumire},{Dimensiune},{Etaj},{(int)Facilitati},{(int)Tip},{Pret}";
 
             return dateForDisplay;
         }

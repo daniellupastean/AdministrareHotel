@@ -38,6 +38,7 @@
   <ItemGroup>
     <Compile Include="Angajat.cs" />
     <Compile Include="Camera.cs" />
+    <Compile Include="Enumerari.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Persoana.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
