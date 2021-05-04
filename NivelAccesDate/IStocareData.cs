@@ -21,9 +21,9 @@ namespace NivelAccesDate
         List<Camera> GetCamere();
         Camera GetCamera(int id);
         
-        //void AddRezervare(Rezervare r);
-        //void UpdateFisierRezervari(List<Rezervare> rezervari);
-        //List<Rezervare> GetRezervari();
-        //Camera GetRezervari(string nume, string prenume);
+        void AddRezervare(Rezervare r);
+        void UpdateFisierRezervari(List<Rezervare> rezervari);
+        List<Rezervare> GetRezervari();
+        Rezervare GetRezervare(int id);
     }
 }

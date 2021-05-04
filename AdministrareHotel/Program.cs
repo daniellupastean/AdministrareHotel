@@ -12,12 +12,14 @@ namespace AdministrareHotel
             List<Client> clienti;
             List<Angajat> angajati;
             List<Camera> camere;
+            List<Rezervare> rezervari;
 
             IStocareData adminHotel = StocareFactory.GetAdministratorStocare();
 
             clienti = adminHotel.GetClienti();
             angajati = adminHotel.GetAngajati();
             camere = adminHotel.GetCamere();
+            rezervari = adminHotel.GetRezervari();
 
             int nrClienti = clienti.Count;
             Client.IdUltimClient = nrClienti;
@@ -27,6 +29,9 @@ namespace AdministrareHotel
             
             int nrCamere = camere.Count;
             Camera.IdUltimaCamera = nrCamere;
+            
+            int nrRezervari = rezervari.Count;
+            Rezervare.IdUltimaRezervare = nrRezervari;
 
             string optiune;
             while(true)
@@ -35,15 +40,19 @@ namespace AdministrareHotel
                 Console.WriteLine("A-CL. Afisare clienti");
                 Console.WriteLine("A-AN. Afisare angajati");
                 Console.WriteLine("A-CA. Afisare camere");
+                Console.WriteLine("A-RE. Afisare rezervari\n");
                 Console.WriteLine("C-CL. Creare si adaugare client");
                 Console.WriteLine("C-AN. Creare si adaugare angajat");
                 Console.WriteLine("C-CA. Creare si adaugare camera");
+                Console.WriteLine("C-RE. Creare si adaugare rezervare\n");
                 Console.WriteLine("F-CL. Cauta client dupa nume");
                 Console.WriteLine("F-AN. Cauta angajat dupa nume");
                 Console.WriteLine("F-CA. Cauta camera dupa id");
+                Console.WriteLine("F-RE. Cauta rezervare dupa id\n");
                 Console.WriteLine("M-CL. Modifica client dupa nume");
                 Console.WriteLine("M-AN. Modifica angajat dupa nume");
-                Console.WriteLine("M-CA. Modifica camera dupa id");
+                Console.WriteLine("M-CA. Modifica camera dupa id\n");
+                Console.WriteLine("M-RE. Modifica rezervare dupa id");
                 Console.WriteLine("X. Inchidere program");
 
                 Console.Write("\nAlegeti o optiune: ");
@@ -59,6 +68,9 @@ namespace AdministrareHotel
                     case "A-CA":
                         AfisareCamere(camere);
                         break;
+                    case "A-RE":
+                        AfisareRezervari(rezervari);
+                        break;
                     case "C-CL":
                         CitireClientTastatura(adminHotel, clienti);
                         break;
@@ -67,6 +79,9 @@ namespace AdministrareHotel
                         break;
                     case "C-CA":
                         CitireCameraTastatura(adminHotel, camere);
+                        break;
+                    case "C-RE":
+                        CitireRezervareTastatura(adminHotel, rezervari);
                         break;
                     case "F-CL":
                         CautaClient(adminHotel);
@@ -77,6 +92,9 @@ namespace AdministrareHotel
                     case "F-CA":
                         CautaCamera(adminHotel);
                         break;
+                    case "F-RE":
+                        CautaRezervare(adminHotel);
+                        break;
                     case "M-CL":
                         UpdateClient(adminHotel, clienti);
                         break;
@@ -85,6 +103,9 @@ namespace AdministrareHotel
                         break;
                     case "M-CA":
                         UpdateCamera(adminHotel, camere);
+                        break;
+                    case "M-RE":
+                        UpdateRezervare(adminHotel, rezervari);
                         break;
                     case "X":
                         return;
@@ -429,6 +450,110 @@ namespace AdministrareHotel
             }
 
             adminHotel.UpdateFisierCamere(camere);
+        }
+        #endregion
+        
+        #region Metode Rezervari
+
+        public static void AfisareRezervari(List<Rezervare> rezervari)
+        {
+            Console.WriteLine("Rezervarile sunt:");
+            for (int i = 0; i < rezervari.Count; i++)
+            {
+                Console.WriteLine(((Rezervare)rezervari[i]).ConversieLaSir());
+            }
+            Console.WriteLine("");
+        }
+
+
+        public static void CitireRezervareTastatura(IStocareData adminHotel, List<Rezervare> rezervari)
+        {
+            Console.WriteLine("CITIRE DATE REZERVARE");
+            Console.Write("Introduceti ID-ul rezervarii: ");
+            string id_rezervare = Console.ReadLine();
+            
+            Console.Write("Introduceti CNP-ul clientului: ");
+            string cnp = Console.ReadLine();
+
+            Console.Write("Introduceti ID-ul camerei: ");
+            string id_camera = Console.ReadLine();
+
+            Console.Write("Introduceti data de check-in sub forma \"zz.ll.aaaa\": ");
+            string checkin = Console.ReadLine();
+            
+            Console.Write("Introduceti data de check-out sub forma \"zz.ll.aaaa\": ");
+            string checkout = Console.ReadLine();
+
+         
+            string line = $"{id_rezervare},{cnp},{id_camera},{checkin},{checkout}";
+
+            rezervari.Add(new Rezervare(line));
+            adminHotel.AddRezervare(new Rezervare(line));
+            Console.WriteLine("");
+        }
+
+        public static void CautaRezervare(IStocareData adminHotel)
+        {
+            Console.Write("Introduceti ID-ul rezervarii cautate: ");
+            int id = int.Parse(Console.ReadLine());
+
+            Rezervare rezervareAfisare = adminHotel.GetRezervare(id);
+            if (rezervareAfisare == null)
+                Console.WriteLine("Aceasta rezervare nu a fost gasita in baza de date.");
+            else
+                Console.WriteLine("\nA fost gasita rezervarea: " + rezervareAfisare.ConversieLaSir() + "\n");
+        }
+
+
+        public static void UpdateRezervare(IStocareData adminHotel, List<Rezervare> rezervari)
+        {
+            Console.Write("Introdu ID-ul rezervarii ale carei informatii vrei sa le modifici: ");
+            int id = int.Parse(Console.ReadLine());
+
+            Rezervare rezervareAfisare = adminHotel.GetRezervare(id);
+            if (rezervareAfisare == null)
+                Console.WriteLine("Aceasta rezervare nu a fost gasita in baza de date.");
+            else
+            {
+                Console.WriteLine("\nA fost gasita: " + rezervareAfisare.ConversieLaSir() + "\n");
+                Console.WriteLine("Ce modificari vrei sa faci?\n[ r=ID rezervare, c=CNP client, i = ID camera, d=data check-in si check-out, ci=CNP client + ID camera etc ]");
+                string modificari = Console.ReadLine();
+
+                int i = 0;
+                while (rezervari[i].ID_rezervare != rezervareAfisare.ID_rezervare)
+                {
+                    i++;
+                }
+                
+                if (modificari.Contains("r"))
+                {
+                    Console.Write("Introdu noul ID  al rezervarii: ");
+                    rezervari[i].ID_rezervare = int.Parse(Console.ReadLine());
+                }
+
+                if (modificari.Contains("c"))
+                {
+                    Console.Write("Introdu noul CNP al clientului: ");
+                    rezervari[i].CNP_client = Console.ReadLine();
+                }
+                
+                if (modificari.Contains("i"))
+                {
+                    Console.Write("Introdu noul ID al camerei: ");
+                    rezervari[i].ID_camera = int.Parse(Console.ReadLine());
+                }
+                
+                if (modificari.Contains("d"))
+                {
+                    Console.Write("Introduceti noua data de check-in sub forma \"zz.ll.aaaa\": ");
+                    rezervari[i].Checkin_date = Console.ReadLine();
+                    Console.Write("Introduceti noua data de check-out sub forma \"zz.ll.aaaa\": ");
+                    rezervari[i].Checkout_date = Console.ReadLine();
+                }
+
+            }
+
+            adminHotel.UpdateFisierRezervari(rezervari);
         }
         #endregion
 
