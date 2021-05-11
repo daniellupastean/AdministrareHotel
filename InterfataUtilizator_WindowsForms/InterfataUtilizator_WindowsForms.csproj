@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -51,6 +52,31 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StocareFactory.cs" />
+    <Compile Include="UCAdaugareCamera.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAdaugareCamera.Designer.cs">
+      <DependentUpon>UCAdaugareCamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCAfisareCamere.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAfisareCamere.Designer.cs">
+      <DependentUpon>UCAfisareCamere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCModificareCamera.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCModificareCamera.Designer.cs">
+      <DependentUpon>UCModificareCamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCCautareCamera.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCautareCamera.Designer.cs">
+      <DependentUpon>UCCautareCamera.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -58,6 +84,18 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAdaugareCamera.resx">
+      <DependentUpon>UCAdaugareCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAfisareCamere.resx">
+      <DependentUpon>UCAfisareCamere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCCautareCamera.resx">
+      <DependentUpon>UCCautareCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCModificareCamera.resx">
+      <DependentUpon>UCModificareCamera.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -87,6 +125,16 @@
     <None Include="Resources\maximize-icon %284%29.png" />
     <None Include="Resources\settings-icon1.png" />
     <None Include="Resources\4177409791543238955-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibrarieModele\LibrarieModele.csproj">
+      <Project>{ce92ed3c-b48c-4310-9a2e-dea0cdac07b5}</Project>
+      <Name>LibrarieModele</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NivelAccesDate\NivelAccesDate.csproj">
+      <Project>{abb21ef4-e9d1-486c-808c-496cb2932bcf}</Project>
+      <Name>NivelAccesDate</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

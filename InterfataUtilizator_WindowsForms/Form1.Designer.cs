@@ -38,33 +38,30 @@ namespace InterfataUtilizator_WindowsForms
             this.Navbar = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.PanelCamere = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.AuthPanel = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.MesajParola = new System.Windows.Forms.Label();
-            this.PanelCamere = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.TxtBxParola = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.InfoSetari = new System.Windows.Forms.ToolTip(this.components);
             this.ButonModificareCamera = new System.Windows.Forms.Button();
             this.ButonCautareCamera = new System.Windows.Forms.Button();
             this.ButonAfisareCamere = new System.Windows.Forms.Button();
             this.ButonAdaugareCamera = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.PnlAddCamera = new System.Windows.Forms.Panel();
-            this.BtnAdaugaCamera = new System.Windows.Forms.Button();
+            this.BtnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.Navbar.SuspendLayout();
             this.MainPanel.SuspendLayout();
+            this.PanelCamere.SuspendLayout();
             this.AuthPanel.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.PanelCamere.SuspendLayout();
-            this.PnlAddCamera.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -122,7 +119,7 @@ namespace InterfataUtilizator_WindowsForms
             // Navbar
             // 
             this.Navbar.BackColor = System.Drawing.Color.Silver;
-            this.Navbar.Controls.Add(this.btnExit);
+            this.Navbar.Controls.Add(this.BtnExit);
             this.Navbar.Controls.Add(this.label3);
             this.Navbar.Dock = System.Windows.Forms.DockStyle.Top;
             this.Navbar.Location = new System.Drawing.Point(0, 0);
@@ -158,6 +155,18 @@ namespace InterfataUtilizator_WindowsForms
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(1042, 587);
             this.MainPanel.TabIndex = 4;
+            // 
+            // PanelCamere
+            // 
+            this.PanelCamere.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PanelCamere.Controls.Add(this.ButonModificareCamera);
+            this.PanelCamere.Controls.Add(this.ButonCautareCamera);
+            this.PanelCamere.Controls.Add(this.ButonAfisareCamere);
+            this.PanelCamere.Controls.Add(this.ButonAdaugareCamera);
+            this.PanelCamere.Location = new System.Drawing.Point(160, 0);
+            this.PanelCamere.Name = "PanelCamere";
+            this.PanelCamere.Size = new System.Drawing.Size(881, 586);
+            this.PanelCamere.TabIndex = 5;
             // 
             // button4
             // 
@@ -227,37 +236,6 @@ namespace InterfataUtilizator_WindowsForms
             this.AuthPanel.Size = new System.Drawing.Size(1042, 587);
             this.AuthPanel.TabIndex = 5;
             // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(9, 7);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 24);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.UseSystemPasswordChar = true;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(471, 243);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 24);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Parola";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.Window;
-            this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Location = new System.Drawing.Point(408, 275);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(206, 37);
-            this.panel5.TabIndex = 2;
-            // 
             // MesajParola
             // 
             this.MesajParola.AutoSize = true;
@@ -268,18 +246,36 @@ namespace InterfataUtilizator_WindowsForms
             this.MesajParola.Size = new System.Drawing.Size(0, 17);
             this.MesajParola.TabIndex = 3;
             // 
-            // PanelCamere
+            // panel5
             // 
-            this.PanelCamere.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PanelCamere.Controls.Add(this.PnlAddCamera);
-            this.PanelCamere.Controls.Add(this.ButonModificareCamera);
-            this.PanelCamere.Controls.Add(this.ButonCautareCamera);
-            this.PanelCamere.Controls.Add(this.ButonAfisareCamere);
-            this.PanelCamere.Controls.Add(this.ButonAdaugareCamera);
-            this.PanelCamere.Location = new System.Drawing.Point(160, 0);
-            this.PanelCamere.Name = "PanelCamere";
-            this.PanelCamere.Size = new System.Drawing.Size(881, 586);
-            this.PanelCamere.TabIndex = 5;
+            this.panel5.BackColor = System.Drawing.SystemColors.Window;
+            this.panel5.Controls.Add(this.TxtBxParola);
+            this.panel5.Location = new System.Drawing.Point(408, 275);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(206, 37);
+            this.panel5.TabIndex = 2;
+            // 
+            // TxtBxParola
+            // 
+            this.TxtBxParola.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtBxParola.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBxParola.Location = new System.Drawing.Point(9, 7);
+            this.TxtBxParola.Margin = new System.Windows.Forms.Padding(10);
+            this.TxtBxParola.Name = "TxtBxParola";
+            this.TxtBxParola.Size = new System.Drawing.Size(190, 24);
+            this.TxtBxParola.TabIndex = 0;
+            this.TxtBxParola.UseSystemPasswordChar = true;
+            this.TxtBxParola.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBxParola_KeyDown);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(471, 243);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 24);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Parola";
             // 
             // ButonModificareCamera
             // 
@@ -293,6 +289,7 @@ namespace InterfataUtilizator_WindowsForms
             this.ButonModificareCamera.Size = new System.Drawing.Size(44, 43);
             this.ButonModificareCamera.TabIndex = 3;
             this.ButonModificareCamera.UseVisualStyleBackColor = false;
+            this.ButonModificareCamera.Click += new System.EventHandler(this.ButonModificareCamera_Click);
             // 
             // ButonCautareCamera
             // 
@@ -306,6 +303,7 @@ namespace InterfataUtilizator_WindowsForms
             this.ButonCautareCamera.Size = new System.Drawing.Size(44, 43);
             this.ButonCautareCamera.TabIndex = 2;
             this.ButonCautareCamera.UseVisualStyleBackColor = false;
+            this.ButonCautareCamera.Click += new System.EventHandler(this.ButonCautareCamera_Click);
             // 
             // ButonAfisareCamere
             // 
@@ -319,6 +317,7 @@ namespace InterfataUtilizator_WindowsForms
             this.ButonAfisareCamere.Size = new System.Drawing.Size(44, 43);
             this.ButonAfisareCamere.TabIndex = 1;
             this.ButonAfisareCamere.UseVisualStyleBackColor = false;
+            this.ButonAfisareCamere.Click += new System.EventHandler(this.ButonAfisareCamere_Click);
             // 
             // ButonAdaugareCamera
             // 
@@ -332,6 +331,7 @@ namespace InterfataUtilizator_WindowsForms
             this.ButonAdaugareCamera.Size = new System.Drawing.Size(44, 43);
             this.ButonAdaugareCamera.TabIndex = 0;
             this.ButonAdaugareCamera.UseVisualStyleBackColor = false;
+            this.ButonAdaugareCamera.Click += new System.EventHandler(this.ButonAdaugareCamera_Click);
             // 
             // button5
             // 
@@ -342,47 +342,26 @@ namespace InterfataUtilizator_WindowsForms
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(68, 535);
+            this.button5.Location = new System.Drawing.Point(63, 480);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(29, 30);
             this.button5.TabIndex = 4;
             this.InfoSetari.SetToolTip(this.button5, "Setari");
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // btnExit
+            // BtnExit
             // 
-            this.btnExit.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources._4177409791543238955_128;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(1004, 9);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(29, 29);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // PnlAddCamera
-            // 
-            this.PnlAddCamera.Controls.Add(this.BtnAdaugaCamera);
-            this.PnlAddCamera.Location = new System.Drawing.Point(29, 50);
-            this.PnlAddCamera.Name = "PnlAddCamera";
-            this.PnlAddCamera.Size = new System.Drawing.Size(824, 514);
-            this.PnlAddCamera.TabIndex = 4;
-            // 
-            // BtnAdaugaCamera
-            // 
-            this.BtnAdaugaCamera.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.BtnAdaugaCamera.FlatAppearance.BorderSize = 0;
-            this.BtnAdaugaCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAdaugaCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAdaugaCamera.Location = new System.Drawing.Point(359, 467);
-            this.BtnAdaugaCamera.Name = "BtnAdaugaCamera";
-            this.BtnAdaugaCamera.Size = new System.Drawing.Size(94, 34);
-            this.BtnAdaugaCamera.TabIndex = 0;
-            this.BtnAdaugaCamera.Text = "Adauga";
-            this.BtnAdaugaCamera.UseVisualStyleBackColor = false;
+            this.BtnExit.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources._4177409791543238955_128;
+            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnExit.FlatAppearance.BorderSize = 0;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.Location = new System.Drawing.Point(1004, 9);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(29, 29);
+            this.BtnExit.TabIndex = 2;
+            this.BtnExit.UseVisualStyleBackColor = true;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // MainForm
             // 
@@ -408,12 +387,11 @@ namespace InterfataUtilizator_WindowsForms
             this.Navbar.ResumeLayout(false);
             this.Navbar.PerformLayout();
             this.MainPanel.ResumeLayout(false);
+            this.PanelCamere.ResumeLayout(false);
             this.AuthPanel.ResumeLayout(false);
             this.AuthPanel.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.PanelCamere.ResumeLayout(false);
-            this.PnlAddCamera.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,9 +411,9 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button BtnExit;
         private System.Windows.Forms.Panel AuthPanel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtBxParola;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label MesajParola;
@@ -445,8 +423,6 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.Button ButonModificareCamera;
         private System.Windows.Forms.Button ButonCautareCamera;
         private System.Windows.Forms.Button ButonAfisareCamere;
-        private System.Windows.Forms.Panel PnlAddCamera;
-        private System.Windows.Forms.Button BtnAdaugaCamera;
     }
 }
 
