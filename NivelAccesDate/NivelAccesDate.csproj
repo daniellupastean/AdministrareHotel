@@ -36,8 +36,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdministrareHotel_FisierText.cs" />
-    <Compile Include="IStocareData.cs" />
+    <Compile Include="AdministrareClienti_FisierText.cs" />
+    <Compile Include="AdministrareAngajati_FisierText.cs" />
+    <Compile Include="AdministrareCamere_FisierText.cs" />
+    <Compile Include="AdministrareRezervari_FisierText.cs" />
+    <Compile Include="IStocareClienti.cs" />
+    <Compile Include="IStocareAngajati.cs" />
+    <Compile Include="IStocareCamere.cs" />
+    <Compile Include="IStocareRezervari.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

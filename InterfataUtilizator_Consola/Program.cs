@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using LibrarieModele;
 using NivelAccesDate;
 
-namespace AdministrareHotel
+namespace InterfataUtilizator_Consola
 {
     class Program
     {
@@ -14,12 +14,15 @@ namespace AdministrareHotel
             List<Camera> camere;
             List<Rezervare> rezervari;
 
-            IStocareData adminHotel = StocareFactory.GetAdministratorStocare();
+            IStocareClienti adminClienti = StocareFactory.GetAdministratorStocareClienti();
+            IStocareAngajati adminAngajati = StocareFactory.GetAdministratorStocareAngajati();
+            IStocareCamere adminCamere = StocareFactory.GetAdministratorStocareCamere();
+            IStocareRezervari adminRezervari = StocareFactory.GetAdministratorStocareRezervari();
 
-            clienti = adminHotel.GetClienti();
-            angajati = adminHotel.GetAngajati();
-            camere = adminHotel.GetCamere();
-            rezervari = adminHotel.GetRezervari();
+            clienti = adminClienti.GetClienti();
+            angajati = adminAngajati.GetAngajati();
+            camere = adminCamere.GetCamere();
+            rezervari = adminRezervari.GetRezervari();
 
             int nrClienti = clienti.Count;
             Client.IdUltimClient = nrClienti;
@@ -72,40 +75,40 @@ namespace AdministrareHotel
                         AfisareRezervari(rezervari);
                         break;
                     case "C-CL":
-                        CitireClientTastatura(adminHotel, clienti);
+                        CitireClientTastatura(adminClienti, clienti);
                         break;
                     case "C-AN":
-                        CitireAngajatTastatura(adminHotel, angajati);
+                        CitireAngajatTastatura(adminAngajati, angajati);
                         break;
                     case "C-CA":
-                        CitireCameraTastatura(adminHotel, camere);
+                        CitireCameraTastatura(adminCamere, camere);
                         break;
                     case "C-RE":
-                        CitireRezervareTastatura(adminHotel, rezervari);
+                        CitireRezervareTastatura(adminRezervari, rezervari);
                         break;
                     case "F-CL":
-                        CautaClient(adminHotel);
+                        CautaClient(adminClienti);
                         break;
                     case "F-AN":
-                        CautaAngajat(adminHotel);
+                        CautaAngajat(adminAngajati);
                         break;
                     case "F-CA":
-                        CautaCamera(adminHotel);
+                        CautaCamera(adminCamere);
                         break;
                     case "F-RE":
-                        CautaRezervare(adminHotel);
+                        CautaRezervare(adminRezervari);
                         break;
                     case "M-CL":
-                        UpdateClient(adminHotel, clienti);
+                        UpdateClient(adminClienti, clienti);
                         break;
                     case "M-AN":
-                        UpdateAngajat(adminHotel, angajati);
+                        UpdateAngajat(adminAngajati, angajati);
                         break;
                     case "M-CA":
-                        UpdateCamera(adminHotel, camere);
+                        UpdateCamera(adminCamere, camere);
                         break;
                     case "M-RE":
-                        UpdateRezervare(adminHotel, rezervari);
+                        UpdateRezervare(adminRezervari, rezervari);
                         break;
                     case "X":
                         return;
@@ -131,7 +134,7 @@ namespace AdministrareHotel
             Console.WriteLine("");
         }
 
-        public static void CitireClientTastatura(IStocareData adminHotel, List<Client> clienti)
+        public static void CitireClientTastatura(IStocareClienti adminClienti, List<Client> clienti)
         {
             Console.WriteLine("CITIRE DATE CLIENT");
             Console.Write("Introduceti numele: ");
@@ -149,11 +152,11 @@ namespace AdministrareHotel
             string line = $"{CNP},{nume},{prenume},{ID_rezervari}";
 
             clienti.Add(new Client(line));
-            adminHotel.AddClient(new Client(line));
+            adminClienti.AddClient(new Client(line));
             Console.WriteLine("");
         }
 
-        public static void CautaClient(IStocareData adminHotel)
+        public static void CautaClient(IStocareClienti adminClienti)
         {
             Console.Write("Introduceti numele clientului cautat: ");
             string nume = Console.ReadLine();
@@ -161,7 +164,7 @@ namespace AdministrareHotel
             Console.Write("Introduceti prenumele clientului cautat: ");
             string prenume = Console.ReadLine();
 
-            Client clientAfisare = adminHotel.GetClient(nume, prenume);
+            Client clientAfisare = adminClienti.GetClient(nume, prenume);
             if (clientAfisare == null)
                 Console.WriteLine("Acest client nu a fost gasit in baza de date.");
             else
@@ -169,7 +172,7 @@ namespace AdministrareHotel
         }
 
 
-        public static void UpdateClient(IStocareData adminHotel, List<Client> clienti)
+        public static void UpdateClient(IStocareClienti adminClienti, List<Client> clienti)
         {
             Console.Write("Introduceti numele clientului ale carui informatii vrei sa le modifici: ");
             string nume = Console.ReadLine();
@@ -177,7 +180,7 @@ namespace AdministrareHotel
             Console.Write("Introduceti prenumele clientului: ");
             string prenume = Console.ReadLine();
 
-            Client clientAfisare = adminHotel.GetClient(nume, prenume);
+            Client clientAfisare = adminClienti.GetClient(nume, prenume);
             if (clientAfisare == null)
                 Console.WriteLine("Client Negasit");
             else
@@ -211,7 +214,7 @@ namespace AdministrareHotel
                 }
             }
 
-            adminHotel.UpdateFisierClienti(clienti);
+            adminClienti.UpdateFisierClienti(clienti);
         }
         #endregion
 
@@ -228,7 +231,7 @@ namespace AdministrareHotel
         }
 
 
-        public static void CitireAngajatTastatura(IStocareData adminHotel, List<Angajat> angajati)
+        public static void CitireAngajatTastatura(IStocareAngajati adminAngajati, List<Angajat> angajati)
         {
             Console.WriteLine("CITIRE DATE ANGAJAT");
             Console.Write("Introduceti numele: ");
@@ -249,11 +252,11 @@ namespace AdministrareHotel
             string line = $"{CNP},{nume},{prenume},{functie},{salariu}";
 
             angajati.Add(new Angajat(line));
-            adminHotel.AddAngajat(new Angajat(line));
+            adminAngajati.AddAngajat(new Angajat(line));
             Console.WriteLine("");
         }
 
-        public static void CautaAngajat(IStocareData adminHotel)
+        public static void CautaAngajat(IStocareAngajati adminAngajati)
         {
             Console.Write("Introduceti numele angajatului cautat: ");
             string nume = Console.ReadLine();
@@ -261,7 +264,7 @@ namespace AdministrareHotel
             Console.Write("Introduceti prenumele angajatului cautat: ");
             string prenume = Console.ReadLine();
 
-            Angajat angajatAfisare = adminHotel.GetAngajat(nume, prenume);
+            Angajat angajatAfisare = adminAngajati.GetAngajat(nume, prenume);
             if (angajatAfisare == null)
                 Console.WriteLine("Acest angajat nu a fost gasit in baza de date.");
             else
@@ -269,7 +272,7 @@ namespace AdministrareHotel
         }
 
 
-        public static void UpdateAngajat(IStocareData adminHotel, List<Angajat> angajati)
+        public static void UpdateAngajat(IStocareAngajati adminAngajati, List<Angajat> angajati)
         {
             Console.Write("Introduceti numele angajatului ale carui informatii vrei sa le modifici: ");
             string nume = Console.ReadLine();
@@ -277,7 +280,7 @@ namespace AdministrareHotel
             Console.Write("Introduceti prenumele angajatului: ");
             string prenume = Console.ReadLine();
             
-            Angajat angajatAfisare = adminHotel.GetAngajat(nume, prenume);
+            Angajat angajatAfisare = adminAngajati.GetAngajat(nume, prenume);
             if (angajatAfisare == null)
                 Console.WriteLine("Angajat Negasit");
             else
@@ -324,7 +327,7 @@ namespace AdministrareHotel
 
             }
 
-            adminHotel.UpdateFisierAngajati(angajati);
+            adminAngajati.UpdateFisierAngajati(angajati);
         }
         #endregion
 
@@ -341,7 +344,7 @@ namespace AdministrareHotel
         }
 
 
-        public static void CitireCameraTastatura(IStocareData adminHotel, List<Camera> camere)
+        public static void CitireCameraTastatura(IStocareCamere adminCamere, List<Camera> camere)
         {
             Console.WriteLine("CITIRE DATE CAMERA");
             Console.Write("Introduceti ID-ul: ");
@@ -368,16 +371,16 @@ namespace AdministrareHotel
             string line = $"{id},{denumire},{dimensiune},{etaj},{facilitati},{tip},{pret}";
 
             camere.Add(new Camera(line));
-            adminHotel.AddCamera(new Camera(line));
+            adminCamere.AddCamera(new Camera(line));
             Console.WriteLine("");
         }
 
-        public static void CautaCamera(IStocareData adminHotel)
+        public static void CautaCamera(IStocareCamere adminCamere)
         {
             Console.Write("Introduceti ID-ul camerei cautate: ");
             int id = int.Parse(Console.ReadLine());
 
-            Camera cameraAfisare = adminHotel.GetCamera(id);
+            Camera cameraAfisare = adminCamere.GetCamera(id);
             if (cameraAfisare == null)
                 Console.WriteLine("Aceasta camera nu a fost gasita in baza de date.");
             else
@@ -385,12 +388,12 @@ namespace AdministrareHotel
         }
 
 
-        public static void UpdateCamera(IStocareData adminHotel, List<Camera> camere)
+        public static void UpdateCamera(IStocareCamere adminCamere, List<Camera> camere)
         {
             Console.Write("Introdu ID-ul camerei ale carei informatii vrei sa le modifici: ");
             int id = int.Parse(Console.ReadLine());
 
-            Camera cameraAfisare = adminHotel.GetCamera(id);
+            Camera cameraAfisare = adminCamere.GetCamera(id);
             if (cameraAfisare == null)
                 Console.WriteLine("Aceasta camera nu a fost gasita in baza de date.");
             else
@@ -431,7 +434,7 @@ namespace AdministrareHotel
 
                 if (modificari.Contains("f"))
                 {
-                    Console.Write("Introdu noile facilitati sub forma \"televizor-internet-seif\": ");
+                    Console.Write("Introdu noile facilitati sub forma \"1-2-16\": ");
 
                     camere[i].Facilitati = (FacilitatiCamera)0;
                     string[] facilitati = Console.ReadLine().Split('-');
@@ -456,7 +459,7 @@ namespace AdministrareHotel
 
             }
 
-            adminHotel.UpdateFisierCamere(camere);
+            adminCamere.UpdateFisierCamere(camere);
         }
         #endregion
         
@@ -473,7 +476,7 @@ namespace AdministrareHotel
         }
 
 
-        public static void CitireRezervareTastatura(IStocareData adminHotel, List<Rezervare> rezervari)
+        public static void CitireRezervareTastatura(IStocareRezervari adminRezervari, List<Rezervare> rezervari)
         {
             Console.WriteLine("CITIRE DATE REZERVARE");
             Console.Write("Introduceti ID-ul rezervarii: ");
@@ -495,16 +498,16 @@ namespace AdministrareHotel
             string line = $"{id_rezervare},{cnp},{id_camera},{checkin},{checkout}";
 
             rezervari.Add(new Rezervare(line));
-            adminHotel.AddRezervare(new Rezervare(line));
+            adminRezervari.AddRezervare(new Rezervare(line));
             Console.WriteLine("");
         }
 
-        public static void CautaRezervare(IStocareData adminHotel)
+        public static void CautaRezervare(IStocareRezervari adminRezervari)
         {
             Console.Write("Introduceti ID-ul rezervarii cautate: ");
             int id = int.Parse(Console.ReadLine());
 
-            Rezervare rezervareAfisare = adminHotel.GetRezervare(id);
+            Rezervare rezervareAfisare = adminRezervari.GetRezervare(id);
             if (rezervareAfisare == null)
                 Console.WriteLine("Aceasta rezervare nu a fost gasita in baza de date.");
             else
@@ -512,12 +515,12 @@ namespace AdministrareHotel
         }
 
 
-        public static void UpdateRezervare(IStocareData adminHotel, List<Rezervare> rezervari)
+        public static void UpdateRezervare(IStocareRezervari adminRezervari, List<Rezervare> rezervari)
         {
             Console.Write("Introdu ID-ul rezervarii ale carei informatii vrei sa le modifici: ");
             int id = int.Parse(Console.ReadLine());
 
-            Rezervare rezervareAfisare = adminHotel.GetRezervare(id);
+            Rezervare rezervareAfisare = adminRezervari.GetRezervare(id);
             if (rezervareAfisare == null)
                 Console.WriteLine("Aceasta rezervare nu a fost gasita in baza de date.");
             else
@@ -560,7 +563,7 @@ namespace AdministrareHotel
 
             }
 
-            adminHotel.UpdateFisierRezervari(rezervari);
+            adminRezervari.UpdateFisierRezervari(rezervari);
         }
         #endregion
 
