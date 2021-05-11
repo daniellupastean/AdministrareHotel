@@ -76,6 +76,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\show-icon1.png" />
+    <None Include="Resources\search-icon1.png" />
+    <None Include="Resources\plus-icon1.png" />
+    <None Include="Resources\edit-icon.png" />
+    <None Include="Resources\show-icon.png" />
+    <None Include="Resources\search-icon.png" />
+    <None Include="Resources\plus-icon.png" />
+    <None Include="Resources\13950056081576590869-128.png" />
     <None Include="Resources\maximize-icon %284%29.png" />
     <None Include="Resources\settings-icon1.png" />
     <None Include="Resources\4177409791543238955-128.png" />

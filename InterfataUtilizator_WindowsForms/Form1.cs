@@ -47,5 +47,30 @@ namespace InterfataUtilizator_WindowsForms
         {
             this.WindowState = FormWindowState.Maximized;
         }
+
+        string password = "daniel";
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (textBox1.Text == password)
+                { 
+                    AuthPanel.Visible = false;
+                    MainPanel.Visible = true;
+
+                }
+                else
+                { 
+                    MesajParola.Text = "*Parola incorecta";
+                    textBox1.Text = "";
+                }
+            }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            MainPanel.Visible = false;
+        }
     }
 }
