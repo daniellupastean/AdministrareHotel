@@ -19,11 +19,11 @@ namespace InterfataUtilizator_WindowsForms
         int movY;
 
         ///Adaugare controale in Form
-        UCAdaugareCamera PnlAdaugareCamera;
-        UCAfisareCamere PnlAfisareCamere;
-        UCModificareCamera PnlModificareCamera;
-        UCCautareCamera PnlCautareCamera;
-        Point locatie = new Point(32, 51);
+        //UCAdaugareCamera PnlAdaugareCamera;
+        //UCAfisareCamere PnlAfisareCamere;
+        //UCModificareCamera PnlModificareCamera;
+        //UCCautareCamera PnlCautareCamera;
+        //Point locatie = new Point(32, 51);
 
         ///Legatura cu backend-ul
         List<Client> clienti;
@@ -35,49 +35,31 @@ namespace InterfataUtilizator_WindowsForms
         IStocareAngajati adminAngajati = StocareFactory.GetAdministratorStocareAngajati();
         IStocareCamere adminCamere = StocareFactory.GetAdministratorStocareCamere();
         IStocareRezervari adminRezervari = StocareFactory.GetAdministratorStocareRezervari();
-        //
-        
+
+        int nrClienti;
+        int nrAngajati;
+        int nrCamere;
+        int nrRezervari;
 
         public MainForm()
         {
             InitializeComponent();
-
-            PnlAdaugareCamera = new UCAdaugareCamera();
-            PanelCamere.Controls.Add(PnlAdaugareCamera);
-            PnlAdaugareCamera.Location = locatie;
-            PnlAdaugareCamera.Visible = true;
-
-            PnlAfisareCamere = new UCAfisareCamere();
-            PanelCamere.Controls.Add(PnlAfisareCamere);
-            PnlAfisareCamere.Location = locatie;
-            PnlAfisareCamere.Visible = false;
-
-            PnlCautareCamera = new UCCautareCamera();
-            PanelCamere.Controls.Add(PnlCautareCamera);
-            PnlCautareCamera.Location = locatie;
-            PnlCautareCamera.Visible = false;
-
-            PnlModificareCamera = new UCModificareCamera();
-            PanelCamere.Controls.Add(PnlModificareCamera);
-            PnlModificareCamera.Location = locatie;
-            PnlModificareCamera.Visible = false;
-
-
+            
             clienti = adminClienti.GetClienti();
             angajati = adminAngajati.GetAngajati();
             camere = adminCamere.GetCamere();
             rezervari = adminRezervari.GetRezervari();
 
-            int nrClienti = clienti.Count;
+            nrClienti = clienti.Count;
             Client.IdUltimClient = nrClienti;
 
-            int nrAngajati = angajati.Count;
+            nrAngajati = angajati.Count;
             Angajat.IdUltimAngajat = nrAngajati;
 
-            int nrCamere = camere.Count;
+            nrCamere = camere.Count;
             Camera.IdUltimaCamera = nrCamere;
 
-            int nrRezervari = rezervari.Count;
+            nrRezervari = rezervari.Count;
             Rezervare.IdUltimaRezervare = nrRezervari;
         }
 
@@ -161,6 +143,11 @@ namespace InterfataUtilizator_WindowsForms
             PnlAfisareCamere.Visible = false;
             PnlCautareCamera.Visible = false;
             PnlModificareCamera.Visible = true;
+        }
+
+        private void PnlAfisareCamere_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

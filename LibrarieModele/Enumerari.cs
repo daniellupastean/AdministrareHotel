@@ -15,7 +15,7 @@ namespace LibrarieModele
     public enum FacilitatiCamera
     {
         Niciuna = 0,
-        Televizor = 1,
+        TV = 1,
         Internet = 2,
         Seif = 4,
         Jacuzzi = 8,

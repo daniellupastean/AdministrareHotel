@@ -31,6 +31,7 @@ namespace InterfataUtilizator_WindowsForms
         {
             this.PnlModificareCamera = new System.Windows.Forms.Panel();
             this.LblTitluAdaugareCamera = new System.Windows.Forms.Label();
+            this.PnlDateCamera = new System.Windows.Forms.Panel();
             this.RBtnQuad = new System.Windows.Forms.RadioButton();
             this.RBtnTripla = new System.Windows.Forms.RadioButton();
             this.RBtnMatrimoniala = new System.Windows.Forms.RadioButton();
@@ -38,9 +39,9 @@ namespace InterfataUtilizator_WindowsForms
             this.RBtnDubla = new System.Windows.Forms.RadioButton();
             this.RBtnSingle = new System.Windows.Forms.RadioButton();
             this.LblTipCamera = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtPretCamera = new System.Windows.Forms.TextBox();
             this.LblPretCamera = new System.Windows.Forms.Label();
-            this.ChBxFigider = new System.Windows.Forms.CheckBox();
+            this.ChBxFrigider = new System.Windows.Forms.CheckBox();
             this.ChBxJacuzzi = new System.Windows.Forms.CheckBox();
             this.ChBxSeif = new System.Windows.Forms.CheckBox();
             this.ChBxInternet = new System.Windows.Forms.CheckBox();
@@ -53,37 +54,25 @@ namespace InterfataUtilizator_WindowsForms
             this.LblDimensiuneCamera = new System.Windows.Forms.Label();
             this.TxtDenumireCamera = new System.Windows.Forms.TextBox();
             this.LblDenumireCamera = new System.Windows.Forms.Label();
-            this.BtnAdaugaCamera = new System.Windows.Forms.Button();
+            this.TxtIDCamera = new System.Windows.Forms.TextBox();
+            this.LblIDCamera = new System.Windows.Forms.Label();
+            this.BtnCautaCamera = new System.Windows.Forms.Button();
+            this.LblCautareAvertisment = new System.Windows.Forms.Label();
+            this.BtnModificaCamera = new System.Windows.Forms.Button();
+            this.LblAvertismentModificare = new System.Windows.Forms.Label();
             this.PnlModificareCamera.SuspendLayout();
+            this.PnlDateCamera.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlModificareCamera
             // 
             this.PnlModificareCamera.BackColor = System.Drawing.Color.Transparent;
+            this.PnlModificareCamera.Controls.Add(this.LblCautareAvertisment);
+            this.PnlModificareCamera.Controls.Add(this.TxtIDCamera);
+            this.PnlModificareCamera.Controls.Add(this.LblIDCamera);
+            this.PnlModificareCamera.Controls.Add(this.BtnCautaCamera);
+            this.PnlModificareCamera.Controls.Add(this.PnlDateCamera);
             this.PnlModificareCamera.Controls.Add(this.LblTitluAdaugareCamera);
-            this.PnlModificareCamera.Controls.Add(this.RBtnQuad);
-            this.PnlModificareCamera.Controls.Add(this.RBtnTripla);
-            this.PnlModificareCamera.Controls.Add(this.RBtnMatrimoniala);
-            this.PnlModificareCamera.Controls.Add(this.RBtnTwin);
-            this.PnlModificareCamera.Controls.Add(this.RBtnDubla);
-            this.PnlModificareCamera.Controls.Add(this.RBtnSingle);
-            this.PnlModificareCamera.Controls.Add(this.LblTipCamera);
-            this.PnlModificareCamera.Controls.Add(this.textBox2);
-            this.PnlModificareCamera.Controls.Add(this.LblPretCamera);
-            this.PnlModificareCamera.Controls.Add(this.ChBxFigider);
-            this.PnlModificareCamera.Controls.Add(this.ChBxJacuzzi);
-            this.PnlModificareCamera.Controls.Add(this.ChBxSeif);
-            this.PnlModificareCamera.Controls.Add(this.ChBxInternet);
-            this.PnlModificareCamera.Controls.Add(this.ChBxTV);
-            this.PnlModificareCamera.Controls.Add(this.ChBxNiciuna);
-            this.PnlModificareCamera.Controls.Add(this.LblFacilitatiCamera);
-            this.PnlModificareCamera.Controls.Add(this.TxtEtajCamera);
-            this.PnlModificareCamera.Controls.Add(this.LblEtajCamera);
-            this.PnlModificareCamera.Controls.Add(this.TxtDimensiuneCamera);
-            this.PnlModificareCamera.Controls.Add(this.LblDimensiuneCamera);
-            this.PnlModificareCamera.Controls.Add(this.TxtDenumireCamera);
-            this.PnlModificareCamera.Controls.Add(this.LblDenumireCamera);
-            this.PnlModificareCamera.Controls.Add(this.BtnAdaugaCamera);
             this.PnlModificareCamera.Location = new System.Drawing.Point(0, 0);
             this.PnlModificareCamera.Name = "PnlModificareCamera";
             this.PnlModificareCamera.Size = new System.Drawing.Size(824, 515);
@@ -98,16 +87,47 @@ namespace InterfataUtilizator_WindowsForms
             this.LblTitluAdaugareCamera.Size = new System.Drawing.Size(275, 33);
             this.LblTitluAdaugareCamera.TabIndex = 23;
             this.LblTitluAdaugareCamera.Text = "Modificare Camera";
-            this.LblTitluAdaugareCamera.Click += new System.EventHandler(this.LblTitluAdaugareCamera_Click);
+            // 
+            // PnlDateCamera
+            // 
+            this.PnlDateCamera.Controls.Add(this.LblAvertismentModificare);
+            this.PnlDateCamera.Controls.Add(this.BtnModificaCamera);
+            this.PnlDateCamera.Controls.Add(this.RBtnQuad);
+            this.PnlDateCamera.Controls.Add(this.RBtnTripla);
+            this.PnlDateCamera.Controls.Add(this.RBtnMatrimoniala);
+            this.PnlDateCamera.Controls.Add(this.RBtnTwin);
+            this.PnlDateCamera.Controls.Add(this.RBtnDubla);
+            this.PnlDateCamera.Controls.Add(this.RBtnSingle);
+            this.PnlDateCamera.Controls.Add(this.LblTipCamera);
+            this.PnlDateCamera.Controls.Add(this.TxtPretCamera);
+            this.PnlDateCamera.Controls.Add(this.LblPretCamera);
+            this.PnlDateCamera.Controls.Add(this.ChBxFrigider);
+            this.PnlDateCamera.Controls.Add(this.ChBxJacuzzi);
+            this.PnlDateCamera.Controls.Add(this.ChBxSeif);
+            this.PnlDateCamera.Controls.Add(this.ChBxInternet);
+            this.PnlDateCamera.Controls.Add(this.ChBxTV);
+            this.PnlDateCamera.Controls.Add(this.ChBxNiciuna);
+            this.PnlDateCamera.Controls.Add(this.LblFacilitatiCamera);
+            this.PnlDateCamera.Controls.Add(this.TxtEtajCamera);
+            this.PnlDateCamera.Controls.Add(this.LblEtajCamera);
+            this.PnlDateCamera.Controls.Add(this.TxtDimensiuneCamera);
+            this.PnlDateCamera.Controls.Add(this.LblDimensiuneCamera);
+            this.PnlDateCamera.Controls.Add(this.TxtDenumireCamera);
+            this.PnlDateCamera.Controls.Add(this.LblDenumireCamera);
+            this.PnlDateCamera.Location = new System.Drawing.Point(37, 139);
+            this.PnlDateCamera.Name = "PnlDateCamera";
+            this.PnlDateCamera.Size = new System.Drawing.Size(748, 366);
+            this.PnlDateCamera.TabIndex = 24;
+            this.PnlDateCamera.Visible = false;
             // 
             // RBtnQuad
             // 
             this.RBtnQuad.AutoSize = true;
             this.RBtnQuad.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBtnQuad.Location = new System.Drawing.Point(351, 333);
+            this.RBtnQuad.Location = new System.Drawing.Point(307, 218);
             this.RBtnQuad.Name = "RBtnQuad";
             this.RBtnQuad.Size = new System.Drawing.Size(69, 24);
-            this.RBtnQuad.TabIndex = 22;
+            this.RBtnQuad.TabIndex = 44;
             this.RBtnQuad.TabStop = true;
             this.RBtnQuad.Text = "Quad";
             this.RBtnQuad.UseVisualStyleBackColor = true;
@@ -116,10 +136,10 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.RBtnTripla.AutoSize = true;
             this.RBtnTripla.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBtnTripla.Location = new System.Drawing.Point(351, 303);
+            this.RBtnTripla.Location = new System.Drawing.Point(307, 188);
             this.RBtnTripla.Name = "RBtnTripla";
             this.RBtnTripla.Size = new System.Drawing.Size(63, 24);
-            this.RBtnTripla.TabIndex = 21;
+            this.RBtnTripla.TabIndex = 43;
             this.RBtnTripla.TabStop = true;
             this.RBtnTripla.Text = "Tripla";
             this.RBtnTripla.UseVisualStyleBackColor = true;
@@ -128,10 +148,10 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.RBtnMatrimoniala.AutoSize = true;
             this.RBtnMatrimoniala.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBtnMatrimoniala.Location = new System.Drawing.Point(350, 273);
+            this.RBtnMatrimoniala.Location = new System.Drawing.Point(306, 158);
             this.RBtnMatrimoniala.Name = "RBtnMatrimoniala";
             this.RBtnMatrimoniala.Size = new System.Drawing.Size(123, 24);
-            this.RBtnMatrimoniala.TabIndex = 20;
+            this.RBtnMatrimoniala.TabIndex = 42;
             this.RBtnMatrimoniala.TabStop = true;
             this.RBtnMatrimoniala.Text = "Matrimoniala";
             this.RBtnMatrimoniala.UseVisualStyleBackColor = true;
@@ -140,10 +160,10 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.RBtnTwin.AutoSize = true;
             this.RBtnTwin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBtnTwin.Location = new System.Drawing.Point(246, 333);
+            this.RBtnTwin.Location = new System.Drawing.Point(202, 218);
             this.RBtnTwin.Name = "RBtnTwin";
             this.RBtnTwin.Size = new System.Drawing.Size(58, 24);
-            this.RBtnTwin.TabIndex = 19;
+            this.RBtnTwin.TabIndex = 41;
             this.RBtnTwin.TabStop = true;
             this.RBtnTwin.Text = "Twin";
             this.RBtnTwin.UseVisualStyleBackColor = true;
@@ -152,10 +172,10 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.RBtnDubla.AutoSize = true;
             this.RBtnDubla.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBtnDubla.Location = new System.Drawing.Point(247, 303);
+            this.RBtnDubla.Location = new System.Drawing.Point(203, 188);
             this.RBtnDubla.Name = "RBtnDubla";
             this.RBtnDubla.Size = new System.Drawing.Size(70, 24);
-            this.RBtnDubla.TabIndex = 18;
+            this.RBtnDubla.TabIndex = 40;
             this.RBtnDubla.TabStop = true;
             this.RBtnDubla.Text = "Dubla";
             this.RBtnDubla.UseVisualStyleBackColor = true;
@@ -164,10 +184,10 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.RBtnSingle.AutoSize = true;
             this.RBtnSingle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBtnSingle.Location = new System.Drawing.Point(247, 273);
+            this.RBtnSingle.Location = new System.Drawing.Point(203, 158);
             this.RBtnSingle.Name = "RBtnSingle";
             this.RBtnSingle.Size = new System.Drawing.Size(69, 24);
-            this.RBtnSingle.TabIndex = 17;
+            this.RBtnSingle.TabIndex = 39;
             this.RBtnSingle.TabStop = true;
             this.RBtnSingle.Text = "Single";
             this.RBtnSingle.UseVisualStyleBackColor = true;
@@ -176,49 +196,49 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.LblTipCamera.AutoSize = true;
             this.LblTipCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTipCamera.Location = new System.Drawing.Point(90, 270);
+            this.LblTipCamera.Location = new System.Drawing.Point(46, 155);
             this.LblTipCamera.Name = "LblTipCamera";
             this.LblTipCamera.Size = new System.Drawing.Size(91, 20);
-            this.LblTipCamera.TabIndex = 16;
+            this.LblTipCamera.TabIndex = 38;
             this.LblTipCamera.Text = "Tip Camera";
             // 
-            // textBox2
+            // TxtPretCamera
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(247, 377);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(236, 26);
-            this.textBox2.TabIndex = 15;
+            this.TxtPretCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPretCamera.Location = new System.Drawing.Point(203, 262);
+            this.TxtPretCamera.Name = "TxtPretCamera";
+            this.TxtPretCamera.Size = new System.Drawing.Size(236, 26);
+            this.TxtPretCamera.TabIndex = 37;
             // 
             // LblPretCamera
             // 
             this.LblPretCamera.AutoSize = true;
             this.LblPretCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPretCamera.Location = new System.Drawing.Point(87, 377);
+            this.LblPretCamera.Location = new System.Drawing.Point(43, 262);
             this.LblPretCamera.Name = "LblPretCamera";
             this.LblPretCamera.Size = new System.Drawing.Size(68, 20);
-            this.LblPretCamera.TabIndex = 14;
+            this.LblPretCamera.TabIndex = 36;
             this.LblPretCamera.Text = "Pret (lei)";
             // 
-            // ChBxFigider
+            // ChBxFrigider
             // 
-            this.ChBxFigider.AutoSize = true;
-            this.ChBxFigider.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChBxFigider.Location = new System.Drawing.Point(664, 279);
-            this.ChBxFigider.Name = "ChBxFigider";
-            this.ChBxFigider.Size = new System.Drawing.Size(81, 24);
-            this.ChBxFigider.TabIndex = 13;
-            this.ChBxFigider.Text = "Frigider";
-            this.ChBxFigider.UseVisualStyleBackColor = true;
+            this.ChBxFrigider.AutoSize = true;
+            this.ChBxFrigider.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChBxFrigider.Location = new System.Drawing.Point(620, 164);
+            this.ChBxFrigider.Name = "ChBxFrigider";
+            this.ChBxFrigider.Size = new System.Drawing.Size(81, 24);
+            this.ChBxFrigider.TabIndex = 35;
+            this.ChBxFrigider.Text = "Frigider";
+            this.ChBxFrigider.UseVisualStyleBackColor = true;
             // 
             // ChBxJacuzzi
             // 
             this.ChBxJacuzzi.AutoSize = true;
             this.ChBxJacuzzi.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChBxJacuzzi.Location = new System.Drawing.Point(664, 249);
+            this.ChBxJacuzzi.Location = new System.Drawing.Point(620, 134);
             this.ChBxJacuzzi.Name = "ChBxJacuzzi";
             this.ChBxJacuzzi.Size = new System.Drawing.Size(79, 24);
-            this.ChBxJacuzzi.TabIndex = 12;
+            this.ChBxJacuzzi.TabIndex = 34;
             this.ChBxJacuzzi.Text = "Jacuzzi";
             this.ChBxJacuzzi.UseVisualStyleBackColor = true;
             // 
@@ -226,10 +246,10 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.ChBxSeif.AutoSize = true;
             this.ChBxSeif.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChBxSeif.Location = new System.Drawing.Point(664, 219);
+            this.ChBxSeif.Location = new System.Drawing.Point(620, 104);
             this.ChBxSeif.Name = "ChBxSeif";
             this.ChBxSeif.Size = new System.Drawing.Size(53, 24);
-            this.ChBxSeif.TabIndex = 11;
+            this.ChBxSeif.TabIndex = 33;
             this.ChBxSeif.Text = "Seif";
             this.ChBxSeif.UseVisualStyleBackColor = true;
             // 
@@ -237,10 +257,10 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.ChBxInternet.AutoSize = true;
             this.ChBxInternet.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChBxInternet.Location = new System.Drawing.Point(664, 189);
+            this.ChBxInternet.Location = new System.Drawing.Point(620, 74);
             this.ChBxInternet.Name = "ChBxInternet";
             this.ChBxInternet.Size = new System.Drawing.Size(86, 24);
-            this.ChBxInternet.TabIndex = 10;
+            this.ChBxInternet.TabIndex = 32;
             this.ChBxInternet.Text = "Internet";
             this.ChBxInternet.UseVisualStyleBackColor = true;
             // 
@@ -248,10 +268,10 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.ChBxTV.AutoSize = true;
             this.ChBxTV.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChBxTV.Location = new System.Drawing.Point(664, 161);
+            this.ChBxTV.Location = new System.Drawing.Point(620, 46);
             this.ChBxTV.Name = "ChBxTV";
             this.ChBxTV.Size = new System.Drawing.Size(44, 24);
-            this.ChBxTV.TabIndex = 9;
+            this.ChBxTV.TabIndex = 31;
             this.ChBxTV.Text = "TV";
             this.ChBxTV.UseVisualStyleBackColor = true;
             // 
@@ -259,10 +279,10 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.ChBxNiciuna.AutoSize = true;
             this.ChBxNiciuna.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChBxNiciuna.Location = new System.Drawing.Point(664, 131);
+            this.ChBxNiciuna.Location = new System.Drawing.Point(620, 16);
             this.ChBxNiciuna.Name = "ChBxNiciuna";
             this.ChBxNiciuna.Size = new System.Drawing.Size(83, 24);
-            this.ChBxNiciuna.TabIndex = 8;
+            this.ChBxNiciuna.TabIndex = 30;
             this.ChBxNiciuna.Text = "Niciuna";
             this.ChBxNiciuna.UseVisualStyleBackColor = true;
             // 
@@ -270,78 +290,132 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.LblFacilitatiCamera.AutoSize = true;
             this.LblFacilitatiCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFacilitatiCamera.Location = new System.Drawing.Point(555, 131);
+            this.LblFacilitatiCamera.Location = new System.Drawing.Point(511, 16);
             this.LblFacilitatiCamera.Name = "LblFacilitatiCamera";
             this.LblFacilitatiCamera.Size = new System.Drawing.Size(68, 20);
-            this.LblFacilitatiCamera.TabIndex = 7;
+            this.LblFacilitatiCamera.TabIndex = 29;
             this.LblFacilitatiCamera.Text = "Facilitati";
             // 
             // TxtEtajCamera
             // 
             this.TxtEtajCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtEtajCamera.Location = new System.Drawing.Point(249, 219);
+            this.TxtEtajCamera.Location = new System.Drawing.Point(205, 104);
             this.TxtEtajCamera.Name = "TxtEtajCamera";
             this.TxtEtajCamera.Size = new System.Drawing.Size(236, 26);
-            this.TxtEtajCamera.TabIndex = 6;
+            this.TxtEtajCamera.TabIndex = 28;
             // 
             // LblEtajCamera
             // 
             this.LblEtajCamera.AutoSize = true;
             this.LblEtajCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEtajCamera.Location = new System.Drawing.Point(89, 219);
+            this.LblEtajCamera.Location = new System.Drawing.Point(45, 104);
             this.LblEtajCamera.Name = "LblEtajCamera";
             this.LblEtajCamera.Size = new System.Drawing.Size(99, 20);
-            this.LblEtajCamera.TabIndex = 5;
+            this.LblEtajCamera.TabIndex = 27;
             this.LblEtajCamera.Text = "Etaj Camera";
             // 
             // TxtDimensiuneCamera
             // 
             this.TxtDimensiuneCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDimensiuneCamera.Location = new System.Drawing.Point(249, 173);
+            this.TxtDimensiuneCamera.Location = new System.Drawing.Point(205, 58);
             this.TxtDimensiuneCamera.Name = "TxtDimensiuneCamera";
             this.TxtDimensiuneCamera.Size = new System.Drawing.Size(236, 26);
-            this.TxtDimensiuneCamera.TabIndex = 4;
+            this.TxtDimensiuneCamera.TabIndex = 26;
             // 
             // LblDimensiuneCamera
             // 
             this.LblDimensiuneCamera.AutoSize = true;
             this.LblDimensiuneCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDimensiuneCamera.Location = new System.Drawing.Point(89, 173);
+            this.LblDimensiuneCamera.Location = new System.Drawing.Point(45, 58);
             this.LblDimensiuneCamera.Name = "LblDimensiuneCamera";
             this.LblDimensiuneCamera.Size = new System.Drawing.Size(123, 20);
-            this.LblDimensiuneCamera.TabIndex = 3;
+            this.LblDimensiuneCamera.TabIndex = 25;
             this.LblDimensiuneCamera.Text = "Dimensiune(m2)";
             // 
             // TxtDenumireCamera
             // 
             this.TxtDenumireCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDenumireCamera.Location = new System.Drawing.Point(248, 127);
+            this.TxtDenumireCamera.Location = new System.Drawing.Point(204, 12);
             this.TxtDenumireCamera.Name = "TxtDenumireCamera";
             this.TxtDenumireCamera.Size = new System.Drawing.Size(236, 26);
-            this.TxtDenumireCamera.TabIndex = 2;
+            this.TxtDenumireCamera.TabIndex = 24;
             // 
             // LblDenumireCamera
             // 
             this.LblDenumireCamera.AutoSize = true;
             this.LblDenumireCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDenumireCamera.Location = new System.Drawing.Point(89, 128);
+            this.LblDenumireCamera.Location = new System.Drawing.Point(45, 13);
             this.LblDenumireCamera.Name = "LblDenumireCamera";
             this.LblDenumireCamera.Size = new System.Drawing.Size(79, 20);
-            this.LblDenumireCamera.TabIndex = 1;
+            this.LblDenumireCamera.TabIndex = 23;
             this.LblDenumireCamera.Text = "Denumire";
             // 
-            // BtnAdaugaCamera
+            // TxtIDCamera
             // 
-            this.BtnAdaugaCamera.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.BtnAdaugaCamera.FlatAppearance.BorderSize = 0;
-            this.BtnAdaugaCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAdaugaCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAdaugaCamera.Location = new System.Drawing.Point(359, 455);
-            this.BtnAdaugaCamera.Name = "BtnAdaugaCamera";
-            this.BtnAdaugaCamera.Size = new System.Drawing.Size(94, 34);
-            this.BtnAdaugaCamera.TabIndex = 0;
-            this.BtnAdaugaCamera.Text = "Adauga";
-            this.BtnAdaugaCamera.UseVisualStyleBackColor = false;
+            this.TxtIDCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIDCamera.Location = new System.Drawing.Point(301, 93);
+            this.TxtIDCamera.Name = "TxtIDCamera";
+            this.TxtIDCamera.Size = new System.Drawing.Size(139, 26);
+            this.TxtIDCamera.TabIndex = 27;
+            // 
+            // LblIDCamera
+            // 
+            this.LblIDCamera.AutoSize = true;
+            this.LblIDCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblIDCamera.Location = new System.Drawing.Point(253, 93);
+            this.LblIDCamera.Name = "LblIDCamera";
+            this.LblIDCamera.Size = new System.Drawing.Size(25, 20);
+            this.LblIDCamera.TabIndex = 26;
+            this.LblIDCamera.Text = "ID";
+            // 
+            // BtnCautaCamera
+            // 
+            this.BtnCautaCamera.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnCautaCamera.FlatAppearance.BorderSize = 0;
+            this.BtnCautaCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCautaCamera.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCautaCamera.Location = new System.Drawing.Point(464, 94);
+            this.BtnCautaCamera.Name = "BtnCautaCamera";
+            this.BtnCautaCamera.Size = new System.Drawing.Size(74, 26);
+            this.BtnCautaCamera.TabIndex = 25;
+            this.BtnCautaCamera.Text = "Cauta";
+            this.BtnCautaCamera.UseVisualStyleBackColor = false;
+            this.BtnCautaCamera.Click += new System.EventHandler(this.BtnCautaCamera_Click);
+            // 
+            // LblCautareAvertisment
+            // 
+            this.LblCautareAvertisment.AutoSize = true;
+            this.LblCautareAvertisment.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCautareAvertisment.ForeColor = System.Drawing.Color.Firebrick;
+            this.LblCautareAvertisment.Location = new System.Drawing.Point(231, 131);
+            this.LblCautareAvertisment.Name = "LblCautareAvertisment";
+            this.LblCautareAvertisment.Size = new System.Drawing.Size(0, 17);
+            this.LblCautareAvertisment.TabIndex = 28;
+            // 
+            // BtnModificaCamera
+            // 
+            this.BtnModificaCamera.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnModificaCamera.FlatAppearance.BorderSize = 0;
+            this.BtnModificaCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnModificaCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModificaCamera.Location = new System.Drawing.Point(306, 329);
+            this.BtnModificaCamera.Name = "BtnModificaCamera";
+            this.BtnModificaCamera.Size = new System.Drawing.Size(94, 34);
+            this.BtnModificaCamera.TabIndex = 45;
+            this.BtnModificaCamera.Text = "Modifica";
+            this.BtnModificaCamera.UseVisualStyleBackColor = false;
+            this.BtnModificaCamera.Click += new System.EventHandler(this.BtnModificaCamera_Click);
+            // 
+            // LblAvertismentModificare
+            // 
+            this.LblAvertismentModificare.AutoSize = true;
+            this.LblAvertismentModificare.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAvertismentModificare.ForeColor = System.Drawing.Color.Firebrick;
+            this.LblAvertismentModificare.Location = new System.Drawing.Point(125, 301);
+            this.LblAvertismentModificare.Name = "LblAvertismentModificare";
+            this.LblAvertismentModificare.Size = new System.Drawing.Size(480, 17);
+            this.LblAvertismentModificare.TabIndex = 46;
+            this.LblAvertismentModificare.Text = "*Trebuie completate toate campurile pentru a putea realiza modificarea";
             // 
             // UCModificareCamera
             // 
@@ -352,6 +426,8 @@ namespace InterfataUtilizator_WindowsForms
             this.Size = new System.Drawing.Size(824, 515);
             this.PnlModificareCamera.ResumeLayout(false);
             this.PnlModificareCamera.PerformLayout();
+            this.PnlDateCamera.ResumeLayout(false);
+            this.PnlDateCamera.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -360,6 +436,7 @@ namespace InterfataUtilizator_WindowsForms
 
         private System.Windows.Forms.Panel PnlModificareCamera;
         private System.Windows.Forms.Label LblTitluAdaugareCamera;
+        private System.Windows.Forms.Panel PnlDateCamera;
         private System.Windows.Forms.RadioButton RBtnQuad;
         private System.Windows.Forms.RadioButton RBtnTripla;
         private System.Windows.Forms.RadioButton RBtnMatrimoniala;
@@ -367,9 +444,9 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.RadioButton RBtnDubla;
         private System.Windows.Forms.RadioButton RBtnSingle;
         private System.Windows.Forms.Label LblTipCamera;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtPretCamera;
         private System.Windows.Forms.Label LblPretCamera;
-        private System.Windows.Forms.CheckBox ChBxFigider;
+        private System.Windows.Forms.CheckBox ChBxFrigider;
         private System.Windows.Forms.CheckBox ChBxJacuzzi;
         private System.Windows.Forms.CheckBox ChBxSeif;
         private System.Windows.Forms.CheckBox ChBxInternet;
@@ -382,6 +459,11 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.Label LblDimensiuneCamera;
         private System.Windows.Forms.TextBox TxtDenumireCamera;
         private System.Windows.Forms.Label LblDenumireCamera;
-        private System.Windows.Forms.Button BtnAdaugaCamera;
+        private System.Windows.Forms.Label LblCautareAvertisment;
+        private System.Windows.Forms.TextBox TxtIDCamera;
+        private System.Windows.Forms.Label LblIDCamera;
+        private System.Windows.Forms.Button BtnCautaCamera;
+        private System.Windows.Forms.Label LblAvertismentModificare;
+        private System.Windows.Forms.Button BtnModificaCamera;
     }
 }

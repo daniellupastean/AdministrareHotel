@@ -45,9 +45,16 @@
 
         public string ConversieLaSir()
         {
-            string dateForDisplay = $"{ID_camera}, {Denumire}, {Dimensiune}m2, {Etaj}, <{Facilitati}>, {Tip}, {Pret} lei";
-            
-            return dateForDisplay;
+            string sf = "{0,-4}{1,-15}{2,6} {3,-3} {4,3}  {5,-30}{6,-13}{7,6} {8, -4}";
+           
+            return string.Format(sf, ID_camera, Denumire, Dimensiune, "m2", Etaj, Facilitati, Tip, Pret, "lei");
+        }
+
+        static public string HeaderInfo()
+        {
+            string sf = "{0,-4}{1,-15}{2,-8} {3,4} {4,-28}  {5,-14}{6,6}";
+
+            return string.Format(sf, "ID", "Denumire", "Dimensiune", "Etaj", "Facilitati", "Tip", "Pret");
         }
 
         public string ConversieLaSir_PentruScriereInFisier()

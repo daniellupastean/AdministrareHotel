@@ -36,9 +36,15 @@ namespace InterfataUtilizator_WindowsForms
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.Navbar = new System.Windows.Forms.Panel();
+            this.BtnExit = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.PanelCamere = new System.Windows.Forms.Panel();
+            this.ButonModificareCamera = new System.Windows.Forms.Button();
+            this.ButonCautareCamera = new System.Windows.Forms.Button();
+            this.ButonAfisareCamere = new System.Windows.Forms.Button();
+            this.ButonAdaugareCamera = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,12 +55,10 @@ namespace InterfataUtilizator_WindowsForms
             this.TxtBxParola = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.InfoSetari = new System.Windows.Forms.ToolTip(this.components);
-            this.ButonModificareCamera = new System.Windows.Forms.Button();
-            this.ButonCautareCamera = new System.Windows.Forms.Button();
-            this.ButonAfisareCamere = new System.Windows.Forms.Button();
-            this.ButonAdaugareCamera = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.BtnExit = new System.Windows.Forms.Button();
+            this.PnlAdaugareCamera = new InterfataUtilizator_WindowsForms.UCAdaugareCamera();
+            this.PnlAfisareCamere = new InterfataUtilizator_WindowsForms.UCAfisareCamere();
+            this.PnlCautareCamera = new InterfataUtilizator_WindowsForms.UCCautareCamera();
+            this.PnlModificareCamera = new InterfataUtilizator_WindowsForms.UCModificareCamera();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.Navbar.SuspendLayout();
@@ -130,6 +134,20 @@ namespace InterfataUtilizator_WindowsForms
             this.Navbar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Navbar_MouseMove);
             this.Navbar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Navbar_MouseUp);
             // 
+            // BtnExit
+            // 
+            this.BtnExit.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources._4177409791543238955_128;
+            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnExit.FlatAppearance.BorderSize = 0;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.Location = new System.Drawing.Point(1004, 9);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(29, 29);
+            this.BtnExit.TabIndex = 2;
+            this.BtnExit.UseVisualStyleBackColor = true;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -159,14 +177,90 @@ namespace InterfataUtilizator_WindowsForms
             // PanelCamere
             // 
             this.PanelCamere.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PanelCamere.Controls.Add(this.PnlCautareCamera);
+            this.PanelCamere.Controls.Add(this.PnlAdaugareCamera);
             this.PanelCamere.Controls.Add(this.ButonModificareCamera);
             this.PanelCamere.Controls.Add(this.ButonCautareCamera);
             this.PanelCamere.Controls.Add(this.ButonAfisareCamere);
             this.PanelCamere.Controls.Add(this.ButonAdaugareCamera);
+            this.PanelCamere.Controls.Add(this.PnlAfisareCamere);
+            this.PanelCamere.Controls.Add(this.PnlModificareCamera);
             this.PanelCamere.Location = new System.Drawing.Point(160, 0);
             this.PanelCamere.Name = "PanelCamere";
             this.PanelCamere.Size = new System.Drawing.Size(881, 586);
             this.PanelCamere.TabIndex = 5;
+            // 
+            // ButonModificareCamera
+            // 
+            this.ButonModificareCamera.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ButonModificareCamera.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.edit_icon;
+            this.ButonModificareCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ButonModificareCamera.FlatAppearance.BorderSize = 0;
+            this.ButonModificareCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButonModificareCamera.Location = new System.Drawing.Point(488, 0);
+            this.ButonModificareCamera.Name = "ButonModificareCamera";
+            this.ButonModificareCamera.Size = new System.Drawing.Size(44, 43);
+            this.ButonModificareCamera.TabIndex = 3;
+            this.ButonModificareCamera.UseVisualStyleBackColor = false;
+            this.ButonModificareCamera.Click += new System.EventHandler(this.ButonModificareCamera_Click);
+            // 
+            // ButonCautareCamera
+            // 
+            this.ButonCautareCamera.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ButonCautareCamera.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.search_icon1;
+            this.ButonCautareCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ButonCautareCamera.FlatAppearance.BorderSize = 0;
+            this.ButonCautareCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButonCautareCamera.Location = new System.Drawing.Point(438, 0);
+            this.ButonCautareCamera.Name = "ButonCautareCamera";
+            this.ButonCautareCamera.Size = new System.Drawing.Size(44, 43);
+            this.ButonCautareCamera.TabIndex = 2;
+            this.ButonCautareCamera.UseVisualStyleBackColor = false;
+            this.ButonCautareCamera.Click += new System.EventHandler(this.ButonCautareCamera_Click);
+            // 
+            // ButonAfisareCamere
+            // 
+            this.ButonAfisareCamere.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ButonAfisareCamere.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.show_icon1;
+            this.ButonAfisareCamere.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ButonAfisareCamere.FlatAppearance.BorderSize = 0;
+            this.ButonAfisareCamere.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButonAfisareCamere.Location = new System.Drawing.Point(388, 0);
+            this.ButonAfisareCamere.Name = "ButonAfisareCamere";
+            this.ButonAfisareCamere.Size = new System.Drawing.Size(44, 43);
+            this.ButonAfisareCamere.TabIndex = 1;
+            this.ButonAfisareCamere.UseVisualStyleBackColor = false;
+            this.ButonAfisareCamere.Click += new System.EventHandler(this.ButonAfisareCamere_Click);
+            // 
+            // ButonAdaugareCamera
+            // 
+            this.ButonAdaugareCamera.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ButonAdaugareCamera.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.plus_icon1;
+            this.ButonAdaugareCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ButonAdaugareCamera.FlatAppearance.BorderSize = 0;
+            this.ButonAdaugareCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButonAdaugareCamera.Location = new System.Drawing.Point(338, 0);
+            this.ButonAdaugareCamera.Name = "ButonAdaugareCamera";
+            this.ButonAdaugareCamera.Size = new System.Drawing.Size(44, 43);
+            this.ButonAdaugareCamera.TabIndex = 0;
+            this.ButonAdaugareCamera.UseVisualStyleBackColor = false;
+            this.ButonAdaugareCamera.Click += new System.EventHandler(this.ButonAdaugareCamera_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.settings_icon1;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(63, 480);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(29, 30);
+            this.button5.TabIndex = 4;
+            this.InfoSetari.SetToolTip(this.button5, "Setari");
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -277,91 +371,37 @@ namespace InterfataUtilizator_WindowsForms
             this.label4.TabIndex = 1;
             this.label4.Text = "Parola";
             // 
-            // ButonModificareCamera
+            // PnlAdaugareCamera
             // 
-            this.ButonModificareCamera.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ButonModificareCamera.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.edit_icon;
-            this.ButonModificareCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ButonModificareCamera.FlatAppearance.BorderSize = 0;
-            this.ButonModificareCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButonModificareCamera.Location = new System.Drawing.Point(488, 0);
-            this.ButonModificareCamera.Name = "ButonModificareCamera";
-            this.ButonModificareCamera.Size = new System.Drawing.Size(44, 43);
-            this.ButonModificareCamera.TabIndex = 3;
-            this.ButonModificareCamera.UseVisualStyleBackColor = false;
-            this.ButonModificareCamera.Click += new System.EventHandler(this.ButonModificareCamera_Click);
+            this.PnlAdaugareCamera.Location = new System.Drawing.Point(29, 49);
+            this.PnlAdaugareCamera.Name = "PnlAdaugareCamera";
+            this.PnlAdaugareCamera.Size = new System.Drawing.Size(824, 515);
+            this.PnlAdaugareCamera.TabIndex = 4;
             // 
-            // ButonCautareCamera
+            // PnlAfisareCamere
             // 
-            this.ButonCautareCamera.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ButonCautareCamera.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.search_icon1;
-            this.ButonCautareCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ButonCautareCamera.FlatAppearance.BorderSize = 0;
-            this.ButonCautareCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButonCautareCamera.Location = new System.Drawing.Point(438, 0);
-            this.ButonCautareCamera.Name = "ButonCautareCamera";
-            this.ButonCautareCamera.Size = new System.Drawing.Size(44, 43);
-            this.ButonCautareCamera.TabIndex = 2;
-            this.ButonCautareCamera.UseVisualStyleBackColor = false;
-            this.ButonCautareCamera.Click += new System.EventHandler(this.ButonCautareCamera_Click);
+            this.PnlAfisareCamere.Location = new System.Drawing.Point(29, 49);
+            this.PnlAfisareCamere.Name = "PnlAfisareCamere";
+            this.PnlAfisareCamere.Size = new System.Drawing.Size(824, 515);
+            this.PnlAfisareCamere.TabIndex = 5;
+            this.PnlAfisareCamere.Visible = false;
+            this.PnlAfisareCamere.Load += new System.EventHandler(this.PnlAfisareCamere_Load);
             // 
-            // ButonAfisareCamere
+            // PnlCautareCamera
             // 
-            this.ButonAfisareCamere.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ButonAfisareCamere.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.show_icon1;
-            this.ButonAfisareCamere.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ButonAfisareCamere.FlatAppearance.BorderSize = 0;
-            this.ButonAfisareCamere.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButonAfisareCamere.Location = new System.Drawing.Point(388, 0);
-            this.ButonAfisareCamere.Name = "ButonAfisareCamere";
-            this.ButonAfisareCamere.Size = new System.Drawing.Size(44, 43);
-            this.ButonAfisareCamere.TabIndex = 1;
-            this.ButonAfisareCamere.UseVisualStyleBackColor = false;
-            this.ButonAfisareCamere.Click += new System.EventHandler(this.ButonAfisareCamere_Click);
+            this.PnlCautareCamera.Location = new System.Drawing.Point(29, 49);
+            this.PnlCautareCamera.Name = "PnlCautareCamera";
+            this.PnlCautareCamera.Size = new System.Drawing.Size(824, 515);
+            this.PnlCautareCamera.TabIndex = 6;
+            this.PnlCautareCamera.Visible = false;
             // 
-            // ButonAdaugareCamera
+            // PnlModificareCamera
             // 
-            this.ButonAdaugareCamera.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ButonAdaugareCamera.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.plus_icon1;
-            this.ButonAdaugareCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ButonAdaugareCamera.FlatAppearance.BorderSize = 0;
-            this.ButonAdaugareCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButonAdaugareCamera.Location = new System.Drawing.Point(338, 0);
-            this.ButonAdaugareCamera.Name = "ButonAdaugareCamera";
-            this.ButonAdaugareCamera.Size = new System.Drawing.Size(44, 43);
-            this.ButonAdaugareCamera.TabIndex = 0;
-            this.ButonAdaugareCamera.UseVisualStyleBackColor = false;
-            this.ButonAdaugareCamera.Click += new System.EventHandler(this.ButonAdaugareCamera_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.settings_icon1;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(63, 480);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(29, 30);
-            this.button5.TabIndex = 4;
-            this.InfoSetari.SetToolTip(this.button5, "Setari");
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // BtnExit
-            // 
-            this.BtnExit.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources._4177409791543238955_128;
-            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnExit.FlatAppearance.BorderSize = 0;
-            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExit.Location = new System.Drawing.Point(1004, 9);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(29, 29);
-            this.BtnExit.TabIndex = 2;
-            this.BtnExit.UseVisualStyleBackColor = true;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            this.PnlModificareCamera.Location = new System.Drawing.Point(29, 49);
+            this.PnlModificareCamera.Name = "PnlModificareCamera";
+            this.PnlModificareCamera.Size = new System.Drawing.Size(824, 515);
+            this.PnlModificareCamera.TabIndex = 7;
+            this.PnlModificareCamera.Visible = false;
             // 
             // MainForm
             // 
@@ -423,6 +463,10 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.Button ButonModificareCamera;
         private System.Windows.Forms.Button ButonCautareCamera;
         private System.Windows.Forms.Button ButonAfisareCamere;
+        private UCModificareCamera PnlModificareCamera;
+        private UCCautareCamera PnlCautareCamera;
+        private UCAfisareCamere PnlAfisareCamere;
+        private UCAdaugareCamera PnlAdaugareCamera;
     }
 }
 
