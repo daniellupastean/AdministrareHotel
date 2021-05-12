@@ -21,10 +21,7 @@ namespace InterfataUtilizator_WindowsForms
         public UCAdaugareCamera()
         {
             InitializeComponent();
-            camere = adminCamere.GetCamere();
-            nrCamere = camere.Count;
-            Camera.IdUltimaCamera = nrCamere;
-            facilitatiSelectate = 0;
+            
         }
 
         private void BtnAdaugaCamera_Click(object sender, EventArgs e)
@@ -75,6 +72,20 @@ namespace InterfataUtilizator_WindowsForms
                 facilitatiSelectate = (FacilitatiCamera)((int)facilitatiSelectate + facilitateSelectata);
             else
                 facilitatiSelectate = (FacilitatiCamera)((int)facilitatiSelectate - facilitateSelectata);
+        }
+
+        private void PnlAddCamera_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible == false)
+                LblAdaugareCameraAvertisment.Text = "";
+        }
+
+        private void UCAdaugareCamera_Load(object sender, EventArgs e)
+        {
+            //camere = adminCamere.GetCamere();
+            nrCamere = camere.Count;
+            Camera.IdUltimaCamera = nrCamere;
+            facilitatiSelectate = 0;
         }
     }
 }

@@ -20,9 +20,7 @@ namespace InterfataUtilizator_WindowsForms
         public UCAfisareCamere()
         {
             InitializeComponent();
-            camere = adminCamere.GetCamere();
-            nrCamere = camere.Count;
-            Camera.IdUltimaCamera = nrCamere;
+           
 
         }
 
@@ -38,6 +36,13 @@ namespace InterfataUtilizator_WindowsForms
                     LsBxAfisareCamere.Items.Add(camera.ConversieLaSir());
                 }
             }
+        }
+
+        private void UCAfisareCamere_Load(object sender, EventArgs e)
+        {
+            //camere = adminCamere.GetCamere();
+            nrCamere = camere.Count;
+            Camera.IdUltimaCamera = nrCamere;
         }
     }
 }

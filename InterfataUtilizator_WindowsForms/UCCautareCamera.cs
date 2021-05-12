@@ -12,15 +12,20 @@ namespace InterfataUtilizator_WindowsForms
 {
     public partial class UCCautareCamera : UserControl
     {
-
-        List<Camera> camere;
-        IStocareCamere adminCamere = StocareFactory.GetAdministratorStocareCamere();
+        List<Camera> camere = new List<Camera>();
+        IStocareCamere adminCamere;
         int nrCamere;
 
         public UCCautareCamera()
         {
             InitializeComponent();
-            camere = adminCamere.GetCamere();
+            
+        }
+
+        private void UCCautareCamera_Load(object sender, EventArgs e)
+        {
+            adminCamere = StocareFactory.GetAdministratorStocareCamere();
+            //camere = adminCamere.GetCamere();
             nrCamere = camere.Count;
             Camera.IdUltimaCamera = nrCamere;
         }
@@ -43,5 +48,6 @@ namespace InterfataUtilizator_WindowsForms
                 LblCameraCautata.Text = cameraAfisare.ConversieLaSir();
             }
         }
+
     }
 }

@@ -90,6 +90,7 @@ namespace InterfataUtilizator_WindowsForms
             this.PnlAddCamera.Name = "PnlAddCamera";
             this.PnlAddCamera.Size = new System.Drawing.Size(824, 515);
             this.PnlAddCamera.TabIndex = 5;
+            this.PnlAddCamera.VisibleChanged += new System.EventHandler(this.PnlAddCamera_VisibleChanged);
             // 
             // LblAdaugareCameraAvertisment
             // 
@@ -364,6 +365,7 @@ namespace InterfataUtilizator_WindowsForms
             this.Controls.Add(this.PnlAddCamera);
             this.Name = "UCAdaugareCamera";
             this.Size = new System.Drawing.Size(824, 515);
+            this.Load += new System.EventHandler(this.UCAdaugareCamera_Load);
             this.PnlAddCamera.ResumeLayout(false);
             this.PnlAddCamera.PerformLayout();
             this.ResumeLayout(false);

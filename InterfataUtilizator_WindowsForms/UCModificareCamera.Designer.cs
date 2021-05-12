@@ -230,6 +230,7 @@ namespace InterfataUtilizator_WindowsForms
             this.ChBxFrigider.TabIndex = 35;
             this.ChBxFrigider.Text = "Frigider";
             this.ChBxFrigider.UseVisualStyleBackColor = true;
+            this.ChBxFrigider.CheckStateChanged += new System.EventHandler(this.CkbFacilitati_CheckedChanged);
             // 
             // ChBxJacuzzi
             // 
@@ -241,6 +242,7 @@ namespace InterfataUtilizator_WindowsForms
             this.ChBxJacuzzi.TabIndex = 34;
             this.ChBxJacuzzi.Text = "Jacuzzi";
             this.ChBxJacuzzi.UseVisualStyleBackColor = true;
+            this.ChBxJacuzzi.CheckStateChanged += new System.EventHandler(this.CkbFacilitati_CheckedChanged);
             // 
             // ChBxSeif
             // 
@@ -252,6 +254,7 @@ namespace InterfataUtilizator_WindowsForms
             this.ChBxSeif.TabIndex = 33;
             this.ChBxSeif.Text = "Seif";
             this.ChBxSeif.UseVisualStyleBackColor = true;
+            this.ChBxSeif.CheckedChanged += new System.EventHandler(this.CkbFacilitati_CheckedChanged);
             // 
             // ChBxInternet
             // 
@@ -263,6 +266,7 @@ namespace InterfataUtilizator_WindowsForms
             this.ChBxInternet.TabIndex = 32;
             this.ChBxInternet.Text = "Internet";
             this.ChBxInternet.UseVisualStyleBackColor = true;
+            this.ChBxInternet.CheckedChanged += new System.EventHandler(this.CkbFacilitati_CheckedChanged);
             // 
             // ChBxTV
             // 
@@ -274,6 +278,7 @@ namespace InterfataUtilizator_WindowsForms
             this.ChBxTV.TabIndex = 31;
             this.ChBxTV.Text = "TV";
             this.ChBxTV.UseVisualStyleBackColor = true;
+            this.ChBxTV.CheckedChanged += new System.EventHandler(this.CkbFacilitati_CheckedChanged);
             // 
             // ChBxNiciuna
             // 
@@ -285,6 +290,7 @@ namespace InterfataUtilizator_WindowsForms
             this.ChBxNiciuna.TabIndex = 30;
             this.ChBxNiciuna.Text = "Niciuna";
             this.ChBxNiciuna.UseVisualStyleBackColor = true;
+            this.ChBxNiciuna.CheckedChanged += new System.EventHandler(this.CkbFacilitati_CheckedChanged);
             // 
             // LblFacilitatiCamera
             // 
@@ -413,9 +419,8 @@ namespace InterfataUtilizator_WindowsForms
             this.LblAvertismentModificare.ForeColor = System.Drawing.Color.Firebrick;
             this.LblAvertismentModificare.Location = new System.Drawing.Point(125, 301);
             this.LblAvertismentModificare.Name = "LblAvertismentModificare";
-            this.LblAvertismentModificare.Size = new System.Drawing.Size(480, 17);
+            this.LblAvertismentModificare.Size = new System.Drawing.Size(0, 17);
             this.LblAvertismentModificare.TabIndex = 46;
-            this.LblAvertismentModificare.Text = "*Trebuie completate toate campurile pentru a putea realiza modificarea";
             // 
             // UCModificareCamera
             // 
@@ -424,6 +429,7 @@ namespace InterfataUtilizator_WindowsForms
             this.Controls.Add(this.PnlModificareCamera);
             this.Name = "UCModificareCamera";
             this.Size = new System.Drawing.Size(824, 515);
+            this.Load += new System.EventHandler(this.UCModificareCamera_Load);
             this.PnlModificareCamera.ResumeLayout(false);
             this.PnlModificareCamera.PerformLayout();
             this.PnlDateCamera.ResumeLayout(false);

@@ -30,9 +30,9 @@ namespace InterfataUtilizator_WindowsForms
         private void InitializeComponent()
         {
             this.PnlAfisareCamere = new System.Windows.Forms.Panel();
-            this.LblTitluAfisareCamere = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LsBxAfisareCamere = new System.Windows.Forms.ListBox();
+            this.LblTitluAfisareCamere = new System.Windows.Forms.Label();
             this.PnlAfisareCamere.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -47,16 +47,6 @@ namespace InterfataUtilizator_WindowsForms
             this.PnlAfisareCamere.Size = new System.Drawing.Size(824, 515);
             this.PnlAfisareCamere.TabIndex = 6;
             this.PnlAfisareCamere.VisibleChanged += new System.EventHandler(this.PnlAfisareCamere_VisibleChanged);
-            // 
-            // LblTitluAfisareCamere
-            // 
-            this.LblTitluAfisareCamere.AutoSize = true;
-            this.LblTitluAfisareCamere.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTitluAfisareCamere.Location = new System.Drawing.Point(298, 32);
-            this.LblTitluAfisareCamere.Name = "LblTitluAfisareCamere";
-            this.LblTitluAfisareCamere.Size = new System.Drawing.Size(219, 33);
-            this.LblTitluAfisareCamere.TabIndex = 23;
-            this.LblTitluAfisareCamere.Text = "Afisare Camere";
             // 
             // panel1
             // 
@@ -78,6 +68,16 @@ namespace InterfataUtilizator_WindowsForms
             this.LsBxAfisareCamere.Size = new System.Drawing.Size(715, 384);
             this.LsBxAfisareCamere.TabIndex = 25;
             // 
+            // LblTitluAfisareCamere
+            // 
+            this.LblTitluAfisareCamere.AutoSize = true;
+            this.LblTitluAfisareCamere.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitluAfisareCamere.Location = new System.Drawing.Point(298, 32);
+            this.LblTitluAfisareCamere.Name = "LblTitluAfisareCamere";
+            this.LblTitluAfisareCamere.Size = new System.Drawing.Size(219, 33);
+            this.LblTitluAfisareCamere.TabIndex = 23;
+            this.LblTitluAfisareCamere.Text = "Afisare Camere";
+            // 
             // UCAfisareCamere
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -85,6 +85,7 @@ namespace InterfataUtilizator_WindowsForms
             this.Controls.Add(this.PnlAfisareCamere);
             this.Name = "UCAfisareCamere";
             this.Size = new System.Drawing.Size(824, 515);
+            this.Load += new System.EventHandler(this.UCAfisareCamere_Load);
             this.PnlAfisareCamere.ResumeLayout(false);
             this.PnlAfisareCamere.PerformLayout();
             this.panel1.ResumeLayout(false);

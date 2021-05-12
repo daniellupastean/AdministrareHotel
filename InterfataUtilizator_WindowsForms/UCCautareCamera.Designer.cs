@@ -30,14 +30,14 @@ namespace InterfataUtilizator_WindowsForms
         private void InitializeComponent()
         {
             this.PnlModificareCamera = new System.Windows.Forms.Panel();
+            this.PnlAfisareCameraCautata = new System.Windows.Forms.Panel();
+            this.LblCameraCautata = new System.Windows.Forms.Label();
+            this.LblHeaderInfo = new System.Windows.Forms.Label();
+            this.LblCautareAvertisment = new System.Windows.Forms.Label();
             this.LblTitluCautareCamera = new System.Windows.Forms.Label();
             this.TxtIDCamera = new System.Windows.Forms.TextBox();
             this.LblIDCamera = new System.Windows.Forms.Label();
             this.BtnCautaCamera = new System.Windows.Forms.Button();
-            this.LblCautareAvertisment = new System.Windows.Forms.Label();
-            this.PnlAfisareCameraCautata = new System.Windows.Forms.Panel();
-            this.LblHeaderInfo = new System.Windows.Forms.Label();
-            this.LblCameraCautata = new System.Windows.Forms.Label();
             this.PnlModificareCamera.SuspendLayout();
             this.PnlAfisareCameraCautata.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +55,46 @@ namespace InterfataUtilizator_WindowsForms
             this.PnlModificareCamera.Name = "PnlModificareCamera";
             this.PnlModificareCamera.Size = new System.Drawing.Size(824, 515);
             this.PnlModificareCamera.TabIndex = 6;
+            // 
+            // PnlAfisareCameraCautata
+            // 
+            this.PnlAfisareCameraCautata.BackColor = System.Drawing.Color.White;
+            this.PnlAfisareCameraCautata.Controls.Add(this.LblCameraCautata);
+            this.PnlAfisareCameraCautata.Controls.Add(this.LblHeaderInfo);
+            this.PnlAfisareCameraCautata.Location = new System.Drawing.Point(44, 261);
+            this.PnlAfisareCameraCautata.Name = "PnlAfisareCameraCautata";
+            this.PnlAfisareCameraCautata.Size = new System.Drawing.Size(726, 92);
+            this.PnlAfisareCameraCautata.TabIndex = 25;
+            this.PnlAfisareCameraCautata.Visible = false;
+            // 
+            // LblCameraCautata
+            // 
+            this.LblCameraCautata.AutoSize = true;
+            this.LblCameraCautata.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCameraCautata.Location = new System.Drawing.Point(10, 50);
+            this.LblCameraCautata.Name = "LblCameraCautata";
+            this.LblCameraCautata.Size = new System.Drawing.Size(0, 16);
+            this.LblCameraCautata.TabIndex = 1;
+            // 
+            // LblHeaderInfo
+            // 
+            this.LblHeaderInfo.AutoSize = true;
+            this.LblHeaderInfo.BackColor = System.Drawing.Color.Gainsboro;
+            this.LblHeaderInfo.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHeaderInfo.Location = new System.Drawing.Point(10, 14);
+            this.LblHeaderInfo.Name = "LblHeaderInfo";
+            this.LblHeaderInfo.Size = new System.Drawing.Size(0, 16);
+            this.LblHeaderInfo.TabIndex = 0;
+            // 
+            // LblCautareAvertisment
+            // 
+            this.LblCautareAvertisment.AutoSize = true;
+            this.LblCautareAvertisment.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCautareAvertisment.ForeColor = System.Drawing.Color.Firebrick;
+            this.LblCautareAvertisment.Location = new System.Drawing.Point(236, 220);
+            this.LblCautareAvertisment.Name = "LblCautareAvertisment";
+            this.LblCautareAvertisment.Size = new System.Drawing.Size(0, 20);
+            this.LblCautareAvertisment.TabIndex = 24;
             // 
             // LblTitluCautareCamera
             // 
@@ -98,46 +138,6 @@ namespace InterfataUtilizator_WindowsForms
             this.BtnCautaCamera.UseVisualStyleBackColor = false;
             this.BtnCautaCamera.Click += new System.EventHandler(this.BtnCautaCamera_Click);
             // 
-            // LblCautareAvertisment
-            // 
-            this.LblCautareAvertisment.AutoSize = true;
-            this.LblCautareAvertisment.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCautareAvertisment.ForeColor = System.Drawing.Color.Firebrick;
-            this.LblCautareAvertisment.Location = new System.Drawing.Point(236, 220);
-            this.LblCautareAvertisment.Name = "LblCautareAvertisment";
-            this.LblCautareAvertisment.Size = new System.Drawing.Size(0, 20);
-            this.LblCautareAvertisment.TabIndex = 24;
-            // 
-            // PnlAfisareCameraCautata
-            // 
-            this.PnlAfisareCameraCautata.BackColor = System.Drawing.Color.White;
-            this.PnlAfisareCameraCautata.Controls.Add(this.LblCameraCautata);
-            this.PnlAfisareCameraCautata.Controls.Add(this.LblHeaderInfo);
-            this.PnlAfisareCameraCautata.Location = new System.Drawing.Point(44, 261);
-            this.PnlAfisareCameraCautata.Name = "PnlAfisareCameraCautata";
-            this.PnlAfisareCameraCautata.Size = new System.Drawing.Size(726, 92);
-            this.PnlAfisareCameraCautata.TabIndex = 25;
-            this.PnlAfisareCameraCautata.Visible = false;
-            // 
-            // LblHeaderInfo
-            // 
-            this.LblHeaderInfo.AutoSize = true;
-            this.LblHeaderInfo.BackColor = System.Drawing.Color.Gainsboro;
-            this.LblHeaderInfo.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblHeaderInfo.Location = new System.Drawing.Point(10, 14);
-            this.LblHeaderInfo.Name = "LblHeaderInfo";
-            this.LblHeaderInfo.Size = new System.Drawing.Size(0, 16);
-            this.LblHeaderInfo.TabIndex = 0;
-            // 
-            // LblCameraCautata
-            // 
-            this.LblCameraCautata.AutoSize = true;
-            this.LblCameraCautata.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCameraCautata.Location = new System.Drawing.Point(10, 50);
-            this.LblCameraCautata.Name = "LblCameraCautata";
-            this.LblCameraCautata.Size = new System.Drawing.Size(0, 16);
-            this.LblCameraCautata.TabIndex = 1;
-            // 
             // UCCautareCamera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,6 +145,7 @@ namespace InterfataUtilizator_WindowsForms
             this.Controls.Add(this.PnlModificareCamera);
             this.Name = "UCCautareCamera";
             this.Size = new System.Drawing.Size(824, 515);
+            this.Load += new System.EventHandler(this.UCCautareCamera_Load);
             this.PnlModificareCamera.ResumeLayout(false);
             this.PnlModificareCamera.PerformLayout();
             this.PnlAfisareCameraCautata.ResumeLayout(false);
