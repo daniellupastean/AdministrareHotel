@@ -25,7 +25,7 @@ namespace InterfataUtilizator_WindowsForms
         private void UCCautareCamera_Load(object sender, EventArgs e)
         {
             adminCamere = StocareFactory.GetAdministratorStocareCamere();
-            //camere = adminCamere.GetCamere();
+            camere = adminCamere.GetCamere();
             nrCamere = camere.Count;
             Camera.IdUltimaCamera = nrCamere;
         }

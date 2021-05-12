@@ -19,11 +19,11 @@ namespace InterfataUtilizator_WindowsForms
         int movY;
 
         ///Adaugare controale in Form
-        //UCAdaugareCamera PnlAdaugareCamera;
-        //UCAfisareCamere PnlAfisareCamere;
-        //UCModificareCamera PnlModificareCamera;
-        //UCCautareCamera PnlCautareCamera;
-        //Point locatie = new Point(32, 51);
+        UCAdaugareCamera PnlAdaugareCamera = new UCAdaugareCamera();
+        UCAfisareCamere PnlAfisareCamere = new UCAfisareCamere();
+        UCModificareCamera PnlModificareCamera = new UCModificareCamera();
+        UCCautareCamera PnlCautareCamera = new UCCautareCamera();
+        Point locatie = new Point(32, 51);
 
         ///Legatura cu backend-ul
         List<Client> clienti;
@@ -61,6 +61,22 @@ namespace InterfataUtilizator_WindowsForms
 
             nrRezervari = rezervari.Count;
             Rezervare.IdUltimaRezervare = nrRezervari;
+
+
+            PnlAdaugareCamera.Location = locatie;
+            PnlAfisareCamere.Location = locatie;
+            PnlModificareCamera.Location = locatie;
+            PnlCautareCamera.Location = locatie;
+            
+            PnlAdaugareCamera.Visible = true;
+            PnlAfisareCamere.Visible = false;
+            PnlModificareCamera.Visible = false;
+            PnlCautareCamera.Visible = false;
+
+            PanelCamere.Controls.Add(PnlAdaugareCamera);
+            PanelCamere.Controls.Add(PnlAfisareCamere);
+            PanelCamere.Controls.Add(PnlCautareCamera);
+            PanelCamere.Controls.Add(PnlModificareCamera);
         }
 
         private void Navbar_MouseMove(object sender, MouseEventArgs e)

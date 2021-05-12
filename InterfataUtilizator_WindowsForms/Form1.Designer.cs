@@ -40,10 +40,14 @@ namespace InterfataUtilizator_WindowsForms
             this.label3 = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.PanelCamere = new System.Windows.Forms.Panel();
+            //this.PnlCautareCamera = new InterfataUtilizator_WindowsForms.UCCautareCamera();
+            //this.PnlAdaugareCamera = new InterfataUtilizator_WindowsForms.UCAdaugareCamera();
             this.ButonModificareCamera = new System.Windows.Forms.Button();
             this.ButonCautareCamera = new System.Windows.Forms.Button();
             this.ButonAfisareCamere = new System.Windows.Forms.Button();
             this.ButonAdaugareCamera = new System.Windows.Forms.Button();
+            //this.PnlAfisareCamere = new InterfataUtilizator_WindowsForms.UCAfisareCamere();
+            //this.PnlModificareCamera = new InterfataUtilizator_WindowsForms.UCModificareCamera();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -55,10 +59,6 @@ namespace InterfataUtilizator_WindowsForms
             this.TxtBxParola = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.InfoSetari = new System.Windows.Forms.ToolTip(this.components);
-            this.PnlAdaugareCamera = new InterfataUtilizator_WindowsForms.UCAdaugareCamera();
-            this.PnlAfisareCamere = new InterfataUtilizator_WindowsForms.UCAfisareCamere();
-            this.PnlCautareCamera = new InterfataUtilizator_WindowsForms.UCCautareCamera();
-            this.PnlModificareCamera = new InterfataUtilizator_WindowsForms.UCModificareCamera();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.Navbar.SuspendLayout();
@@ -177,18 +177,33 @@ namespace InterfataUtilizator_WindowsForms
             // PanelCamere
             // 
             this.PanelCamere.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.PanelCamere.Controls.Add(this.PnlCautareCamera);
-            this.PanelCamere.Controls.Add(this.PnlAdaugareCamera);
+            //this.PanelCamere.Controls.Add(this.PnlCautareCamera);
+            //this.PanelCamere.Controls.Add(this.PnlAdaugareCamera);
             this.PanelCamere.Controls.Add(this.ButonModificareCamera);
             this.PanelCamere.Controls.Add(this.ButonCautareCamera);
             this.PanelCamere.Controls.Add(this.ButonAfisareCamere);
             this.PanelCamere.Controls.Add(this.ButonAdaugareCamera);
-            this.PanelCamere.Controls.Add(this.PnlAfisareCamere);
-            this.PanelCamere.Controls.Add(this.PnlModificareCamera);
+            //this.PanelCamere.Controls.Add(this.PnlAfisareCamere);
+            //this.PanelCamere.Controls.Add(this.PnlModificareCamera);
             this.PanelCamere.Location = new System.Drawing.Point(160, 0);
             this.PanelCamere.Name = "PanelCamere";
             this.PanelCamere.Size = new System.Drawing.Size(881, 586);
             this.PanelCamere.TabIndex = 5;
+            //// 
+            //// PnlCautareCamera
+            //// 
+            //this.PnlCautareCamera.Location = new System.Drawing.Point(29, 49);
+            //this.PnlCautareCamera.Name = "PnlCautareCamera";
+            //this.PnlCautareCamera.Size = new System.Drawing.Size(824, 515);
+            //this.PnlCautareCamera.TabIndex = 6;
+            //this.PnlCautareCamera.Visible = false;
+            //// 
+            //// PnlAdaugareCamera
+            //// 
+            //this.PnlAdaugareCamera.Location = new System.Drawing.Point(29, 49);
+            //this.PnlAdaugareCamera.Name = "PnlAdaugareCamera";
+            //this.PnlAdaugareCamera.Size = new System.Drawing.Size(824, 515);
+            //this.PnlAdaugareCamera.TabIndex = 4;
             // 
             // ButonModificareCamera
             // 
@@ -245,6 +260,23 @@ namespace InterfataUtilizator_WindowsForms
             this.ButonAdaugareCamera.TabIndex = 0;
             this.ButonAdaugareCamera.UseVisualStyleBackColor = false;
             this.ButonAdaugareCamera.Click += new System.EventHandler(this.ButonAdaugareCamera_Click);
+            // 
+            //// PnlAfisareCamere
+            //// 
+            //this.PnlAfisareCamere.Location = new System.Drawing.Point(29, 49);
+            //this.PnlAfisareCamere.Name = "PnlAfisareCamere";
+            //this.PnlAfisareCamere.Size = new System.Drawing.Size(824, 515);
+            //this.PnlAfisareCamere.TabIndex = 5;
+            //this.PnlAfisareCamere.Visible = false;
+            //this.PnlAfisareCamere.Load += new System.EventHandler(this.PnlAfisareCamere_Load);
+            //// 
+            //// PnlModificareCamera
+            //// 
+            //this.PnlModificareCamera.Location = new System.Drawing.Point(29, 49);
+            //this.PnlModificareCamera.Name = "PnlModificareCamera";
+            //this.PnlModificareCamera.Size = new System.Drawing.Size(824, 515);
+            //this.PnlModificareCamera.TabIndex = 7;
+            //this.PnlModificareCamera.Visible = false;
             // 
             // button5
             // 
@@ -371,38 +403,6 @@ namespace InterfataUtilizator_WindowsForms
             this.label4.TabIndex = 1;
             this.label4.Text = "Parola";
             // 
-            // PnlAdaugareCamera
-            // 
-            this.PnlAdaugareCamera.Location = new System.Drawing.Point(29, 49);
-            this.PnlAdaugareCamera.Name = "PnlAdaugareCamera";
-            this.PnlAdaugareCamera.Size = new System.Drawing.Size(824, 515);
-            this.PnlAdaugareCamera.TabIndex = 4;
-            // 
-            // PnlAfisareCamere
-            // 
-            this.PnlAfisareCamere.Location = new System.Drawing.Point(29, 49);
-            this.PnlAfisareCamere.Name = "PnlAfisareCamere";
-            this.PnlAfisareCamere.Size = new System.Drawing.Size(824, 515);
-            this.PnlAfisareCamere.TabIndex = 5;
-            this.PnlAfisareCamere.Visible = false;
-            this.PnlAfisareCamere.Load += new System.EventHandler(this.PnlAfisareCamere_Load);
-            // 
-            // PnlCautareCamera
-            // 
-            this.PnlCautareCamera.Location = new System.Drawing.Point(29, 49);
-            this.PnlCautareCamera.Name = "PnlCautareCamera";
-            this.PnlCautareCamera.Size = new System.Drawing.Size(824, 515);
-            this.PnlCautareCamera.TabIndex = 6;
-            this.PnlCautareCamera.Visible = false;
-            // 
-            // PnlModificareCamera
-            // 
-            this.PnlModificareCamera.Location = new System.Drawing.Point(29, 49);
-            this.PnlModificareCamera.Name = "PnlModificareCamera";
-            this.PnlModificareCamera.Size = new System.Drawing.Size(824, 515);
-            this.PnlModificareCamera.TabIndex = 7;
-            this.PnlModificareCamera.Visible = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,10 +463,10 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.Button ButonModificareCamera;
         private System.Windows.Forms.Button ButonCautareCamera;
         private System.Windows.Forms.Button ButonAfisareCamere;
-        private UCModificareCamera PnlModificareCamera;
-        private UCCautareCamera PnlCautareCamera;
-        private UCAfisareCamere PnlAfisareCamere;
-        private UCAdaugareCamera PnlAdaugareCamera;
+        //private UCModificareCamera PnlModificareCamera;
+       // private UCCautareCamera PnlCautareCamera;
+        //private UCAfisareCamere PnlAfisareCamere;
+        //private UCAdaugareCamera PnlAdaugareCamera;
     }
 }
 

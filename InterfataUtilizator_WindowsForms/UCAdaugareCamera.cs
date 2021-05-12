@@ -82,7 +82,7 @@ namespace InterfataUtilizator_WindowsForms
 
         private void UCAdaugareCamera_Load(object sender, EventArgs e)
         {
-            //camere = adminCamere.GetCamere();
+            camere = adminCamere.GetCamere();
             nrCamere = camere.Count;
             Camera.IdUltimaCamera = nrCamere;
             facilitatiSelectate = 0;
