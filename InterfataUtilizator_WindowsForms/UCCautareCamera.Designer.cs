@@ -29,7 +29,7 @@ namespace InterfataUtilizator_WindowsForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.PnlModificareCamera = new System.Windows.Forms.Panel();
+            this.PnlCautareCamera = new System.Windows.Forms.Panel();
             this.PnlAfisareCameraCautata = new System.Windows.Forms.Panel();
             this.LblCameraCautata = new System.Windows.Forms.Label();
             this.LblHeaderInfo = new System.Windows.Forms.Label();
@@ -38,23 +38,23 @@ namespace InterfataUtilizator_WindowsForms
             this.TxtIDCamera = new System.Windows.Forms.TextBox();
             this.LblIDCamera = new System.Windows.Forms.Label();
             this.BtnCautaCamera = new System.Windows.Forms.Button();
-            this.PnlModificareCamera.SuspendLayout();
+            this.PnlCautareCamera.SuspendLayout();
             this.PnlAfisareCameraCautata.SuspendLayout();
             this.SuspendLayout();
             // 
-            // PnlModificareCamera
+            // PnlCautareCamera
             // 
-            this.PnlModificareCamera.BackColor = System.Drawing.Color.Transparent;
-            this.PnlModificareCamera.Controls.Add(this.PnlAfisareCameraCautata);
-            this.PnlModificareCamera.Controls.Add(this.LblCautareAvertisment);
-            this.PnlModificareCamera.Controls.Add(this.LblTitluCautareCamera);
-            this.PnlModificareCamera.Controls.Add(this.TxtIDCamera);
-            this.PnlModificareCamera.Controls.Add(this.LblIDCamera);
-            this.PnlModificareCamera.Controls.Add(this.BtnCautaCamera);
-            this.PnlModificareCamera.Location = new System.Drawing.Point(0, 0);
-            this.PnlModificareCamera.Name = "PnlModificareCamera";
-            this.PnlModificareCamera.Size = new System.Drawing.Size(824, 515);
-            this.PnlModificareCamera.TabIndex = 6;
+            this.PnlCautareCamera.BackColor = System.Drawing.Color.Transparent;
+            this.PnlCautareCamera.Controls.Add(this.PnlAfisareCameraCautata);
+            this.PnlCautareCamera.Controls.Add(this.LblCautareAvertisment);
+            this.PnlCautareCamera.Controls.Add(this.LblTitluCautareCamera);
+            this.PnlCautareCamera.Controls.Add(this.TxtIDCamera);
+            this.PnlCautareCamera.Controls.Add(this.LblIDCamera);
+            this.PnlCautareCamera.Controls.Add(this.BtnCautaCamera);
+            this.PnlCautareCamera.Location = new System.Drawing.Point(0, 0);
+            this.PnlCautareCamera.Name = "PnlCautareCamera";
+            this.PnlCautareCamera.Size = new System.Drawing.Size(824, 515);
+            this.PnlCautareCamera.TabIndex = 6;
             // 
             // PnlAfisareCameraCautata
             // 
@@ -142,12 +142,12 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.PnlModificareCamera);
+            this.Controls.Add(this.PnlCautareCamera);
             this.Name = "UCCautareCamera";
             this.Size = new System.Drawing.Size(824, 515);
             this.Load += new System.EventHandler(this.UCCautareCamera_Load);
-            this.PnlModificareCamera.ResumeLayout(false);
-            this.PnlModificareCamera.PerformLayout();
+            this.PnlCautareCamera.ResumeLayout(false);
+            this.PnlCautareCamera.PerformLayout();
             this.PnlAfisareCameraCautata.ResumeLayout(false);
             this.PnlAfisareCameraCautata.PerformLayout();
             this.ResumeLayout(false);
@@ -156,7 +156,7 @@ namespace InterfataUtilizator_WindowsForms
 
         #endregion
 
-        private System.Windows.Forms.Panel PnlModificareCamera;
+        private System.Windows.Forms.Panel PnlCautareCamera;
         private System.Windows.Forms.Label LblTitluCautareCamera;
         private System.Windows.Forms.TextBox TxtIDCamera;
         private System.Windows.Forms.Label LblIDCamera;

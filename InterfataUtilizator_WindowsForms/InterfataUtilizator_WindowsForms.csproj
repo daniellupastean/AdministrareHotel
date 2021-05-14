@@ -53,17 +53,77 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StocareFactory.cs" />
+    <Compile Include="UCAdaugareAngajat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAdaugareAngajat.Designer.cs">
+      <DependentUpon>UCAdaugareAngajat.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCAdaugareCamera.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCAdaugareCamera.Designer.cs">
       <DependentUpon>UCAdaugareCamera.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCAdaugareClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAdaugareClient.Designer.cs">
+      <DependentUpon>UCAdaugareClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCAdaugareRezervare.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAdaugareRezervare.Designer.cs">
+      <DependentUpon>UCAdaugareRezervare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCAfisareAngajati.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAfisareAngajati.Designer.cs">
+      <DependentUpon>UCAfisareAngajati.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCAfisareCamere.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCAfisareCamere.Designer.cs">
       <DependentUpon>UCAfisareCamere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCAfisareClienti.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAfisareClienti.Designer.cs">
+      <DependentUpon>UCAfisareClienti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCAfisareRezervari.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAfisareRezervari.Designer.cs">
+      <DependentUpon>UCAfisareRezervari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCCautareAngajat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCautareAngajat.Designer.cs">
+      <DependentUpon>UCCautareAngajat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCCautareClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCautareClient.Designer.cs">
+      <DependentUpon>UCCautareClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCCautareRezervare.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCautareRezervare.Designer.cs">
+      <DependentUpon>UCCautareRezervare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCModificareAngajat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCModificareAngajat.Designer.cs">
+      <DependentUpon>UCModificareAngajat.cs</DependentUpon>
     </Compile>
     <Compile Include="UCModificareCamera.cs">
       <SubType>UserControl</SubType>
@@ -77,6 +137,18 @@
     <Compile Include="UCCautareCamera.Designer.cs">
       <DependentUpon>UCCautareCamera.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCModificareClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCModificareClient.Designer.cs">
+      <DependentUpon>UCModificareClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCModificareRezervare.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCModificareRezervare.Designer.cs">
+      <DependentUpon>UCModificareRezervare.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,17 +157,53 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCAdaugareAngajat.resx">
+      <DependentUpon>UCAdaugareAngajat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCAdaugareCamera.resx">
       <DependentUpon>UCAdaugareCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAdaugareClient.resx">
+      <DependentUpon>UCAdaugareClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAdaugareRezervare.resx">
+      <DependentUpon>UCAdaugareRezervare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAfisareAngajati.resx">
+      <DependentUpon>UCAfisareAngajati.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCAfisareCamere.resx">
       <DependentUpon>UCAfisareCamere.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCAfisareClienti.resx">
+      <DependentUpon>UCAfisareClienti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAfisareRezervari.resx">
+      <DependentUpon>UCAfisareRezervari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCCautareAngajat.resx">
+      <DependentUpon>UCCautareAngajat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCCautareCamera.resx">
       <DependentUpon>UCCautareCamera.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCCautareClient.resx">
+      <DependentUpon>UCCautareClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCCautareRezervare.resx">
+      <DependentUpon>UCCautareRezervare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCModificareAngajat.resx">
+      <DependentUpon>UCModificareAngajat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCModificareCamera.resx">
       <DependentUpon>UCModificareCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCModificareClient.resx">
+      <DependentUpon>UCModificareClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCModificareRezervare.resx">
+      <DependentUpon>UCModificareRezervare.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

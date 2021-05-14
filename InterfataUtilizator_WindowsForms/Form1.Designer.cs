@@ -39,20 +39,31 @@ namespace InterfataUtilizator_WindowsForms
             this.BtnExit = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.BtnSetari = new System.Windows.Forms.Button();
+            this.BtnAngajati = new System.Windows.Forms.Button();
+            this.BtnClienti = new System.Windows.Forms.Button();
+            this.BtnRezervari = new System.Windows.Forms.Button();
+            this.BtnCamere = new System.Windows.Forms.Button();
+            this.PanelRezervari = new System.Windows.Forms.Panel();
+            this.BtnModificareRezervare = new System.Windows.Forms.Button();
+            this.BtnCautareRezervare = new System.Windows.Forms.Button();
+            this.BtnAfisareRezervari = new System.Windows.Forms.Button();
+            this.BtnAdaugareRezervare = new System.Windows.Forms.Button();
             this.PanelCamere = new System.Windows.Forms.Panel();
-            //this.PnlCautareCamera = new InterfataUtilizator_WindowsForms.UCCautareCamera();
-            //this.PnlAdaugareCamera = new InterfataUtilizator_WindowsForms.UCAdaugareCamera();
             this.ButonModificareCamera = new System.Windows.Forms.Button();
             this.ButonCautareCamera = new System.Windows.Forms.Button();
             this.ButonAfisareCamere = new System.Windows.Forms.Button();
             this.ButonAdaugareCamera = new System.Windows.Forms.Button();
-            //this.PnlAfisareCamere = new InterfataUtilizator_WindowsForms.UCAfisareCamere();
-            //this.PnlModificareCamera = new InterfataUtilizator_WindowsForms.UCModificareCamera();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.PanelClienti = new System.Windows.Forms.Panel();
+            this.BtnModificareClient = new System.Windows.Forms.Button();
+            this.BtnCautareClient = new System.Windows.Forms.Button();
+            this.BtnAfisareClienti = new System.Windows.Forms.Button();
+            this.BtnAdaugareClient = new System.Windows.Forms.Button();
+            this.PanelAngajati = new System.Windows.Forms.Panel();
+            this.BtnModificareAngajat = new System.Windows.Forms.Button();
+            this.BtnCautareAngajat = new System.Windows.Forms.Button();
+            this.BtnAfisareAngajati = new System.Windows.Forms.Button();
+            this.BtnAdaugareAngajat = new System.Windows.Forms.Button();
             this.AuthPanel = new System.Windows.Forms.Panel();
             this.MesajParola = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -63,7 +74,10 @@ namespace InterfataUtilizator_WindowsForms
             this.panel3.SuspendLayout();
             this.Navbar.SuspendLayout();
             this.MainPanel.SuspendLayout();
+            this.PanelRezervari.SuspendLayout();
             this.PanelCamere.SuspendLayout();
+            this.PanelClienti.SuspendLayout();
+            this.PanelAngajati.SuspendLayout();
             this.AuthPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -161,12 +175,15 @@ namespace InterfataUtilizator_WindowsForms
             // MainPanel
             // 
             this.MainPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.MainPanel.Controls.Add(this.BtnSetari);
+            this.MainPanel.Controls.Add(this.BtnAngajati);
+            this.MainPanel.Controls.Add(this.BtnClienti);
+            this.MainPanel.Controls.Add(this.BtnRezervari);
+            this.MainPanel.Controls.Add(this.BtnCamere);
+            this.MainPanel.Controls.Add(this.PanelAngajati);
+            this.MainPanel.Controls.Add(this.PanelRezervari);
             this.MainPanel.Controls.Add(this.PanelCamere);
-            this.MainPanel.Controls.Add(this.button5);
-            this.MainPanel.Controls.Add(this.button4);
-            this.MainPanel.Controls.Add(this.button3);
-            this.MainPanel.Controls.Add(this.button2);
-            this.MainPanel.Controls.Add(this.button1);
+            this.MainPanel.Controls.Add(this.PanelClienti);
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MainPanel.Location = new System.Drawing.Point(0, 47);
             this.MainPanel.Margin = new System.Windows.Forms.Padding(2);
@@ -174,36 +191,161 @@ namespace InterfataUtilizator_WindowsForms
             this.MainPanel.Size = new System.Drawing.Size(1042, 587);
             this.MainPanel.TabIndex = 4;
             // 
+            // BtnSetari
+            // 
+            this.BtnSetari.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.settings_icon1;
+            this.BtnSetari.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnSetari.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSetari.FlatAppearance.BorderSize = 0;
+            this.BtnSetari.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnSetari.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnSetari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSetari.Location = new System.Drawing.Point(63, 480);
+            this.BtnSetari.Name = "BtnSetari";
+            this.BtnSetari.Size = new System.Drawing.Size(29, 30);
+            this.BtnSetari.TabIndex = 4;
+            this.InfoSetari.SetToolTip(this.BtnSetari, "Setari");
+            this.BtnSetari.UseVisualStyleBackColor = true;
+            // 
+            // BtnAngajati
+            // 
+            this.BtnAngajati.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnAngajati.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnAngajati.FlatAppearance.BorderSize = 0;
+            this.BtnAngajati.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAngajati.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAngajati.Location = new System.Drawing.Point(0, 216);
+            this.BtnAngajati.Name = "BtnAngajati";
+            this.BtnAngajati.Size = new System.Drawing.Size(160, 38);
+            this.BtnAngajati.TabIndex = 3;
+            this.BtnAngajati.Text = "Angajati";
+            this.BtnAngajati.UseVisualStyleBackColor = true;
+            this.BtnAngajati.Click += new System.EventHandler(this.BtnAngajati_Click);
+            // 
+            // BtnClienti
+            // 
+            this.BtnClienti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnClienti.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnClienti.FlatAppearance.BorderSize = 0;
+            this.BtnClienti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClienti.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClienti.Location = new System.Drawing.Point(0, 172);
+            this.BtnClienti.Name = "BtnClienti";
+            this.BtnClienti.Size = new System.Drawing.Size(160, 38);
+            this.BtnClienti.TabIndex = 2;
+            this.BtnClienti.Text = "Clienti";
+            this.BtnClienti.UseVisualStyleBackColor = true;
+            this.BtnClienti.Click += new System.EventHandler(this.BtnClienti_Click);
+            // 
+            // BtnRezervari
+            // 
+            this.BtnRezervari.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnRezervari.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnRezervari.FlatAppearance.BorderSize = 0;
+            this.BtnRezervari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRezervari.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRezervari.Location = new System.Drawing.Point(0, 128);
+            this.BtnRezervari.Name = "BtnRezervari";
+            this.BtnRezervari.Size = new System.Drawing.Size(160, 38);
+            this.BtnRezervari.TabIndex = 1;
+            this.BtnRezervari.Text = "Rezervari";
+            this.BtnRezervari.UseVisualStyleBackColor = true;
+            this.BtnRezervari.Click += new System.EventHandler(this.BtnRezervari_Click);
+            // 
+            // BtnCamere
+            // 
+            this.BtnCamere.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnCamere.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCamere.FlatAppearance.BorderSize = 0;
+            this.BtnCamere.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCamere.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCamere.Location = new System.Drawing.Point(0, 84);
+            this.BtnCamere.Name = "BtnCamere";
+            this.BtnCamere.Size = new System.Drawing.Size(160, 38);
+            this.BtnCamere.TabIndex = 0;
+            this.BtnCamere.Text = "Camere";
+            this.BtnCamere.UseVisualStyleBackColor = true;
+            this.BtnCamere.Click += new System.EventHandler(this.BtnCamere_Click);
+            // 
+            // PanelRezervari
+            // 
+            this.PanelRezervari.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PanelRezervari.Controls.Add(this.BtnModificareRezervare);
+            this.PanelRezervari.Controls.Add(this.BtnCautareRezervare);
+            this.PanelRezervari.Controls.Add(this.BtnAfisareRezervari);
+            this.PanelRezervari.Controls.Add(this.BtnAdaugareRezervare);
+            this.PanelRezervari.Location = new System.Drawing.Point(160, 0);
+            this.PanelRezervari.Name = "PanelRezervari";
+            this.PanelRezervari.Size = new System.Drawing.Size(881, 586);
+            this.PanelRezervari.TabIndex = 6;
+            // 
+            // BtnModificareRezervare
+            // 
+            this.BtnModificareRezervare.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnModificareRezervare.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.edit_icon;
+            this.BtnModificareRezervare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnModificareRezervare.FlatAppearance.BorderSize = 0;
+            this.BtnModificareRezervare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnModificareRezervare.Location = new System.Drawing.Point(488, 0);
+            this.BtnModificareRezervare.Name = "BtnModificareRezervare";
+            this.BtnModificareRezervare.Size = new System.Drawing.Size(44, 43);
+            this.BtnModificareRezervare.TabIndex = 3;
+            this.BtnModificareRezervare.UseVisualStyleBackColor = false;
+            this.BtnModificareRezervare.Click += new System.EventHandler(this.BtnModificareRezervare_Click);
+            // 
+            // BtnCautareRezervare
+            // 
+            this.BtnCautareRezervare.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnCautareRezervare.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.search_icon1;
+            this.BtnCautareRezervare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnCautareRezervare.FlatAppearance.BorderSize = 0;
+            this.BtnCautareRezervare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCautareRezervare.Location = new System.Drawing.Point(438, 0);
+            this.BtnCautareRezervare.Name = "BtnCautareRezervare";
+            this.BtnCautareRezervare.Size = new System.Drawing.Size(44, 43);
+            this.BtnCautareRezervare.TabIndex = 2;
+            this.BtnCautareRezervare.UseVisualStyleBackColor = false;
+            this.BtnCautareRezervare.Click += new System.EventHandler(this.BtnCautareRezervare_Click);
+            // 
+            // BtnAfisareRezervari
+            // 
+            this.BtnAfisareRezervari.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnAfisareRezervari.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.show_icon1;
+            this.BtnAfisareRezervari.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnAfisareRezervari.FlatAppearance.BorderSize = 0;
+            this.BtnAfisareRezervari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAfisareRezervari.Location = new System.Drawing.Point(388, 0);
+            this.BtnAfisareRezervari.Name = "BtnAfisareRezervari";
+            this.BtnAfisareRezervari.Size = new System.Drawing.Size(44, 43);
+            this.BtnAfisareRezervari.TabIndex = 1;
+            this.BtnAfisareRezervari.UseVisualStyleBackColor = false;
+            this.BtnAfisareRezervari.Click += new System.EventHandler(this.BtnAfisareRezervari_Click);
+            // 
+            // BtnAdaugareRezervare
+            // 
+            this.BtnAdaugareRezervare.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnAdaugareRezervare.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.plus_icon1;
+            this.BtnAdaugareRezervare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnAdaugareRezervare.FlatAppearance.BorderSize = 0;
+            this.BtnAdaugareRezervare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAdaugareRezervare.Location = new System.Drawing.Point(338, 0);
+            this.BtnAdaugareRezervare.Name = "BtnAdaugareRezervare";
+            this.BtnAdaugareRezervare.Size = new System.Drawing.Size(44, 43);
+            this.BtnAdaugareRezervare.TabIndex = 0;
+            this.BtnAdaugareRezervare.UseVisualStyleBackColor = false;
+            this.BtnAdaugareRezervare.Click += new System.EventHandler(this.BtnAdaugareRezervare_Click);
+            // 
             // PanelCamere
             // 
             this.PanelCamere.BackColor = System.Drawing.SystemColors.ButtonFace;
-            //this.PanelCamere.Controls.Add(this.PnlCautareCamera);
-            //this.PanelCamere.Controls.Add(this.PnlAdaugareCamera);
             this.PanelCamere.Controls.Add(this.ButonModificareCamera);
             this.PanelCamere.Controls.Add(this.ButonCautareCamera);
             this.PanelCamere.Controls.Add(this.ButonAfisareCamere);
             this.PanelCamere.Controls.Add(this.ButonAdaugareCamera);
-            //this.PanelCamere.Controls.Add(this.PnlAfisareCamere);
-            //this.PanelCamere.Controls.Add(this.PnlModificareCamera);
             this.PanelCamere.Location = new System.Drawing.Point(160, 0);
             this.PanelCamere.Name = "PanelCamere";
             this.PanelCamere.Size = new System.Drawing.Size(881, 586);
             this.PanelCamere.TabIndex = 5;
-            //// 
-            //// PnlCautareCamera
-            //// 
-            //this.PnlCautareCamera.Location = new System.Drawing.Point(29, 49);
-            //this.PnlCautareCamera.Name = "PnlCautareCamera";
-            //this.PnlCautareCamera.Size = new System.Drawing.Size(824, 515);
-            //this.PnlCautareCamera.TabIndex = 6;
-            //this.PnlCautareCamera.Visible = false;
-            //// 
-            //// PnlAdaugareCamera
-            //// 
-            //this.PnlAdaugareCamera.Location = new System.Drawing.Point(29, 49);
-            //this.PnlAdaugareCamera.Name = "PnlAdaugareCamera";
-            //this.PnlAdaugareCamera.Size = new System.Drawing.Size(824, 515);
-            //this.PnlAdaugareCamera.TabIndex = 4;
             // 
             // ButonModificareCamera
             // 
@@ -261,94 +403,141 @@ namespace InterfataUtilizator_WindowsForms
             this.ButonAdaugareCamera.UseVisualStyleBackColor = false;
             this.ButonAdaugareCamera.Click += new System.EventHandler(this.ButonAdaugareCamera_Click);
             // 
-            //// PnlAfisareCamere
-            //// 
-            //this.PnlAfisareCamere.Location = new System.Drawing.Point(29, 49);
-            //this.PnlAfisareCamere.Name = "PnlAfisareCamere";
-            //this.PnlAfisareCamere.Size = new System.Drawing.Size(824, 515);
-            //this.PnlAfisareCamere.TabIndex = 5;
-            //this.PnlAfisareCamere.Visible = false;
-            //this.PnlAfisareCamere.Load += new System.EventHandler(this.PnlAfisareCamere_Load);
-            //// 
-            //// PnlModificareCamera
-            //// 
-            //this.PnlModificareCamera.Location = new System.Drawing.Point(29, 49);
-            //this.PnlModificareCamera.Name = "PnlModificareCamera";
-            //this.PnlModificareCamera.Size = new System.Drawing.Size(824, 515);
-            //this.PnlModificareCamera.TabIndex = 7;
-            //this.PnlModificareCamera.Visible = false;
+            // PanelClienti
             // 
-            // button5
+            this.PanelClienti.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PanelClienti.Controls.Add(this.BtnModificareClient);
+            this.PanelClienti.Controls.Add(this.BtnCautareClient);
+            this.PanelClienti.Controls.Add(this.BtnAfisareClienti);
+            this.PanelClienti.Controls.Add(this.BtnAdaugareClient);
+            this.PanelClienti.Location = new System.Drawing.Point(160, 0);
+            this.PanelClienti.Name = "PanelClienti";
+            this.PanelClienti.Size = new System.Drawing.Size(881, 586);
+            this.PanelClienti.TabIndex = 7;
             // 
-            this.button5.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.settings_icon1;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(63, 480);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(29, 30);
-            this.button5.TabIndex = 4;
-            this.InfoSetari.SetToolTip(this.button5, "Setari");
-            this.button5.UseVisualStyleBackColor = true;
+            // BtnModificareClient
             // 
-            // button4
+            this.BtnModificareClient.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnModificareClient.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.edit_icon;
+            this.BtnModificareClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnModificareClient.FlatAppearance.BorderSize = 0;
+            this.BtnModificareClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnModificareClient.Location = new System.Drawing.Point(488, 0);
+            this.BtnModificareClient.Name = "BtnModificareClient";
+            this.BtnModificareClient.Size = new System.Drawing.Size(44, 43);
+            this.BtnModificareClient.TabIndex = 3;
+            this.BtnModificareClient.UseVisualStyleBackColor = false;
+            this.BtnModificareClient.Click += new System.EventHandler(this.BtnModificareClient_Click);
             // 
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 216);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(161, 38);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Angajati";
-            this.button4.UseVisualStyleBackColor = true;
+            // BtnCautareClient
             // 
-            // button3
+            this.BtnCautareClient.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnCautareClient.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.search_icon1;
+            this.BtnCautareClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnCautareClient.FlatAppearance.BorderSize = 0;
+            this.BtnCautareClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCautareClient.Location = new System.Drawing.Point(438, 0);
+            this.BtnCautareClient.Name = "BtnCautareClient";
+            this.BtnCautareClient.Size = new System.Drawing.Size(44, 43);
+            this.BtnCautareClient.TabIndex = 2;
+            this.BtnCautareClient.UseVisualStyleBackColor = false;
+            this.BtnCautareClient.Click += new System.EventHandler(this.BtnCautareClient_Click);
             // 
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 172);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(161, 38);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Clienti";
-            this.button3.UseVisualStyleBackColor = true;
+            // BtnAfisareClienti
             // 
-            // button2
+            this.BtnAfisareClienti.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnAfisareClienti.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.show_icon1;
+            this.BtnAfisareClienti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnAfisareClienti.FlatAppearance.BorderSize = 0;
+            this.BtnAfisareClienti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAfisareClienti.Location = new System.Drawing.Point(388, 0);
+            this.BtnAfisareClienti.Name = "BtnAfisareClienti";
+            this.BtnAfisareClienti.Size = new System.Drawing.Size(44, 43);
+            this.BtnAfisareClienti.TabIndex = 1;
+            this.BtnAfisareClienti.UseVisualStyleBackColor = false;
+            this.BtnAfisareClienti.Click += new System.EventHandler(this.BtnAfisareClienti_Click);
             // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 128);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(161, 38);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Rezervari";
-            this.button2.UseVisualStyleBackColor = true;
+            // BtnAdaugareClient
             // 
-            // button1
+            this.BtnAdaugareClient.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnAdaugareClient.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.plus_icon1;
+            this.BtnAdaugareClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnAdaugareClient.FlatAppearance.BorderSize = 0;
+            this.BtnAdaugareClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAdaugareClient.Location = new System.Drawing.Point(338, 0);
+            this.BtnAdaugareClient.Name = "BtnAdaugareClient";
+            this.BtnAdaugareClient.Size = new System.Drawing.Size(44, 43);
+            this.BtnAdaugareClient.TabIndex = 0;
+            this.BtnAdaugareClient.UseVisualStyleBackColor = false;
+            this.BtnAdaugareClient.Click += new System.EventHandler(this.BtnAdaugareClient_Click);
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 84);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 38);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Camere";
-            this.button1.UseVisualStyleBackColor = true;
+            // PanelAngajati
+            // 
+            this.PanelAngajati.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.PanelAngajati.Controls.Add(this.BtnModificareAngajat);
+            this.PanelAngajati.Controls.Add(this.BtnCautareAngajat);
+            this.PanelAngajati.Controls.Add(this.BtnAfisareAngajati);
+            this.PanelAngajati.Controls.Add(this.BtnAdaugareAngajat);
+            this.PanelAngajati.Location = new System.Drawing.Point(160, 0);
+            this.PanelAngajati.Name = "PanelAngajati";
+            this.PanelAngajati.Size = new System.Drawing.Size(881, 586);
+            this.PanelAngajati.TabIndex = 8;
+            // 
+            // BtnModificareAngajat
+            // 
+            this.BtnModificareAngajat.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnModificareAngajat.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.edit_icon;
+            this.BtnModificareAngajat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnModificareAngajat.FlatAppearance.BorderSize = 0;
+            this.BtnModificareAngajat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnModificareAngajat.Location = new System.Drawing.Point(488, 0);
+            this.BtnModificareAngajat.Name = "BtnModificareAngajat";
+            this.BtnModificareAngajat.Size = new System.Drawing.Size(44, 43);
+            this.BtnModificareAngajat.TabIndex = 3;
+            this.BtnModificareAngajat.UseVisualStyleBackColor = false;
+            this.BtnModificareAngajat.Click += new System.EventHandler(this.BtnModificareAngajat_Click);
+            // 
+            // BtnCautareAngajat
+            // 
+            this.BtnCautareAngajat.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnCautareAngajat.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.search_icon1;
+            this.BtnCautareAngajat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnCautareAngajat.FlatAppearance.BorderSize = 0;
+            this.BtnCautareAngajat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCautareAngajat.Location = new System.Drawing.Point(438, 0);
+            this.BtnCautareAngajat.Name = "BtnCautareAngajat";
+            this.BtnCautareAngajat.Size = new System.Drawing.Size(44, 43);
+            this.BtnCautareAngajat.TabIndex = 2;
+            this.BtnCautareAngajat.UseVisualStyleBackColor = false;
+            this.BtnCautareAngajat.Click += new System.EventHandler(this.BtnCautareAngajat_Click);
+            // 
+            // BtnAfisareAngajati
+            // 
+            this.BtnAfisareAngajati.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnAfisareAngajati.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.show_icon1;
+            this.BtnAfisareAngajati.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnAfisareAngajati.FlatAppearance.BorderSize = 0;
+            this.BtnAfisareAngajati.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAfisareAngajati.Location = new System.Drawing.Point(388, 0);
+            this.BtnAfisareAngajati.Name = "BtnAfisareAngajati";
+            this.BtnAfisareAngajati.Size = new System.Drawing.Size(44, 43);
+            this.BtnAfisareAngajati.TabIndex = 1;
+            this.BtnAfisareAngajati.UseVisualStyleBackColor = false;
+            this.BtnAfisareAngajati.Click += new System.EventHandler(this.BtnAfisareAngajati_Click);
+            // 
+            // BtnAdaugareAngajat
+            // 
+            this.BtnAdaugareAngajat.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnAdaugareAngajat.BackgroundImage = global::InterfataUtilizator_WindowsForms.Properties.Resources.plus_icon1;
+            this.BtnAdaugareAngajat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnAdaugareAngajat.FlatAppearance.BorderSize = 0;
+            this.BtnAdaugareAngajat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAdaugareAngajat.Location = new System.Drawing.Point(338, 0);
+            this.BtnAdaugareAngajat.Name = "BtnAdaugareAngajat";
+            this.BtnAdaugareAngajat.Size = new System.Drawing.Size(44, 43);
+            this.BtnAdaugareAngajat.TabIndex = 0;
+            this.BtnAdaugareAngajat.UseVisualStyleBackColor = false;
+            this.BtnAdaugareAngajat.Click += new System.EventHandler(this.BtnAdaugareAngajat_Click);
             // 
             // AuthPanel
             // 
@@ -427,7 +616,10 @@ namespace InterfataUtilizator_WindowsForms
             this.Navbar.ResumeLayout(false);
             this.Navbar.PerformLayout();
             this.MainPanel.ResumeLayout(false);
+            this.PanelRezervari.ResumeLayout(false);
             this.PanelCamere.ResumeLayout(false);
+            this.PanelClienti.ResumeLayout(false);
+            this.PanelAngajati.ResumeLayout(false);
             this.AuthPanel.ResumeLayout(false);
             this.AuthPanel.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -446,11 +638,11 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.Panel Navbar;
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnSetari;
+        private System.Windows.Forms.Button BtnAngajati;
+        private System.Windows.Forms.Button BtnClienti;
+        private System.Windows.Forms.Button BtnRezervari;
+        private System.Windows.Forms.Button BtnCamere;
         private System.Windows.Forms.Button BtnExit;
         private System.Windows.Forms.Panel AuthPanel;
         private System.Windows.Forms.TextBox TxtBxParola;
@@ -463,8 +655,23 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.Button ButonModificareCamera;
         private System.Windows.Forms.Button ButonCautareCamera;
         private System.Windows.Forms.Button ButonAfisareCamere;
+        private System.Windows.Forms.Panel PanelRezervari;
+        private System.Windows.Forms.Button BtnModificareRezervare;
+        private System.Windows.Forms.Button BtnCautareRezervare;
+        private System.Windows.Forms.Button BtnAfisareRezervari;
+        private System.Windows.Forms.Button BtnAdaugareRezervare;
+        private System.Windows.Forms.Panel PanelClienti;
+        private System.Windows.Forms.Panel PanelAngajati;
+        private System.Windows.Forms.Button BtnModificareAngajat;
+        private System.Windows.Forms.Button BtnCautareAngajat;
+        private System.Windows.Forms.Button BtnAfisareAngajati;
+        private System.Windows.Forms.Button BtnAdaugareAngajat;
+        private System.Windows.Forms.Button BtnModificareClient;
+        private System.Windows.Forms.Button BtnCautareClient;
+        private System.Windows.Forms.Button BtnAfisareClienti;
+        private System.Windows.Forms.Button BtnAdaugareClient;
         //private UCModificareCamera PnlModificareCamera;
-       // private UCCautareCamera PnlCautareCamera;
+        // private UCCautareCamera PnlCautareCamera;
         //private UCAfisareCamere PnlAfisareCamere;
         //private UCAdaugareCamera PnlAdaugareCamera;
     }

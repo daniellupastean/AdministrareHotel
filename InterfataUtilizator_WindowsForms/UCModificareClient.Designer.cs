@@ -1,7 +1,7 @@
 ﻿
 namespace InterfataUtilizator_WindowsForms
 {
-    partial class UCModificareCamera
+    partial class UCModificareClient
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,14 +29,14 @@ namespace InterfataUtilizator_WindowsForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.PnlModificareCamera = new System.Windows.Forms.Panel();
+            this.PnlModificareClient = new System.Windows.Forms.Panel();
             this.LblCautareAvertisment = new System.Windows.Forms.Label();
             this.TxtIDCamera = new System.Windows.Forms.TextBox();
             this.LblIDCamera = new System.Windows.Forms.Label();
             this.BtnCautaCamera = new System.Windows.Forms.Button();
             this.PnlDateCamera = new System.Windows.Forms.Panel();
             this.LblAvertismentModificare = new System.Windows.Forms.Label();
-            this.BtnModificaCamera = new System.Windows.Forms.Button();
+            this.BtnModificaClient = new System.Windows.Forms.Button();
             this.RBtnQuad = new System.Windows.Forms.RadioButton();
             this.RBtnTripla = new System.Windows.Forms.RadioButton();
             this.RBtnMatrimoniala = new System.Windows.Forms.RadioButton();
@@ -59,24 +59,24 @@ namespace InterfataUtilizator_WindowsForms
             this.LblDimensiuneCamera = new System.Windows.Forms.Label();
             this.TxtDenumireCamera = new System.Windows.Forms.TextBox();
             this.LblDenumireCamera = new System.Windows.Forms.Label();
-            this.LblTitluAdaugareCamera = new System.Windows.Forms.Label();
-            this.PnlModificareCamera.SuspendLayout();
+            this.LblTitluAdaugareClient = new System.Windows.Forms.Label();
+            this.PnlModificareClient.SuspendLayout();
             this.PnlDateCamera.SuspendLayout();
             this.SuspendLayout();
             // 
-            // PnlModificareCamera
+            // PnlModificareClient
             // 
-            this.PnlModificareCamera.BackColor = System.Drawing.Color.Transparent;
-            this.PnlModificareCamera.Controls.Add(this.LblCautareAvertisment);
-            this.PnlModificareCamera.Controls.Add(this.TxtIDCamera);
-            this.PnlModificareCamera.Controls.Add(this.LblIDCamera);
-            this.PnlModificareCamera.Controls.Add(this.BtnCautaCamera);
-            this.PnlModificareCamera.Controls.Add(this.PnlDateCamera);
-            this.PnlModificareCamera.Controls.Add(this.LblTitluAdaugareCamera);
-            this.PnlModificareCamera.Location = new System.Drawing.Point(0, 0);
-            this.PnlModificareCamera.Name = "PnlModificareCamera";
-            this.PnlModificareCamera.Size = new System.Drawing.Size(824, 515);
-            this.PnlModificareCamera.TabIndex = 5;
+            this.PnlModificareClient.BackColor = System.Drawing.Color.Transparent;
+            this.PnlModificareClient.Controls.Add(this.LblCautareAvertisment);
+            this.PnlModificareClient.Controls.Add(this.TxtIDCamera);
+            this.PnlModificareClient.Controls.Add(this.LblIDCamera);
+            this.PnlModificareClient.Controls.Add(this.BtnCautaCamera);
+            this.PnlModificareClient.Controls.Add(this.PnlDateCamera);
+            this.PnlModificareClient.Controls.Add(this.LblTitluAdaugareClient);
+            this.PnlModificareClient.Location = new System.Drawing.Point(0, 0);
+            this.PnlModificareClient.Name = "PnlModificareClient";
+            this.PnlModificareClient.Size = new System.Drawing.Size(824, 515);
+            this.PnlModificareClient.TabIndex = 6;
             // 
             // LblCautareAvertisment
             // 
@@ -118,12 +118,11 @@ namespace InterfataUtilizator_WindowsForms
             this.BtnCautaCamera.TabIndex = 25;
             this.BtnCautaCamera.Text = "Cauta";
             this.BtnCautaCamera.UseVisualStyleBackColor = false;
-            this.BtnCautaCamera.Click += new System.EventHandler(this.BtnCautaCamera_Click);
             // 
             // PnlDateCamera
             // 
             this.PnlDateCamera.Controls.Add(this.LblAvertismentModificare);
-            this.PnlDateCamera.Controls.Add(this.BtnModificaCamera);
+            this.PnlDateCamera.Controls.Add(this.BtnModificaClient);
             this.PnlDateCamera.Controls.Add(this.RBtnQuad);
             this.PnlDateCamera.Controls.Add(this.RBtnTripla);
             this.PnlDateCamera.Controls.Add(this.RBtnMatrimoniala);
@@ -162,19 +161,18 @@ namespace InterfataUtilizator_WindowsForms
             this.LblAvertismentModificare.Size = new System.Drawing.Size(0, 17);
             this.LblAvertismentModificare.TabIndex = 46;
             // 
-            // BtnModificaCamera
+            // BtnModificaClient
             // 
-            this.BtnModificaCamera.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.BtnModificaCamera.FlatAppearance.BorderSize = 0;
-            this.BtnModificaCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnModificaCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnModificaCamera.Location = new System.Drawing.Point(306, 329);
-            this.BtnModificaCamera.Name = "BtnModificaCamera";
-            this.BtnModificaCamera.Size = new System.Drawing.Size(94, 34);
-            this.BtnModificaCamera.TabIndex = 45;
-            this.BtnModificaCamera.Text = "Modifica";
-            this.BtnModificaCamera.UseVisualStyleBackColor = false;
-            this.BtnModificaCamera.Click += new System.EventHandler(this.BtnModificaCamera_Click);
+            this.BtnModificaClient.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnModificaClient.FlatAppearance.BorderSize = 0;
+            this.BtnModificaClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnModificaClient.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModificaClient.Location = new System.Drawing.Point(306, 329);
+            this.BtnModificaClient.Name = "BtnModificaClient";
+            this.BtnModificaClient.Size = new System.Drawing.Size(94, 34);
+            this.BtnModificaClient.TabIndex = 45;
+            this.BtnModificaClient.Text = "Modifica";
+            this.BtnModificaClient.UseVisualStyleBackColor = false;
             // 
             // RBtnQuad
             // 
@@ -286,7 +284,6 @@ namespace InterfataUtilizator_WindowsForms
             this.ChBxFrigider.TabIndex = 35;
             this.ChBxFrigider.Text = "Frigider";
             this.ChBxFrigider.UseVisualStyleBackColor = true;
-            this.ChBxFrigider.CheckStateChanged += new System.EventHandler(this.CkbFacilitati_CheckedChanged);
             // 
             // ChBxJacuzzi
             // 
@@ -298,7 +295,6 @@ namespace InterfataUtilizator_WindowsForms
             this.ChBxJacuzzi.TabIndex = 34;
             this.ChBxJacuzzi.Text = "Jacuzzi";
             this.ChBxJacuzzi.UseVisualStyleBackColor = true;
-            this.ChBxJacuzzi.CheckStateChanged += new System.EventHandler(this.CkbFacilitati_CheckedChanged);
             // 
             // ChBxSeif
             // 
@@ -310,7 +306,6 @@ namespace InterfataUtilizator_WindowsForms
             this.ChBxSeif.TabIndex = 33;
             this.ChBxSeif.Text = "Seif";
             this.ChBxSeif.UseVisualStyleBackColor = true;
-            this.ChBxSeif.CheckedChanged += new System.EventHandler(this.CkbFacilitati_CheckedChanged);
             // 
             // ChBxInternet
             // 
@@ -322,7 +317,6 @@ namespace InterfataUtilizator_WindowsForms
             this.ChBxInternet.TabIndex = 32;
             this.ChBxInternet.Text = "Internet";
             this.ChBxInternet.UseVisualStyleBackColor = true;
-            this.ChBxInternet.CheckedChanged += new System.EventHandler(this.CkbFacilitati_CheckedChanged);
             // 
             // ChBxTV
             // 
@@ -334,7 +328,6 @@ namespace InterfataUtilizator_WindowsForms
             this.ChBxTV.TabIndex = 31;
             this.ChBxTV.Text = "TV";
             this.ChBxTV.UseVisualStyleBackColor = true;
-            this.ChBxTV.CheckedChanged += new System.EventHandler(this.CkbFacilitati_CheckedChanged);
             // 
             // ChBxNiciuna
             // 
@@ -346,7 +339,6 @@ namespace InterfataUtilizator_WindowsForms
             this.ChBxNiciuna.TabIndex = 30;
             this.ChBxNiciuna.Text = "Niciuna";
             this.ChBxNiciuna.UseVisualStyleBackColor = true;
-            this.ChBxNiciuna.CheckedChanged += new System.EventHandler(this.CkbFacilitati_CheckedChanged);
             // 
             // LblFacilitatiCamera
             // 
@@ -412,26 +404,25 @@ namespace InterfataUtilizator_WindowsForms
             this.LblDenumireCamera.TabIndex = 23;
             this.LblDenumireCamera.Text = "Denumire";
             // 
-            // LblTitluAdaugareCamera
+            // LblTitluAdaugareClient
             // 
-            this.LblTitluAdaugareCamera.AutoSize = true;
-            this.LblTitluAdaugareCamera.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTitluAdaugareCamera.Location = new System.Drawing.Point(263, 32);
-            this.LblTitluAdaugareCamera.Name = "LblTitluAdaugareCamera";
-            this.LblTitluAdaugareCamera.Size = new System.Drawing.Size(275, 33);
-            this.LblTitluAdaugareCamera.TabIndex = 23;
-            this.LblTitluAdaugareCamera.Text = "Modificare Camera";
+            this.LblTitluAdaugareClient.AutoSize = true;
+            this.LblTitluAdaugareClient.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitluAdaugareClient.Location = new System.Drawing.Point(263, 32);
+            this.LblTitluAdaugareClient.Name = "LblTitluAdaugareClient";
+            this.LblTitluAdaugareClient.Size = new System.Drawing.Size(243, 33);
+            this.LblTitluAdaugareClient.TabIndex = 23;
+            this.LblTitluAdaugareClient.Text = "Modificare Client";
             // 
-            // UCModificareCamera
+            // UCModificareClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.PnlModificareCamera);
-            this.Name = "UCModificareCamera";
+            this.Controls.Add(this.PnlModificareClient);
+            this.Name = "UCModificareClient";
             this.Size = new System.Drawing.Size(824, 515);
-            this.Load += new System.EventHandler(this.UCModificareCamera_Load);
-            this.PnlModificareCamera.ResumeLayout(false);
-            this.PnlModificareCamera.PerformLayout();
+            this.PnlModificareClient.ResumeLayout(false);
+            this.PnlModificareClient.PerformLayout();
             this.PnlDateCamera.ResumeLayout(false);
             this.PnlDateCamera.PerformLayout();
             this.ResumeLayout(false);
@@ -440,9 +431,14 @@ namespace InterfataUtilizator_WindowsForms
 
         #endregion
 
-        private System.Windows.Forms.Panel PnlModificareCamera;
-        private System.Windows.Forms.Label LblTitluAdaugareCamera;
+        private System.Windows.Forms.Panel PnlModificareClient;
+        private System.Windows.Forms.Label LblCautareAvertisment;
+        private System.Windows.Forms.TextBox TxtIDCamera;
+        private System.Windows.Forms.Label LblIDCamera;
+        private System.Windows.Forms.Button BtnCautaCamera;
         private System.Windows.Forms.Panel PnlDateCamera;
+        private System.Windows.Forms.Label LblAvertismentModificare;
+        private System.Windows.Forms.Button BtnModificaClient;
         private System.Windows.Forms.RadioButton RBtnQuad;
         private System.Windows.Forms.RadioButton RBtnTripla;
         private System.Windows.Forms.RadioButton RBtnMatrimoniala;
@@ -465,11 +461,6 @@ namespace InterfataUtilizator_WindowsForms
         private System.Windows.Forms.Label LblDimensiuneCamera;
         private System.Windows.Forms.TextBox TxtDenumireCamera;
         private System.Windows.Forms.Label LblDenumireCamera;
-        private System.Windows.Forms.Label LblCautareAvertisment;
-        private System.Windows.Forms.TextBox TxtIDCamera;
-        private System.Windows.Forms.Label LblIDCamera;
-        private System.Windows.Forms.Button BtnCautaCamera;
-        private System.Windows.Forms.Label LblAvertismentModificare;
-        private System.Windows.Forms.Button BtnModificaCamera;
+        private System.Windows.Forms.Label LblTitluAdaugareClient;
     }
 }
