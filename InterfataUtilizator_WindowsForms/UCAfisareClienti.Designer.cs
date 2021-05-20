@@ -29,23 +29,24 @@ namespace InterfataUtilizator_WindowsForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.PnlAfisareCamere = new System.Windows.Forms.Panel();
+            this.PnlAfisareClienti = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LsBxAfisareClienti = new System.Windows.Forms.ListBox();
             this.LblTitluAfisareClienti = new System.Windows.Forms.Label();
-            this.PnlAfisareCamere.SuspendLayout();
+            this.PnlAfisareClienti.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // PnlAfisareCamere
+            // PnlAfisareClienti
             // 
-            this.PnlAfisareCamere.BackColor = System.Drawing.Color.Transparent;
-            this.PnlAfisareCamere.Controls.Add(this.panel1);
-            this.PnlAfisareCamere.Controls.Add(this.LblTitluAfisareClienti);
-            this.PnlAfisareCamere.Location = new System.Drawing.Point(0, 0);
-            this.PnlAfisareCamere.Name = "PnlAfisareCamere";
-            this.PnlAfisareCamere.Size = new System.Drawing.Size(824, 515);
-            this.PnlAfisareCamere.TabIndex = 8;
+            this.PnlAfisareClienti.BackColor = System.Drawing.Color.Transparent;
+            this.PnlAfisareClienti.Controls.Add(this.panel1);
+            this.PnlAfisareClienti.Controls.Add(this.LblTitluAfisareClienti);
+            this.PnlAfisareClienti.Location = new System.Drawing.Point(0, 0);
+            this.PnlAfisareClienti.Name = "PnlAfisareClienti";
+            this.PnlAfisareClienti.Size = new System.Drawing.Size(824, 515);
+            this.PnlAfisareClienti.TabIndex = 8;
+            this.PnlAfisareClienti.VisibleChanged += new System.EventHandler(this.PnlAfisareClienti_VisibleChanged);
             // 
             // panel1
             // 
@@ -81,11 +82,12 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.PnlAfisareCamere);
+            this.Controls.Add(this.PnlAfisareClienti);
             this.Name = "UCAfisareClienti";
             this.Size = new System.Drawing.Size(824, 515);
-            this.PnlAfisareCamere.ResumeLayout(false);
-            this.PnlAfisareCamere.PerformLayout();
+            this.Load += new System.EventHandler(this.UCAfisareClienti_Load);
+            this.PnlAfisareClienti.ResumeLayout(false);
+            this.PnlAfisareClienti.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -93,7 +95,7 @@ namespace InterfataUtilizator_WindowsForms
 
         #endregion
 
-        private System.Windows.Forms.Panel PnlAfisareCamere;
+        private System.Windows.Forms.Panel PnlAfisareClienti;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListBox LsBxAfisareClienti;
         private System.Windows.Forms.Label LblTitluAfisareClienti;

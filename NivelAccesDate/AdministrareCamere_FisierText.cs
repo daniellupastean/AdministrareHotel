@@ -68,6 +68,7 @@ namespace NivelAccesDate
                     {
                         Camera cameraDinFisier = new Camera(line);
                         camere.Add(cameraDinFisier);
+                        Camera.IdUltimaCamera = cameraDinFisier.ID_camera;
                     }
                 }
             }

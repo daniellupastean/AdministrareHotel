@@ -43,7 +43,8 @@ namespace InterfataUtilizator_WindowsForms
                     t = TipCamera.Quad;
 
                 LblAdaugareCameraAvertisment.ForeColor = Color.Green;
-                string line = $"1,{TxtDenumireCamera.Text},{TxtDimensiuneCamera.Text},{TxtEtajCamera.Text},{(int)facilitatiSelectate},{(int)t},{TxtBxPret.Text}";
+                Camera.IdUltimaCamera++;
+                string line = $"{Camera.IdUltimaCamera},{TxtDenumireCamera.Text},{TxtDimensiuneCamera.Text},{TxtEtajCamera.Text},{(int)facilitatiSelectate},{(int)t},{TxtBxPret.Text}";
                 camere.Add(new Camera(line));
                 adminCamere.AddCamera(new Camera(line));
 

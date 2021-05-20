@@ -24,18 +24,26 @@ namespace LibrarieModele
             }
         }
 
+        static public string HeaderInfo()
+        {
+            string sf = "{0,-15}{1,-15}{2,-15} {3,-20}";
+
+            return string.Format(sf, "Nume", "Prenume", "CNP", "ID Rezervari");
+        }
+
         public override string ConversieLaSir()
         {
-            string dateForDisplay = $"{CNP}, {Nume} {Prenume}, ";
-            foreach(int rezervare in ID_rezervari)
+            string sf = "{0,-15}{1,-15}{2,-15} {3,-20}";
+            string rezervari = "";
+            foreach (int rezervare in ID_rezervari)
             {
-                
-                dateForDisplay += $"{rezervare}-";
+
+                rezervari += $"{rezervare}-";
             }
 
-            dateForDisplay = dateForDisplay.TrimEnd('-');
+            rezervari = rezervari.TrimEnd('-');
 
-            return dateForDisplay;
+            return string.Format(sf, Nume, Prenume, CNP, rezervari);
         }
 
         public string ConversieLaSir_PentruScriereInFisier()
@@ -50,28 +58,5 @@ namespace LibrarieModele
 
             return dateForDisplay;
         }
-
-        public void Update(string _CNP, string _Nume, string _Prenume, string _ID_rezervari)
-        {
-            CNP = _CNP;
-            Nume = _Nume;
-            Prenume = _Prenume;
-
-            string[] rezervariAsArrayOfStrings = _ID_rezervari.Split('-');
-
-
-            ID_rezervari = new int[rezervariAsArrayOfStrings.Length];
-            for (int i = 0; i < ID_rezervari.Length; i++)
-            {
-                ID_rezervari[i] = int.Parse(rezervariAsArrayOfStrings[i]);
-            }
-        }
-
-
-
-
-
-
-
     }
 }
