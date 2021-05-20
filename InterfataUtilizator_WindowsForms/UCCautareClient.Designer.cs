@@ -31,12 +31,14 @@ namespace InterfataUtilizator_WindowsForms
         {
             this.PnlCautareClient = new System.Windows.Forms.Panel();
             this.PnlAfisareClientCautat = new System.Windows.Forms.Panel();
-            this.LblCameraCautata = new System.Windows.Forms.Label();
+            this.LblClientCautat = new System.Windows.Forms.Label();
             this.LblHeaderInfo = new System.Windows.Forms.Label();
-            this.LblCautareAvertisment = new System.Windows.Forms.Label();
             this.LblTitluCautareClient = new System.Windows.Forms.Label();
-            this.TxtIDCamera = new System.Windows.Forms.TextBox();
-            this.LblIDClient = new System.Windows.Forms.Label();
+            this.TxtPrenumeClientCautat = new System.Windows.Forms.TextBox();
+            this.LblPrenumeClientCautat = new System.Windows.Forms.Label();
+            this.LblAvertismentCautare = new System.Windows.Forms.Label();
+            this.TxtNumeClientCautat = new System.Windows.Forms.TextBox();
+            this.LblNumeClientCautat = new System.Windows.Forms.Label();
             this.BtnCautaClient = new System.Windows.Forms.Button();
             this.PnlCautareClient.SuspendLayout();
             this.PnlAfisareClientCautat.SuspendLayout();
@@ -45,12 +47,14 @@ namespace InterfataUtilizator_WindowsForms
             // PnlCautareClient
             // 
             this.PnlCautareClient.BackColor = System.Drawing.Color.Transparent;
-            this.PnlCautareClient.Controls.Add(this.PnlAfisareClientCautat);
-            this.PnlCautareClient.Controls.Add(this.LblCautareAvertisment);
-            this.PnlCautareClient.Controls.Add(this.LblTitluCautareClient);
-            this.PnlCautareClient.Controls.Add(this.TxtIDCamera);
-            this.PnlCautareClient.Controls.Add(this.LblIDClient);
+            this.PnlCautareClient.Controls.Add(this.TxtPrenumeClientCautat);
+            this.PnlCautareClient.Controls.Add(this.LblPrenumeClientCautat);
+            this.PnlCautareClient.Controls.Add(this.LblAvertismentCautare);
+            this.PnlCautareClient.Controls.Add(this.TxtNumeClientCautat);
+            this.PnlCautareClient.Controls.Add(this.LblNumeClientCautat);
             this.PnlCautareClient.Controls.Add(this.BtnCautaClient);
+            this.PnlCautareClient.Controls.Add(this.LblTitluCautareClient);
+            this.PnlCautareClient.Controls.Add(this.PnlAfisareClientCautat);
             this.PnlCautareClient.Location = new System.Drawing.Point(0, 0);
             this.PnlCautareClient.Name = "PnlCautareClient";
             this.PnlCautareClient.Size = new System.Drawing.Size(824, 515);
@@ -59,22 +63,22 @@ namespace InterfataUtilizator_WindowsForms
             // PnlAfisareClientCautat
             // 
             this.PnlAfisareClientCautat.BackColor = System.Drawing.Color.White;
-            this.PnlAfisareClientCautat.Controls.Add(this.LblCameraCautata);
+            this.PnlAfisareClientCautat.Controls.Add(this.LblClientCautat);
             this.PnlAfisareClientCautat.Controls.Add(this.LblHeaderInfo);
-            this.PnlAfisareClientCautat.Location = new System.Drawing.Point(44, 261);
+            this.PnlAfisareClientCautat.Location = new System.Drawing.Point(50, 261);
             this.PnlAfisareClientCautat.Name = "PnlAfisareClientCautat";
             this.PnlAfisareClientCautat.Size = new System.Drawing.Size(726, 92);
             this.PnlAfisareClientCautat.TabIndex = 25;
             this.PnlAfisareClientCautat.Visible = false;
             // 
-            // LblCameraCautata
+            // LblClientCautat
             // 
-            this.LblCameraCautata.AutoSize = true;
-            this.LblCameraCautata.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCameraCautata.Location = new System.Drawing.Point(10, 50);
-            this.LblCameraCautata.Name = "LblCameraCautata";
-            this.LblCameraCautata.Size = new System.Drawing.Size(0, 16);
-            this.LblCameraCautata.TabIndex = 1;
+            this.LblClientCautat.AutoSize = true;
+            this.LblClientCautat.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblClientCautat.Location = new System.Drawing.Point(10, 50);
+            this.LblClientCautat.Name = "LblClientCautat";
+            this.LblClientCautat.Size = new System.Drawing.Size(0, 16);
+            this.LblClientCautat.TabIndex = 1;
             // 
             // LblHeaderInfo
             // 
@@ -86,43 +90,61 @@ namespace InterfataUtilizator_WindowsForms
             this.LblHeaderInfo.Size = new System.Drawing.Size(0, 16);
             this.LblHeaderInfo.TabIndex = 0;
             // 
-            // LblCautareAvertisment
-            // 
-            this.LblCautareAvertisment.AutoSize = true;
-            this.LblCautareAvertisment.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCautareAvertisment.ForeColor = System.Drawing.Color.Firebrick;
-            this.LblCautareAvertisment.Location = new System.Drawing.Point(236, 220);
-            this.LblCautareAvertisment.Name = "LblCautareAvertisment";
-            this.LblCautareAvertisment.Size = new System.Drawing.Size(0, 20);
-            this.LblCautareAvertisment.TabIndex = 24;
-            // 
             // LblTitluCautareClient
             // 
             this.LblTitluCautareClient.AutoSize = true;
             this.LblTitluCautareClient.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTitluCautareClient.Location = new System.Drawing.Point(283, 34);
+            this.LblTitluCautareClient.Location = new System.Drawing.Point(297, 34);
             this.LblTitluCautareClient.Name = "LblTitluCautareClient";
             this.LblTitluCautareClient.Size = new System.Drawing.Size(210, 33);
             this.LblTitluCautareClient.TabIndex = 23;
             this.LblTitluCautareClient.Text = "Cautare Client";
             // 
-            // TxtIDCamera
+            // TxtPrenumeClientCautat
             // 
-            this.TxtIDCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIDCamera.Location = new System.Drawing.Point(305, 170);
-            this.TxtIDCamera.Name = "TxtIDCamera";
-            this.TxtIDCamera.Size = new System.Drawing.Size(139, 26);
-            this.TxtIDCamera.TabIndex = 2;
+            this.TxtPrenumeClientCautat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPrenumeClientCautat.Location = new System.Drawing.Point(377, 133);
+            this.TxtPrenumeClientCautat.Name = "TxtPrenumeClientCautat";
+            this.TxtPrenumeClientCautat.Size = new System.Drawing.Size(139, 26);
+            this.TxtPrenumeClientCautat.TabIndex = 36;
             // 
-            // LblIDClient
+            // LblPrenumeClientCautat
             // 
-            this.LblIDClient.AutoSize = true;
-            this.LblIDClient.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIDClient.Location = new System.Drawing.Point(257, 170);
-            this.LblIDClient.Name = "LblIDClient";
-            this.LblIDClient.Size = new System.Drawing.Size(25, 20);
-            this.LblIDClient.TabIndex = 1;
-            this.LblIDClient.Text = "ID";
+            this.LblPrenumeClientCautat.AutoSize = true;
+            this.LblPrenumeClientCautat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPrenumeClientCautat.Location = new System.Drawing.Point(284, 136);
+            this.LblPrenumeClientCautat.Name = "LblPrenumeClientCautat";
+            this.LblPrenumeClientCautat.Size = new System.Drawing.Size(74, 20);
+            this.LblPrenumeClientCautat.TabIndex = 35;
+            this.LblPrenumeClientCautat.Text = "Prenume";
+            // 
+            // LblAvertismentCautare
+            // 
+            this.LblAvertismentCautare.AutoSize = true;
+            this.LblAvertismentCautare.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAvertismentCautare.ForeColor = System.Drawing.Color.Firebrick;
+            this.LblAvertismentCautare.Location = new System.Drawing.Point(265, 167);
+            this.LblAvertismentCautare.Name = "LblAvertismentCautare";
+            this.LblAvertismentCautare.Size = new System.Drawing.Size(0, 17);
+            this.LblAvertismentCautare.TabIndex = 34;
+            // 
+            // TxtNumeClientCautat
+            // 
+            this.TxtNumeClientCautat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNumeClientCautat.Location = new System.Drawing.Point(377, 101);
+            this.TxtNumeClientCautat.Name = "TxtNumeClientCautat";
+            this.TxtNumeClientCautat.Size = new System.Drawing.Size(139, 26);
+            this.TxtNumeClientCautat.TabIndex = 33;
+            // 
+            // LblNumeClientCautat
+            // 
+            this.LblNumeClientCautat.AutoSize = true;
+            this.LblNumeClientCautat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNumeClientCautat.Location = new System.Drawing.Point(284, 104);
+            this.LblNumeClientCautat.Name = "LblNumeClientCautat";
+            this.LblNumeClientCautat.Size = new System.Drawing.Size(52, 20);
+            this.LblNumeClientCautat.TabIndex = 32;
+            this.LblNumeClientCautat.Text = "Nume";
             // 
             // BtnCautaClient
             // 
@@ -130,12 +152,13 @@ namespace InterfataUtilizator_WindowsForms
             this.BtnCautaClient.FlatAppearance.BorderSize = 0;
             this.BtnCautaClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCautaClient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCautaClient.Location = new System.Drawing.Point(468, 171);
+            this.BtnCautaClient.Location = new System.Drawing.Point(368, 203);
             this.BtnCautaClient.Name = "BtnCautaClient";
             this.BtnCautaClient.Size = new System.Drawing.Size(74, 26);
-            this.BtnCautaClient.TabIndex = 0;
+            this.BtnCautaClient.TabIndex = 31;
             this.BtnCautaClient.Text = "Cauta";
             this.BtnCautaClient.UseVisualStyleBackColor = false;
+            this.BtnCautaClient.Click += new System.EventHandler(this.BtnCautaClient_Click);
             // 
             // UCCautareClient
             // 
@@ -144,6 +167,7 @@ namespace InterfataUtilizator_WindowsForms
             this.Controls.Add(this.PnlCautareClient);
             this.Name = "UCCautareClient";
             this.Size = new System.Drawing.Size(824, 515);
+            this.Load += new System.EventHandler(this.UCCautareClient_Load);
             this.PnlCautareClient.ResumeLayout(false);
             this.PnlCautareClient.PerformLayout();
             this.PnlAfisareClientCautat.ResumeLayout(false);
@@ -156,12 +180,14 @@ namespace InterfataUtilizator_WindowsForms
 
         private System.Windows.Forms.Panel PnlCautareClient;
         private System.Windows.Forms.Panel PnlAfisareClientCautat;
-        private System.Windows.Forms.Label LblCameraCautata;
+        private System.Windows.Forms.Label LblClientCautat;
         private System.Windows.Forms.Label LblHeaderInfo;
-        private System.Windows.Forms.Label LblCautareAvertisment;
         private System.Windows.Forms.Label LblTitluCautareClient;
-        private System.Windows.Forms.TextBox TxtIDCamera;
-        private System.Windows.Forms.Label LblIDClient;
+        private System.Windows.Forms.TextBox TxtPrenumeClientCautat;
+        private System.Windows.Forms.Label LblPrenumeClientCautat;
+        private System.Windows.Forms.Label LblAvertismentCautare;
+        private System.Windows.Forms.TextBox TxtNumeClientCautat;
+        private System.Windows.Forms.Label LblNumeClientCautat;
         private System.Windows.Forms.Button BtnCautaClient;
     }
 }

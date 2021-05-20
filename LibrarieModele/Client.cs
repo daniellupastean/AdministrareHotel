@@ -26,14 +26,14 @@ namespace LibrarieModele
 
         static public string HeaderInfo()
         {
-            string sf = "{0,-15}{1,-15}{2,-15} {3,-20}";
+            string sf = "{0,-20}{1,-20}{2,-20} {3,-23}";
 
             return string.Format(sf, "Nume", "Prenume", "CNP", "ID Rezervari");
         }
 
         public override string ConversieLaSir()
         {
-            string sf = "{0,-15}{1,-15}{2,-15} {3,-20}";
+            string sf = "{0,-20}{1,-20}{2,-20} {3,-23}";
             string rezervari = "";
             foreach (int rezervare in ID_rezervari)
             {
