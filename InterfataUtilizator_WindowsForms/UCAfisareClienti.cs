@@ -14,7 +14,6 @@ namespace InterfataUtilizator_WindowsForms
     {
         List<Client> clienti;
         IStocareClienti adminClienti = StocareFactory.GetAdministratorStocareClienti();
-        int nrClienti;
 
         public UCAfisareClienti()
         {
@@ -24,8 +23,6 @@ namespace InterfataUtilizator_WindowsForms
         private void UCAfisareClienti_Load(object sender, EventArgs e)
         {
             clienti = adminClienti.GetClienti();
-            nrClienti = clienti.Count;
-            Client.IdUltimClient = nrClienti;
         }
 
         private void PnlAfisareClienti_VisibleChanged(object sender, EventArgs e)
@@ -40,6 +37,29 @@ namespace InterfataUtilizator_WindowsForms
                 {
                     LsBxAfisareClienti.Items.Add(client.ConversieLaSir());
                 }
+            }
+        }
+
+        private void LsBxAfisareClienti_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (LsBxAfisareClienti.SelectedIndex == 0)
+                BtnStergeClient.Enabled = false;
+            else
+            {
+                BtnStergeClient.Enabled = true;
+            }
+        }
+
+        private void BtnStergeClient_Click(object sender, EventArgs e)
+        {
+            clienti = adminClienti.GetClienti();
+            clienti.RemoveAll(r => r.ConversieLaSir() == LsBxAfisareClienti.SelectedItem.ToString());
+            adminClienti.UpdateFisierClienti(clienti);
+            LsBxAfisareClienti.Items.Clear();
+            LsBxAfisareClienti.Items.Add(Client.HeaderInfo());
+            foreach (Client client in clienti)
+            {
+                LsBxAfisareClienti.Items.Add(client.ConversieLaSir());
             }
         }
     }

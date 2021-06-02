@@ -15,12 +15,13 @@ namespace InterfataUtilizator_WindowsForms
 
         List<Camera> camere;
         IStocareCamere adminCamere = StocareFactory.GetAdministratorStocareCamere();
-        int nrCamere;
 
         public UCAfisareCamere()
         {
             InitializeComponent();
-           
+            if (LsBxAfisareCamere.SelectedItem == null || LsBxAfisareCamere.SelectedIndex == 0)
+                BtnStergeCamera.Enabled = false;
+
 
         }
 
@@ -41,8 +42,31 @@ namespace InterfataUtilizator_WindowsForms
         private void UCAfisareCamere_Load(object sender, EventArgs e)
         {
             camere = adminCamere.GetCamere();
-            nrCamere = camere.Count;
-            Camera.IdUltimaCamera = nrCamere;
+        }
+
+        private void LsBxAfisareCamere_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (LsBxAfisareCamere.SelectedIndex == 0)
+                BtnStergeCamera.Enabled = false;
+            else
+            {
+                BtnStergeCamera.Enabled = true;
+            }
+        }
+
+        private void BtnStergeCamera_Click(object sender, EventArgs e)
+        {
+            camere = adminCamere.GetCamere();
+            string[] date = LsBxAfisareCamere.SelectedItem.ToString().Split(' ');
+            int id = int.Parse(date[0]);
+            camere.RemoveAll(r => r.ID_camera == id);
+            adminCamere.UpdateFisierCamere(camere);
+            LsBxAfisareCamere.Items.Clear();
+            LsBxAfisareCamere.Items.Add(Camera.HeaderInfo());
+            foreach (Camera camera in camere)
+            {
+                LsBxAfisareCamere.Items.Add(camera.ConversieLaSir());
+            }
         }
     }
 }

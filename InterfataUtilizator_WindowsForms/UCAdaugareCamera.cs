@@ -15,7 +15,6 @@ namespace InterfataUtilizator_WindowsForms
 
         List<Camera> camere;
         IStocareCamere adminCamere = StocareFactory.GetAdministratorStocareCamere();
-        int nrCamere;
         FacilitatiCamera facilitatiSelectate = new FacilitatiCamera();
 
         public UCAdaugareCamera()
@@ -26,8 +25,11 @@ namespace InterfataUtilizator_WindowsForms
 
         private void BtnAdaugaCamera_Click(object sender, EventArgs e)
         {
-            if (TxtDenumireCamera.Text != "" && TxtDimensiuneCamera.Text != "" && TxtEtajCamera.Text != "" && TxtBxPret.Text != "")
+            if (DateValide())
             {
+                camere = adminCamere.GetCamere();
+                if (camere.Count == 0)
+                    Camera.IdUltimaCamera = 0;
                 TipCamera t = new TipCamera();
                 if (RBtnSingle.Checked)
                     t = TipCamera.Single;
@@ -42,22 +44,12 @@ namespace InterfataUtilizator_WindowsForms
                 else if (RBtnQuad.Checked)
                     t = TipCamera.Quad;
 
-                LblAdaugareCameraAvertisment.ForeColor = Color.Green;
                 Camera.IdUltimaCamera++;
                 string line = $"{Camera.IdUltimaCamera},{TxtDenumireCamera.Text},{TxtDimensiuneCamera.Text},{TxtEtajCamera.Text},{(int)facilitatiSelectate},{(int)t},{TxtBxPret.Text}";
                 camere.Add(new Camera(line));
                 adminCamere.AddCamera(new Camera(line));
 
-                TxtDenumireCamera.Text = "";
-                TxtDimensiuneCamera.Text = "";
-                TxtEtajCamera.Text = "";
-                TxtBxPret.Text = "";
-                LblAdaugareCameraAvertisment.Text = "Camera a fost adaugata cu succes";
-            }
-            else
-            { 
-                LblAdaugareCameraAvertisment.ForeColor = Color.Firebrick;
-                LblAdaugareCameraAvertisment.Text = "*Trebuie completate toate campurile pentru a finaliza actiunea";
+                ResetareControale(); 
             }
         }
 
@@ -84,9 +76,47 @@ namespace InterfataUtilizator_WindowsForms
         private void UCAdaugareCamera_Load(object sender, EventArgs e)
         {
             camere = adminCamere.GetCamere();
-            nrCamere = camere.Count;
-            Camera.IdUltimaCamera = nrCamere;
             facilitatiSelectate = 0;
+        }
+
+        void ResetareControale()
+        {
+            TxtDenumireCamera.Text = "";
+            TxtDimensiuneCamera.Text = "";
+            TxtEtajCamera.Text = "";
+            TxtBxPret.Text = "";
+            RBtnSingle.Checked = true;
+            ChBxFrigider.Checked = false;
+            ChBxTV.Checked = false;
+            ChBxSeif.Checked = false;
+            ChBxJacuzzi.Checked = false;
+            ChBxInternet.Checked = false;
+        }
+
+
+        bool DateValide()
+        {
+            if(TxtDenumireCamera.Text == "" || TxtDimensiuneCamera.Text == "" || TxtEtajCamera.Text == "" || TxtBxPret.Text == "")
+            {
+                LblAdaugareCameraAvertisment.Text = "*Trebuie completate toate campurile";
+                return false;
+            }
+            if(!Functii.IsFloatNumber(TxtDimensiuneCamera.Text))
+            {
+                LblAdaugareCameraAvertisment.Text = "*Dimensiunea introdusa este invalida";
+                return false;
+            }
+            if (!Functii.IsIntNumber(TxtEtajCamera.Text))
+            {
+                LblAdaugareCameraAvertisment.Text = "*Etajul introdus este invalid";
+                return false;
+            }
+            if (!Functii.IsFloatNumber(TxtBxPret.Text))
+            {
+                LblAdaugareCameraAvertisment.Text = "*Pretul introdus este invalid";
+                return false;
+            }
+            return true;
         }
     }
 }

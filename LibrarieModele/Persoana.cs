@@ -6,13 +6,18 @@
         public string Prenume { get; set; }
         public string CNP { get; set; }
 
+        private const char SEPARATOR_PRINCIPAL_FISIER = ',';
+        private const int CNP_POZ = 0;
+        private const int NUME = 1;
+        private const int PRENUME = 2;
+
         public Persoana(string _date)
         {
-            string[] dateAsArrayOfStrings = _date.Split(',');
+            string[] dateAsArrayOfStrings = _date.Split(SEPARATOR_PRINCIPAL_FISIER);
 
-            CNP = dateAsArrayOfStrings[0];
-            Nume = dateAsArrayOfStrings[1];
-            Prenume = dateAsArrayOfStrings[2];
+            CNP = dateAsArrayOfStrings[CNP_POZ];
+            Nume = dateAsArrayOfStrings[NUME];
+            Prenume = dateAsArrayOfStrings[PRENUME];
 
         }
 

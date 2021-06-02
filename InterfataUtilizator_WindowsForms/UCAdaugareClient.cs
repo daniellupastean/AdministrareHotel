@@ -16,7 +16,6 @@ namespace InterfataUtilizator_WindowsForms
 
         List<Client> clienti;
         IStocareClienti adminClienti = StocareFactory.GetAdministratorStocareClienti();
-        int nrClienti;
 
         public UCAdaugareClient()
         {
@@ -25,30 +24,60 @@ namespace InterfataUtilizator_WindowsForms
 
         private void BtnAdaugaClient_Click(object sender, EventArgs e)
         {
-            if (TxtNumeClient.Text != "" && TxtPrenumeClient.Text != "" && TxtCNPClient.Text != "")
+            if (DateValide())
             {
-                LblAdaugareClientAvertisment.ForeColor = Color.Green;
                 string line = $"{TxtCNPClient.Text},{TxtNumeClient.Text},{TxtPrenumeClient.Text},0";
                 clienti.Add(new Client(line));
                 adminClienti.AddClient(new Client(line));
 
-                TxtNumeClient.Text = "";
-                TxtPrenumeClient.Text = "";
-                TxtCNPClient.Text = "";
-                LblAdaugareClientAvertisment.Text = "Clientul a fost adaugat cu succes";
-            }
-            else
-            {
-                LblAdaugareClientAvertisment.ForeColor = Color.Firebrick;
-                LblAdaugareClientAvertisment.Text = "*Trebuie completate toate campurile";
+                ResetareControale();
             }
         }
 
         private void UCAdaugareClient_Load(object sender, EventArgs e)
         {
             clienti = adminClienti.GetClienti();
-            nrClienti = clienti.Count;
-            Client.IdUltimClient = nrClienti;
         }
+
+        bool DateValide()
+        {
+            if(TxtNumeClient.Text == "" && TxtPrenumeClient.Text == "" && TxtCNPClient.Text == "")
+            {
+                LblAdaugareClientAvertisment.ForeColor = Color.Firebrick;
+                LblAdaugareClientAvertisment.Text = "*Trebuie completate toate campurile";
+                return false;
+            }
+            if(!Functii.OnlyLetters(TxtNumeClient.Text))
+            {
+                LblAdaugareClientAvertisment.Text = "*Numele poate sa contina doar litere";
+                return false;
+            }
+            if (!Functii.OnlyLetters(TxtPrenumeClient.Text))
+            {
+                LblAdaugareClientAvertisment.Text = "*Prenumele poate sa contina doar litere";
+                return false;
+            }
+            if (TxtCNPClient.TextLength != 13)
+            {
+                LblAdaugareClientAvertisment.Text = "CNP-ul trebuie sa aiba lungimea 13";
+                return false;
+            }
+            
+            if(!Functii.OnlyDigits(TxtCNPClient.Text))
+            {
+                LblAdaugareClientAvertisment.Text = "CNP-ul trebuie sa contina doar cifre";
+                return false;
+            }
+            return true;
+        }
+
+        void ResetareControale()
+        {
+            TxtNumeClient.Text = "";
+            TxtPrenumeClient.Text = "";
+            TxtCNPClient.Text = "";
+            LblAdaugareClientAvertisment.Text = "";
+        }
+
     }
 }

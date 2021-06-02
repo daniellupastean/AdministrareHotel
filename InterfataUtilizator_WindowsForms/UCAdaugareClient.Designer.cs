@@ -72,10 +72,11 @@ namespace InterfataUtilizator_WindowsForms
             // LblTitluAdaugareClient
             // 
             this.LblTitluAdaugareClient.AutoSize = true;
-            this.LblTitluAdaugareClient.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitluAdaugareClient.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitluAdaugareClient.ForeColor = System.Drawing.Color.White;
             this.LblTitluAdaugareClient.Location = new System.Drawing.Point(294, 42);
             this.LblTitluAdaugareClient.Name = "LblTitluAdaugareClient";
-            this.LblTitluAdaugareClient.Size = new System.Drawing.Size(234, 33);
+            this.LblTitluAdaugareClient.Size = new System.Drawing.Size(231, 32);
             this.LblTitluAdaugareClient.TabIndex = 23;
             this.LblTitluAdaugareClient.Text = "Adaugare Client";
             // 
@@ -83,6 +84,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.TxtCNPClient.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCNPClient.Location = new System.Drawing.Point(326, 255);
+            this.TxtCNPClient.MaxLength = 13;
             this.TxtCNPClient.Name = "TxtCNPClient";
             this.TxtCNPClient.Size = new System.Drawing.Size(236, 26);
             this.TxtCNPClient.TabIndex = 6;
@@ -91,6 +93,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.LblCNPClient.AutoSize = true;
             this.LblCNPClient.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCNPClient.ForeColor = System.Drawing.Color.White;
             this.LblCNPClient.Location = new System.Drawing.Point(166, 255);
             this.LblCNPClient.Name = "LblCNPClient";
             this.LblCNPClient.Size = new System.Drawing.Size(41, 20);
@@ -109,6 +112,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.LblPrenumeClient.AutoSize = true;
             this.LblPrenumeClient.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPrenumeClient.ForeColor = System.Drawing.Color.White;
             this.LblPrenumeClient.Location = new System.Drawing.Point(166, 209);
             this.LblPrenumeClient.Name = "LblPrenumeClient";
             this.LblPrenumeClient.Size = new System.Drawing.Size(74, 20);
@@ -127,6 +131,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.LblNumeClient.AutoSize = true;
             this.LblNumeClient.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNumeClient.ForeColor = System.Drawing.Color.White;
             this.LblNumeClient.Location = new System.Drawing.Point(166, 164);
             this.LblNumeClient.Name = "LblNumeClient";
             this.LblNumeClient.Size = new System.Drawing.Size(52, 20);
@@ -135,10 +140,11 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // BtnAdaugaClient
             // 
-            this.BtnAdaugaClient.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnAdaugaClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(155)))), ((int)(((byte)(118)))));
             this.BtnAdaugaClient.FlatAppearance.BorderSize = 0;
             this.BtnAdaugaClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAdaugaClient.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAdaugaClient.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAdaugaClient.ForeColor = System.Drawing.Color.White;
             this.BtnAdaugaClient.Location = new System.Drawing.Point(359, 455);
             this.BtnAdaugaClient.Name = "BtnAdaugaClient";
             this.BtnAdaugaClient.Size = new System.Drawing.Size(94, 34);
@@ -151,6 +157,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
             this.Controls.Add(this.PnlAddCamera);
             this.Name = "UCAdaugareClient";
             this.Size = new System.Drawing.Size(824, 515);

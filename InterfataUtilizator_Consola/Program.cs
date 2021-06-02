@@ -556,9 +556,9 @@ namespace InterfataUtilizator_Consola
                 if (modificari.Contains("d"))
                 {
                     Console.Write("Introduceti noua data de check-in sub forma \"zz.ll.aaaa\": ");
-                    rezervari[i].Checkin_date = Console.ReadLine();
+                    rezervari[i].Checkin_date = DateTime.Parse(Console.ReadLine());
                     Console.Write("Introduceti noua data de check-out sub forma \"zz.ll.aaaa\": ");
-                    rezervari[i].Checkout_date = Console.ReadLine();
+                    rezervari[i].Checkout_date = DateTime.Parse(Console.ReadLine());
                 }
 
             }

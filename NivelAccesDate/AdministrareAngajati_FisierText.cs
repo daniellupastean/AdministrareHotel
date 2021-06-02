@@ -31,6 +31,7 @@ namespace NivelAccesDate
                 //al doilea parametru setat la 'true' al constructorului StreamWriter indica modul 'append' de deschidere al fisierului
                 using (StreamWriter swFisierTextAngajati = new StreamWriter(NumeFisierAngajati, true))
                 {
+                    a.DataActualizare = DateTime.Now;
                     swFisierTextAngajati.WriteLine(a.ConversieLaSir_PentruScriereInFisier());
                 }
             }

@@ -58,7 +58,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // PnlAfisareCameraCautata
             // 
-            this.PnlAfisareCameraCautata.BackColor = System.Drawing.Color.White;
+            this.PnlAfisareCameraCautata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(29)))));
             this.PnlAfisareCameraCautata.Controls.Add(this.LblCameraCautata);
             this.PnlAfisareCameraCautata.Controls.Add(this.LblHeaderInfo);
             this.PnlAfisareCameraCautata.Location = new System.Drawing.Point(44, 261);
@@ -71,6 +71,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.LblCameraCautata.AutoSize = true;
             this.LblCameraCautata.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCameraCautata.ForeColor = System.Drawing.Color.White;
             this.LblCameraCautata.Location = new System.Drawing.Point(10, 50);
             this.LblCameraCautata.Name = "LblCameraCautata";
             this.LblCameraCautata.Size = new System.Drawing.Size(0, 16);
@@ -79,8 +80,9 @@ namespace InterfataUtilizator_WindowsForms
             // LblHeaderInfo
             // 
             this.LblHeaderInfo.AutoSize = true;
-            this.LblHeaderInfo.BackColor = System.Drawing.Color.Gainsboro;
+            this.LblHeaderInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
             this.LblHeaderInfo.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHeaderInfo.ForeColor = System.Drawing.Color.White;
             this.LblHeaderInfo.Location = new System.Drawing.Point(10, 14);
             this.LblHeaderInfo.Name = "LblHeaderInfo";
             this.LblHeaderInfo.Size = new System.Drawing.Size(0, 16);
@@ -99,10 +101,11 @@ namespace InterfataUtilizator_WindowsForms
             // LblTitluCautareCamera
             // 
             this.LblTitluCautareCamera.AutoSize = true;
-            this.LblTitluCautareCamera.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitluCautareCamera.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitluCautareCamera.ForeColor = System.Drawing.Color.White;
             this.LblTitluCautareCamera.Location = new System.Drawing.Point(283, 34);
             this.LblTitluCautareCamera.Name = "LblTitluCautareCamera";
-            this.LblTitluCautareCamera.Size = new System.Drawing.Size(242, 33);
+            this.LblTitluCautareCamera.Size = new System.Drawing.Size(238, 32);
             this.LblTitluCautareCamera.TabIndex = 23;
             this.LblTitluCautareCamera.Text = "Cautare Camera";
             // 
@@ -118,6 +121,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.LblIDCamera.AutoSize = true;
             this.LblIDCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblIDCamera.ForeColor = System.Drawing.Color.White;
             this.LblIDCamera.Location = new System.Drawing.Point(257, 170);
             this.LblIDCamera.Name = "LblIDCamera";
             this.LblIDCamera.Size = new System.Drawing.Size(25, 20);
@@ -126,10 +130,11 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // BtnCautaCamera
             // 
-            this.BtnCautaCamera.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnCautaCamera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(155)))), ((int)(((byte)(118)))));
             this.BtnCautaCamera.FlatAppearance.BorderSize = 0;
             this.BtnCautaCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCautaCamera.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCautaCamera.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCautaCamera.ForeColor = System.Drawing.Color.White;
             this.BtnCautaCamera.Location = new System.Drawing.Point(468, 171);
             this.BtnCautaCamera.Name = "BtnCautaCamera";
             this.BtnCautaCamera.Size = new System.Drawing.Size(74, 26);
@@ -142,6 +147,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
             this.Controls.Add(this.PnlCautareCamera);
             this.Name = "UCCautareCamera";
             this.Size = new System.Drawing.Size(824, 515);

@@ -30,6 +30,8 @@ namespace InterfataUtilizator_WindowsForms
         private void InitializeComponent()
         {
             this.PnlModificareClient = new System.Windows.Forms.Panel();
+            this.TxtPrenumeClientCautat = new System.Windows.Forms.TextBox();
+            this.LblPrenumeClientCautat = new System.Windows.Forms.Label();
             this.LblCautareAvertisment = new System.Windows.Forms.Label();
             this.TxtNumeClientCautat = new System.Windows.Forms.TextBox();
             this.LblNumeClientCautat = new System.Windows.Forms.Label();
@@ -44,8 +46,6 @@ namespace InterfataUtilizator_WindowsForms
             this.TxtNumeClient = new System.Windows.Forms.TextBox();
             this.LblNumeClient = new System.Windows.Forms.Label();
             this.LblTitluAdaugareClient = new System.Windows.Forms.Label();
-            this.TxtPrenumeClientCautat = new System.Windows.Forms.TextBox();
-            this.LblPrenumeClientCautat = new System.Windows.Forms.Label();
             this.PnlModificareClient.SuspendLayout();
             this.PnlDateClient.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +65,25 @@ namespace InterfataUtilizator_WindowsForms
             this.PnlModificareClient.Name = "PnlModificareClient";
             this.PnlModificareClient.Size = new System.Drawing.Size(824, 515);
             this.PnlModificareClient.TabIndex = 6;
+            // 
+            // TxtPrenumeClientCautat
+            // 
+            this.TxtPrenumeClientCautat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPrenumeClientCautat.Location = new System.Drawing.Point(380, 123);
+            this.TxtPrenumeClientCautat.Name = "TxtPrenumeClientCautat";
+            this.TxtPrenumeClientCautat.Size = new System.Drawing.Size(139, 26);
+            this.TxtPrenumeClientCautat.TabIndex = 30;
+            // 
+            // LblPrenumeClientCautat
+            // 
+            this.LblPrenumeClientCautat.AutoSize = true;
+            this.LblPrenumeClientCautat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPrenumeClientCautat.ForeColor = System.Drawing.Color.White;
+            this.LblPrenumeClientCautat.Location = new System.Drawing.Point(287, 126);
+            this.LblPrenumeClientCautat.Name = "LblPrenumeClientCautat";
+            this.LblPrenumeClientCautat.Size = new System.Drawing.Size(74, 20);
+            this.LblPrenumeClientCautat.TabIndex = 29;
+            this.LblPrenumeClientCautat.Text = "Prenume";
             // 
             // LblCautareAvertisment
             // 
@@ -88,6 +107,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.LblNumeClientCautat.AutoSize = true;
             this.LblNumeClientCautat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNumeClientCautat.ForeColor = System.Drawing.Color.White;
             this.LblNumeClientCautat.Location = new System.Drawing.Point(287, 94);
             this.LblNumeClientCautat.Name = "LblNumeClientCautat";
             this.LblNumeClientCautat.Size = new System.Drawing.Size(52, 20);
@@ -96,16 +116,18 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // BtnCautaClient
             // 
-            this.BtnCautaClient.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnCautaClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(155)))), ((int)(((byte)(118)))));
             this.BtnCautaClient.FlatAppearance.BorderSize = 0;
             this.BtnCautaClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCautaClient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCautaClient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCautaClient.ForeColor = System.Drawing.Color.White;
             this.BtnCautaClient.Location = new System.Drawing.Point(370, 193);
             this.BtnCautaClient.Name = "BtnCautaClient";
             this.BtnCautaClient.Size = new System.Drawing.Size(74, 26);
             this.BtnCautaClient.TabIndex = 25;
             this.BtnCautaClient.Text = "Cauta";
             this.BtnCautaClient.UseVisualStyleBackColor = false;
+            this.BtnCautaClient.Click += new System.EventHandler(this.BtnCautaClient_Click);
             // 
             // PnlDateClient
             // 
@@ -128,28 +150,31 @@ namespace InterfataUtilizator_WindowsForms
             this.LblAvertismentModificare.AutoSize = true;
             this.LblAvertismentModificare.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblAvertismentModificare.ForeColor = System.Drawing.Color.Firebrick;
-            this.LblAvertismentModificare.Location = new System.Drawing.Point(125, 301);
+            this.LblAvertismentModificare.Location = new System.Drawing.Point(220, 165);
             this.LblAvertismentModificare.Name = "LblAvertismentModificare";
             this.LblAvertismentModificare.Size = new System.Drawing.Size(0, 17);
             this.LblAvertismentModificare.TabIndex = 46;
             // 
             // BtnModificaClient
             // 
-            this.BtnModificaClient.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnModificaClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(155)))), ((int)(((byte)(118)))));
             this.BtnModificaClient.FlatAppearance.BorderSize = 0;
             this.BtnModificaClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnModificaClient.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModificaClient.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModificaClient.ForeColor = System.Drawing.Color.White;
             this.BtnModificaClient.Location = new System.Drawing.Point(319, 193);
             this.BtnModificaClient.Name = "BtnModificaClient";
             this.BtnModificaClient.Size = new System.Drawing.Size(94, 34);
             this.BtnModificaClient.TabIndex = 45;
             this.BtnModificaClient.Text = "Modifica";
             this.BtnModificaClient.UseVisualStyleBackColor = false;
+            this.BtnModificaClient.Click += new System.EventHandler(this.BtnModificaClient_Click);
             // 
             // TxtCNPClient
             // 
             this.TxtCNPClient.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCNPClient.Location = new System.Drawing.Point(319, 122);
+            this.TxtCNPClient.MaxLength = 13;
             this.TxtCNPClient.Name = "TxtCNPClient";
             this.TxtCNPClient.Size = new System.Drawing.Size(236, 26);
             this.TxtCNPClient.TabIndex = 28;
@@ -158,6 +183,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.LblCNPClient.AutoSize = true;
             this.LblCNPClient.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCNPClient.ForeColor = System.Drawing.Color.White;
             this.LblCNPClient.Location = new System.Drawing.Point(159, 122);
             this.LblCNPClient.Name = "LblCNPClient";
             this.LblCNPClient.Size = new System.Drawing.Size(41, 20);
@@ -176,6 +202,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.LblPrenumeClient.AutoSize = true;
             this.LblPrenumeClient.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPrenumeClient.ForeColor = System.Drawing.Color.White;
             this.LblPrenumeClient.Location = new System.Drawing.Point(159, 76);
             this.LblPrenumeClient.Name = "LblPrenumeClient";
             this.LblPrenumeClient.Size = new System.Drawing.Size(74, 20);
@@ -194,6 +221,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.LblNumeClient.AutoSize = true;
             this.LblNumeClient.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNumeClient.ForeColor = System.Drawing.Color.White;
             this.LblNumeClient.Location = new System.Drawing.Point(159, 31);
             this.LblNumeClient.Name = "LblNumeClient";
             this.LblNumeClient.Size = new System.Drawing.Size(52, 20);
@@ -203,35 +231,19 @@ namespace InterfataUtilizator_WindowsForms
             // LblTitluAdaugareClient
             // 
             this.LblTitluAdaugareClient.AutoSize = true;
-            this.LblTitluAdaugareClient.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitluAdaugareClient.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitluAdaugareClient.ForeColor = System.Drawing.Color.White;
             this.LblTitluAdaugareClient.Location = new System.Drawing.Point(285, 29);
             this.LblTitluAdaugareClient.Name = "LblTitluAdaugareClient";
-            this.LblTitluAdaugareClient.Size = new System.Drawing.Size(243, 33);
+            this.LblTitluAdaugareClient.Size = new System.Drawing.Size(237, 32);
             this.LblTitluAdaugareClient.TabIndex = 23;
             this.LblTitluAdaugareClient.Text = "Modificare Client";
-            // 
-            // TxtPrenumeClientCautat
-            // 
-            this.TxtPrenumeClientCautat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPrenumeClientCautat.Location = new System.Drawing.Point(380, 123);
-            this.TxtPrenumeClientCautat.Name = "TxtPrenumeClientCautat";
-            this.TxtPrenumeClientCautat.Size = new System.Drawing.Size(139, 26);
-            this.TxtPrenumeClientCautat.TabIndex = 30;
-            // 
-            // LblPrenumeClientCautat
-            // 
-            this.LblPrenumeClientCautat.AutoSize = true;
-            this.LblPrenumeClientCautat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPrenumeClientCautat.Location = new System.Drawing.Point(287, 126);
-            this.LblPrenumeClientCautat.Name = "LblPrenumeClientCautat";
-            this.LblPrenumeClientCautat.Size = new System.Drawing.Size(74, 20);
-            this.LblPrenumeClientCautat.TabIndex = 29;
-            this.LblPrenumeClientCautat.Text = "Prenume";
             // 
             // UCModificareClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
             this.Controls.Add(this.PnlModificareClient);
             this.Name = "UCModificareClient";
             this.Size = new System.Drawing.Size(824, 515);

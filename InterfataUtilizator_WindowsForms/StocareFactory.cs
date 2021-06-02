@@ -10,7 +10,21 @@ namespace InterfataUtilizator_WindowsForms
         private const string NUME_FISIER_ANGAJATI = "NumeFisierAngajati";
         private const string NUME_FISIER_CAMERE = "NumeFisierCamere";
         private const string NUME_FISIER_REZERVARI = "NumeFisierRezervari";
-        
+        private const string NUME_FISIER_PAROLA = "NumeFisierParola";
+
+        public static IStocareParola GetAdministratorStocareParola()
+        {
+            var formatSalvare = ConfigurationManager.AppSettings[FORMAT_SALVARE];
+            var numeFisierParola = ConfigurationManager.AppSettings[NUME_FISIER_PAROLA];
+
+            if (formatSalvare != null)
+            {
+                return new AdministrareParola_FisierText($"{numeFisierParola}.{formatSalvare}");
+            }
+
+            return null;
+        }
+
         public static IStocareClienti GetAdministratorStocareClienti()
         {
             var formatSalvare = ConfigurationManager.AppSettings[FORMAT_SALVARE];
@@ -18,12 +32,7 @@ namespace InterfataUtilizator_WindowsForms
 
             if (formatSalvare != null)
             {
-                switch (formatSalvare)
-                {
-                    default:
-                    case "txt":
-                        return new AdministrareClienti_FisierText($"{numeFisierClienti}.{formatSalvare}");
-                }
+                return new AdministrareClienti_FisierText($"{numeFisierClienti}.{formatSalvare}");
             }
 
             return null;

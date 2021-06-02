@@ -14,7 +14,6 @@ namespace InterfataUtilizator_WindowsForms
     {
         List<Client> clienti;
         IStocareClienti adminClienti = StocareFactory.GetAdministratorStocareClienti();
-        int nrClienti;
 
         public UCCautareClient()
         {
@@ -24,8 +23,6 @@ namespace InterfataUtilizator_WindowsForms
         private void UCCautareClient_Load(object sender, EventArgs e)
         {
             clienti = adminClienti.GetClienti();
-            nrClienti = clienti.Count;
-            Client.IdUltimClient = nrClienti;
         }
 
         private void BtnCautaClient_Click(object sender, EventArgs e)

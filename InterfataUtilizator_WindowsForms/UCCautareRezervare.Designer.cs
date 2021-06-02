@@ -29,37 +29,37 @@ namespace InterfataUtilizator_WindowsForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.PnlModificareCamera = new System.Windows.Forms.Panel();
+            this.PnlModificareRezervare = new System.Windows.Forms.Panel();
             this.PnlAfisareRezervareCautata = new System.Windows.Forms.Panel();
-            this.LblCameraCautata = new System.Windows.Forms.Label();
+            this.LblRezervareCautata = new System.Windows.Forms.Label();
             this.LblHeaderInfo = new System.Windows.Forms.Label();
             this.LblCautareAvertisment = new System.Windows.Forms.Label();
             this.LblTitluCautareRezervare = new System.Windows.Forms.Label();
             this.TxtIDRezervare = new System.Windows.Forms.TextBox();
             this.LblIDRezervare = new System.Windows.Forms.Label();
             this.BtnCautaRezervare = new System.Windows.Forms.Button();
-            this.PnlModificareCamera.SuspendLayout();
+            this.PnlModificareRezervare.SuspendLayout();
             this.PnlAfisareRezervareCautata.SuspendLayout();
             this.SuspendLayout();
             // 
-            // PnlModificareCamera
+            // PnlModificareRezervare
             // 
-            this.PnlModificareCamera.BackColor = System.Drawing.Color.Transparent;
-            this.PnlModificareCamera.Controls.Add(this.PnlAfisareRezervareCautata);
-            this.PnlModificareCamera.Controls.Add(this.LblCautareAvertisment);
-            this.PnlModificareCamera.Controls.Add(this.LblTitluCautareRezervare);
-            this.PnlModificareCamera.Controls.Add(this.TxtIDRezervare);
-            this.PnlModificareCamera.Controls.Add(this.LblIDRezervare);
-            this.PnlModificareCamera.Controls.Add(this.BtnCautaRezervare);
-            this.PnlModificareCamera.Location = new System.Drawing.Point(0, 0);
-            this.PnlModificareCamera.Name = "PnlModificareCamera";
-            this.PnlModificareCamera.Size = new System.Drawing.Size(824, 515);
-            this.PnlModificareCamera.TabIndex = 7;
+            this.PnlModificareRezervare.BackColor = System.Drawing.Color.Transparent;
+            this.PnlModificareRezervare.Controls.Add(this.PnlAfisareRezervareCautata);
+            this.PnlModificareRezervare.Controls.Add(this.LblCautareAvertisment);
+            this.PnlModificareRezervare.Controls.Add(this.LblTitluCautareRezervare);
+            this.PnlModificareRezervare.Controls.Add(this.TxtIDRezervare);
+            this.PnlModificareRezervare.Controls.Add(this.LblIDRezervare);
+            this.PnlModificareRezervare.Controls.Add(this.BtnCautaRezervare);
+            this.PnlModificareRezervare.Location = new System.Drawing.Point(0, 0);
+            this.PnlModificareRezervare.Name = "PnlModificareRezervare";
+            this.PnlModificareRezervare.Size = new System.Drawing.Size(824, 515);
+            this.PnlModificareRezervare.TabIndex = 7;
             // 
             // PnlAfisareRezervareCautata
             // 
-            this.PnlAfisareRezervareCautata.BackColor = System.Drawing.Color.White;
-            this.PnlAfisareRezervareCautata.Controls.Add(this.LblCameraCautata);
+            this.PnlAfisareRezervareCautata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(29)))));
+            this.PnlAfisareRezervareCautata.Controls.Add(this.LblRezervareCautata);
             this.PnlAfisareRezervareCautata.Controls.Add(this.LblHeaderInfo);
             this.PnlAfisareRezervareCautata.Location = new System.Drawing.Point(44, 261);
             this.PnlAfisareRezervareCautata.Name = "PnlAfisareRezervareCautata";
@@ -67,20 +67,22 @@ namespace InterfataUtilizator_WindowsForms
             this.PnlAfisareRezervareCautata.TabIndex = 25;
             this.PnlAfisareRezervareCautata.Visible = false;
             // 
-            // LblCameraCautata
+            // LblRezervareCautata
             // 
-            this.LblCameraCautata.AutoSize = true;
-            this.LblCameraCautata.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCameraCautata.Location = new System.Drawing.Point(10, 50);
-            this.LblCameraCautata.Name = "LblCameraCautata";
-            this.LblCameraCautata.Size = new System.Drawing.Size(0, 16);
-            this.LblCameraCautata.TabIndex = 1;
+            this.LblRezervareCautata.AutoSize = true;
+            this.LblRezervareCautata.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblRezervareCautata.ForeColor = System.Drawing.Color.White;
+            this.LblRezervareCautata.Location = new System.Drawing.Point(10, 50);
+            this.LblRezervareCautata.Name = "LblRezervareCautata";
+            this.LblRezervareCautata.Size = new System.Drawing.Size(0, 16);
+            this.LblRezervareCautata.TabIndex = 1;
             // 
             // LblHeaderInfo
             // 
             this.LblHeaderInfo.AutoSize = true;
-            this.LblHeaderInfo.BackColor = System.Drawing.Color.Gainsboro;
+            this.LblHeaderInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
             this.LblHeaderInfo.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHeaderInfo.ForeColor = System.Drawing.Color.White;
             this.LblHeaderInfo.Location = new System.Drawing.Point(10, 14);
             this.LblHeaderInfo.Name = "LblHeaderInfo";
             this.LblHeaderInfo.Size = new System.Drawing.Size(0, 16);
@@ -99,10 +101,11 @@ namespace InterfataUtilizator_WindowsForms
             // LblTitluCautareRezervare
             // 
             this.LblTitluCautareRezervare.AutoSize = true;
-            this.LblTitluCautareRezervare.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitluCautareRezervare.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitluCautareRezervare.ForeColor = System.Drawing.Color.White;
             this.LblTitluCautareRezervare.Location = new System.Drawing.Point(283, 34);
             this.LblTitluCautareRezervare.Name = "LblTitluCautareRezervare";
-            this.LblTitluCautareRezervare.Size = new System.Drawing.Size(264, 33);
+            this.LblTitluCautareRezervare.Size = new System.Drawing.Size(260, 32);
             this.LblTitluCautareRezervare.TabIndex = 23;
             this.LblTitluCautareRezervare.Text = "Cautare Rezervare";
             // 
@@ -118,6 +121,7 @@ namespace InterfataUtilizator_WindowsForms
             // 
             this.LblIDRezervare.AutoSize = true;
             this.LblIDRezervare.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblIDRezervare.ForeColor = System.Drawing.Color.White;
             this.LblIDRezervare.Location = new System.Drawing.Point(257, 170);
             this.LblIDRezervare.Name = "LblIDRezervare";
             this.LblIDRezervare.Size = new System.Drawing.Size(25, 20);
@@ -126,26 +130,30 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // BtnCautaRezervare
             // 
-            this.BtnCautaRezervare.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnCautaRezervare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(155)))), ((int)(((byte)(118)))));
             this.BtnCautaRezervare.FlatAppearance.BorderSize = 0;
             this.BtnCautaRezervare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCautaRezervare.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCautaRezervare.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCautaRezervare.ForeColor = System.Drawing.Color.White;
             this.BtnCautaRezervare.Location = new System.Drawing.Point(468, 171);
             this.BtnCautaRezervare.Name = "BtnCautaRezervare";
             this.BtnCautaRezervare.Size = new System.Drawing.Size(74, 26);
             this.BtnCautaRezervare.TabIndex = 0;
             this.BtnCautaRezervare.Text = "Cauta";
             this.BtnCautaRezervare.UseVisualStyleBackColor = false;
+            this.BtnCautaRezervare.Click += new System.EventHandler(this.BtnCautaRezervare_Click);
             // 
             // UCCautareRezervare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.PnlModificareCamera);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
+            this.Controls.Add(this.PnlModificareRezervare);
             this.Name = "UCCautareRezervare";
             this.Size = new System.Drawing.Size(824, 515);
-            this.PnlModificareCamera.ResumeLayout(false);
-            this.PnlModificareCamera.PerformLayout();
+            this.Load += new System.EventHandler(this.UCCautareRezervare_Load);
+            this.PnlModificareRezervare.ResumeLayout(false);
+            this.PnlModificareRezervare.PerformLayout();
             this.PnlAfisareRezervareCautata.ResumeLayout(false);
             this.PnlAfisareRezervareCautata.PerformLayout();
             this.ResumeLayout(false);
@@ -154,9 +162,9 @@ namespace InterfataUtilizator_WindowsForms
 
         #endregion
 
-        private System.Windows.Forms.Panel PnlModificareCamera;
+        private System.Windows.Forms.Panel PnlModificareRezervare;
         private System.Windows.Forms.Panel PnlAfisareRezervareCautata;
-        private System.Windows.Forms.Label LblCameraCautata;
+        private System.Windows.Forms.Label LblRezervareCautata;
         private System.Windows.Forms.Label LblHeaderInfo;
         private System.Windows.Forms.Label LblCautareAvertisment;
         private System.Windows.Forms.Label LblTitluCautareRezervare;

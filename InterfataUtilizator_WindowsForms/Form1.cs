@@ -52,33 +52,16 @@ namespace InterfataUtilizator_WindowsForms
         IStocareAngajati adminAngajati = StocareFactory.GetAdministratorStocareAngajati();
         IStocareCamere adminCamere = StocareFactory.GetAdministratorStocareCamere();
         IStocareRezervari adminRezervari = StocareFactory.GetAdministratorStocareRezervari();
+        IStocareParola adminParola = StocareFactory.GetAdministratorStocareParola();
 
-        int nrClienti;
-        int nrAngajati;
-        int nrCamere;
-        int nrRezervari;
+        string Password { set; get; }
+
 
         public MainForm()
         {
             InitializeComponent();
-            
-            clienti = adminClienti.GetClienti();
-            angajati = adminAngajati.GetAngajati();
-            camere = adminCamere.GetCamere();
-            rezervari = adminRezervari.GetRezervari();
 
-            nrClienti = clienti.Count;
-            Client.IdUltimClient = nrClienti;
-
-            nrAngajati = angajati.Count;
-            Angajat.IdUltimAngajat = nrAngajati;
-
-            nrCamere = camere.Count;
-            Camera.IdUltimaCamera = nrCamere;
-
-            nrRezervari = rezervari.Count;
-            Rezervare.IdUltimaRezervare = nrRezervari;
-
+            SetareAcasa();
 
             PnlAdaugareCamera.Location = locatie;
             PnlAfisareCamere.Location = locatie;
@@ -145,10 +128,22 @@ namespace InterfataUtilizator_WindowsForms
             
 
 
-            PanelCamere.Visible = true;
+            PanelAcasa.Visible = true;
+            PanelCamere.Visible = false;
             PanelRezervari.Visible = false;
             PanelClienti.Visible = false;
             PanelAngajati.Visible = false;
+            PanelSetari.Visible = false;
+
+            if (adminParola.GetPassword() != null)
+            {
+                Password = adminParola.GetPassword();
+            }
+            else
+            { 
+                Password = "password";
+                adminParola.SetPassword(Password);
+            }
         }
 
         private void Navbar_MouseMove(object sender, MouseEventArgs e)
@@ -169,7 +164,6 @@ namespace InterfataUtilizator_WindowsForms
             mov = 0;
         }
 
-        readonly string password = "daniel";
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -186,7 +180,7 @@ namespace InterfataUtilizator_WindowsForms
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (TxtBxParola.Text == password)
+                if (TxtBxParola.Text == Password)
                 {
                     AuthPanel.Visible = false;
                     MainPanel.Visible = true;
@@ -239,6 +233,8 @@ namespace InterfataUtilizator_WindowsForms
             PanelRezervari.Visible = false;
             PanelClienti.Visible = false;
             PanelAngajati.Visible = false;
+            PanelAcasa.Visible = false;
+            PanelSetari.Visible = false;
         }
 
         private void BtnRezervari_Click(object sender, EventArgs e)
@@ -247,6 +243,8 @@ namespace InterfataUtilizator_WindowsForms
             PanelRezervari.Visible = true;
             PanelClienti.Visible = false;
             PanelAngajati.Visible = false;
+            PanelAcasa.Visible = false;
+            PanelSetari.Visible = false;
         }
 
         private void BtnClienti_Click(object sender, EventArgs e)
@@ -256,6 +254,8 @@ namespace InterfataUtilizator_WindowsForms
             PanelClienti.Visible = true;
             PanelAngajati.Visible = false;
             PnlAdaugareClient.Visible = true;
+            PanelAcasa.Visible = false;
+            PanelSetari.Visible = false;
         }
 
         private void BtnAngajati_Click(object sender, EventArgs e)
@@ -264,6 +264,8 @@ namespace InterfataUtilizator_WindowsForms
             PanelRezervari.Visible = false;
             PanelClienti.Visible = false;
             PanelAngajati.Visible = true;
+            PanelAcasa.Visible = false;
+            PanelSetari.Visible = false;
         }
 
         private void BtnAdaugareRezervare_Click(object sender, EventArgs e)
@@ -360,6 +362,106 @@ namespace InterfataUtilizator_WindowsForms
             PnlAfisareAngajati.Visible = false;
             PnlCautareAngajat.Visible = false;
             PnlModificareAngajat.Visible = true;
+        }
+
+        private void BtnSetari_Click(object sender, EventArgs e)
+        {
+            PanelCamere.Visible = false;
+            PanelRezervari.Visible = false;
+            PanelClienti.Visible = false;
+            PanelAngajati.Visible = false;
+            PanelAcasa.Visible = false;
+            PanelSetari.Visible = true;
+        }
+
+        private void BtnAcasa_Click(object sender, EventArgs e)
+        {
+            PanelCamere.Visible = false;
+            PanelRezervari.Visible = false;
+            PanelClienti.Visible = false;
+            PanelAngajati.Visible = false;
+            PanelAcasa.Visible = true;
+            PanelSetari.Visible = false;
+        }
+
+        private void PanelAcasa_VisibleChanged(object sender, EventArgs e)
+        {
+            if(PanelAcasa.Visible == true)
+            {
+                SetareAcasa();
+            }
+        }
+
+        void SetareAcasa()
+        {
+            clienti = adminClienti.GetClienti();
+            angajati = adminAngajati.GetAngajati();
+            camere = adminCamere.GetCamere();
+            rezervari = adminRezervari.GetRezervari();
+
+            LblNrAngajati.Text = angajati.Count.ToString();
+            if (angajati.Count == 1)
+                LblAngajati.Text = "Angajat";
+            else
+                LblAngajati.Text = "Angajati";
+
+            LblNrClienti.Text = clienti.Count.ToString();
+            if (clienti.Count == 1)
+                LblClienti.Text = "Client";
+            else
+                LblClienti.Text = "Clienti";
+
+            LblNrCamere.Text = camere.Count.ToString();
+            if (camere.Count == 1)
+                LblCamere.Text = "Camera";
+            else
+                LblCamere.Text = "Camere";
+        }
+
+        
+
+        private void BtnActualizeazaParola_Click(object sender, EventArgs e)
+        {
+            if(DateValide())
+            {
+                Password = TxtNouaParola.Text;
+                adminParola.SetPassword(Password);
+                ResetareControale();
+            }
+        }
+
+        void ResetareControale()
+        {
+            TxtActualaParola.Text = "";
+            TxtNouaParola.Text = "";
+            TxtRepetaNouaParola.Text = "";
+            LblModificareParolaAvertisment.Text = "";
+        }
+
+        bool DateValide()
+        {
+            Password = adminParola.GetPassword();
+            if(TxtActualaParola.Text == "" || TxtNouaParola.Text == "" || TxtRepetaNouaParola.Text == "")
+            {
+                LblModificareParolaAvertisment.Text = "*Trebuie completate toate campurile";
+                return false;
+            }
+            if (TxtActualaParola.Text == TxtNouaParola.Text)
+            {
+                LblModificareParolaAvertisment.Text = "*Noua parola trebuie sa fie diferita de cea actuala";
+                return false;
+            }
+            if (TxtNouaParola.Text != TxtRepetaNouaParola.Text)
+            {
+                LblModificareParolaAvertisment.Text = "*Noua parola introdusa a doua oara nu coincide cu prima";
+                return false;
+            }
+            if (TxtActualaParola.Text != Password)
+            {
+                LblModificareParolaAvertisment.Text = "*Parola actuala introdusa gresit";
+                return false;
+            }
+            return true;
         }
     }
 }

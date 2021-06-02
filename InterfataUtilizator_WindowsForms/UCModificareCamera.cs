@@ -111,7 +111,6 @@ namespace InterfataUtilizator_WindowsForms
                 camere[i].Dimensiune = float.Parse(TxtDimensiuneCamera.Text);
                 camere[i].Etaj = int.Parse(TxtEtajCamera.Text);
                 camere[i].Facilitati = facilitatiSelectate;
-                LblCautareAvertisment.Text = facilitatiSelectate.ToString();
                 camere[i].Tip = t;
                 camere[i].Pret = float.Parse(TxtPretCamera.Text);
 

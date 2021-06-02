@@ -30,126 +30,173 @@ namespace InterfataUtilizator_WindowsForms
         private void InitializeComponent()
         {
             this.PnlModificareAngajat = new System.Windows.Forms.Panel();
+            this.TxtPrenumeAngajatCautat = new System.Windows.Forms.TextBox();
+            this.LblPrenumeAngajatCautat = new System.Windows.Forms.Label();
             this.LblCautareAvertisment = new System.Windows.Forms.Label();
-            this.TxtIDCamera = new System.Windows.Forms.TextBox();
-            this.LblIDCamera = new System.Windows.Forms.Label();
-            this.BtnCautaCamera = new System.Windows.Forms.Button();
-            this.PnlDateCamera = new System.Windows.Forms.Panel();
+            this.TxtNumeAngajatCautat = new System.Windows.Forms.TextBox();
+            this.LblNumeAngajatCautat = new System.Windows.Forms.Label();
+            this.BtnCautaAngajat = new System.Windows.Forms.Button();
+            this.PnlDateAngajat = new System.Windows.Forms.Panel();
+            this.CbxFunctieAngajat = new System.Windows.Forms.ComboBox();
+            this.LblFunctieAngajat = new System.Windows.Forms.Label();
+            this.TxtSalariuAngajat = new System.Windows.Forms.TextBox();
+            this.LblSalariuAngajat = new System.Windows.Forms.Label();
             this.LblAvertismentModificare = new System.Windows.Forms.Label();
             this.BtnModificaAngajat = new System.Windows.Forms.Button();
-            this.RBtnQuad = new System.Windows.Forms.RadioButton();
-            this.RBtnTripla = new System.Windows.Forms.RadioButton();
-            this.RBtnMatrimoniala = new System.Windows.Forms.RadioButton();
-            this.RBtnTwin = new System.Windows.Forms.RadioButton();
-            this.RBtnDubla = new System.Windows.Forms.RadioButton();
-            this.RBtnSingle = new System.Windows.Forms.RadioButton();
-            this.LblTipCamera = new System.Windows.Forms.Label();
-            this.TxtPretCamera = new System.Windows.Forms.TextBox();
-            this.LblPretCamera = new System.Windows.Forms.Label();
-            this.ChBxFrigider = new System.Windows.Forms.CheckBox();
-            this.ChBxJacuzzi = new System.Windows.Forms.CheckBox();
-            this.ChBxSeif = new System.Windows.Forms.CheckBox();
-            this.ChBxInternet = new System.Windows.Forms.CheckBox();
-            this.ChBxTV = new System.Windows.Forms.CheckBox();
-            this.ChBxNiciuna = new System.Windows.Forms.CheckBox();
-            this.LblFacilitatiCamera = new System.Windows.Forms.Label();
-            this.TxtEtajCamera = new System.Windows.Forms.TextBox();
-            this.LblEtajCamera = new System.Windows.Forms.Label();
-            this.TxtDimensiuneCamera = new System.Windows.Forms.TextBox();
-            this.LblDimensiuneCamera = new System.Windows.Forms.Label();
-            this.TxtDenumireCamera = new System.Windows.Forms.TextBox();
-            this.LblDenumireCamera = new System.Windows.Forms.Label();
+            this.TxtCNPAngajat = new System.Windows.Forms.TextBox();
+            this.LblCNPAngajat = new System.Windows.Forms.Label();
+            this.TxtPrenumeAngajat = new System.Windows.Forms.TextBox();
+            this.LblPrenumeAngajat = new System.Windows.Forms.Label();
+            this.TxtNumeAngajat = new System.Windows.Forms.TextBox();
+            this.LblNumeAngajat = new System.Windows.Forms.Label();
             this.LblTitluModificareAngajat = new System.Windows.Forms.Label();
             this.PnlModificareAngajat.SuspendLayout();
-            this.PnlDateCamera.SuspendLayout();
+            this.PnlDateAngajat.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlModificareAngajat
             // 
             this.PnlModificareAngajat.BackColor = System.Drawing.Color.Transparent;
+            this.PnlModificareAngajat.Controls.Add(this.TxtPrenumeAngajatCautat);
+            this.PnlModificareAngajat.Controls.Add(this.LblPrenumeAngajatCautat);
             this.PnlModificareAngajat.Controls.Add(this.LblCautareAvertisment);
-            this.PnlModificareAngajat.Controls.Add(this.TxtIDCamera);
-            this.PnlModificareAngajat.Controls.Add(this.LblIDCamera);
-            this.PnlModificareAngajat.Controls.Add(this.BtnCautaCamera);
-            this.PnlModificareAngajat.Controls.Add(this.PnlDateCamera);
+            this.PnlModificareAngajat.Controls.Add(this.TxtNumeAngajatCautat);
+            this.PnlModificareAngajat.Controls.Add(this.LblNumeAngajatCautat);
+            this.PnlModificareAngajat.Controls.Add(this.BtnCautaAngajat);
+            this.PnlModificareAngajat.Controls.Add(this.PnlDateAngajat);
             this.PnlModificareAngajat.Controls.Add(this.LblTitluModificareAngajat);
             this.PnlModificareAngajat.Location = new System.Drawing.Point(0, 0);
             this.PnlModificareAngajat.Name = "PnlModificareAngajat";
             this.PnlModificareAngajat.Size = new System.Drawing.Size(824, 515);
             this.PnlModificareAngajat.TabIndex = 6;
             // 
+            // TxtPrenumeAngajatCautat
+            // 
+            this.TxtPrenumeAngajatCautat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPrenumeAngajatCautat.Location = new System.Drawing.Point(381, 121);
+            this.TxtPrenumeAngajatCautat.Name = "TxtPrenumeAngajatCautat";
+            this.TxtPrenumeAngajatCautat.Size = new System.Drawing.Size(139, 26);
+            this.TxtPrenumeAngajatCautat.TabIndex = 38;
+            // 
+            // LblPrenumeAngajatCautat
+            // 
+            this.LblPrenumeAngajatCautat.AutoSize = true;
+            this.LblPrenumeAngajatCautat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPrenumeAngajatCautat.ForeColor = System.Drawing.Color.White;
+            this.LblPrenumeAngajatCautat.Location = new System.Drawing.Point(288, 124);
+            this.LblPrenumeAngajatCautat.Name = "LblPrenumeAngajatCautat";
+            this.LblPrenumeAngajatCautat.Size = new System.Drawing.Size(74, 20);
+            this.LblPrenumeAngajatCautat.TabIndex = 37;
+            this.LblPrenumeAngajatCautat.Text = "Prenume";
+            // 
             // LblCautareAvertisment
             // 
             this.LblCautareAvertisment.AutoSize = true;
             this.LblCautareAvertisment.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCautareAvertisment.ForeColor = System.Drawing.Color.Firebrick;
-            this.LblCautareAvertisment.Location = new System.Drawing.Point(231, 131);
+            this.LblCautareAvertisment.Location = new System.Drawing.Point(271, 155);
             this.LblCautareAvertisment.Name = "LblCautareAvertisment";
             this.LblCautareAvertisment.Size = new System.Drawing.Size(0, 17);
-            this.LblCautareAvertisment.TabIndex = 28;
+            this.LblCautareAvertisment.TabIndex = 36;
             // 
-            // TxtIDCamera
+            // TxtNumeAngajatCautat
             // 
-            this.TxtIDCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIDCamera.Location = new System.Drawing.Point(301, 93);
-            this.TxtIDCamera.Name = "TxtIDCamera";
-            this.TxtIDCamera.Size = new System.Drawing.Size(139, 26);
-            this.TxtIDCamera.TabIndex = 27;
+            this.TxtNumeAngajatCautat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNumeAngajatCautat.Location = new System.Drawing.Point(381, 89);
+            this.TxtNumeAngajatCautat.Name = "TxtNumeAngajatCautat";
+            this.TxtNumeAngajatCautat.Size = new System.Drawing.Size(139, 26);
+            this.TxtNumeAngajatCautat.TabIndex = 35;
             // 
-            // LblIDCamera
+            // LblNumeAngajatCautat
             // 
-            this.LblIDCamera.AutoSize = true;
-            this.LblIDCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIDCamera.Location = new System.Drawing.Point(253, 93);
-            this.LblIDCamera.Name = "LblIDCamera";
-            this.LblIDCamera.Size = new System.Drawing.Size(25, 20);
-            this.LblIDCamera.TabIndex = 26;
-            this.LblIDCamera.Text = "ID";
+            this.LblNumeAngajatCautat.AutoSize = true;
+            this.LblNumeAngajatCautat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNumeAngajatCautat.ForeColor = System.Drawing.Color.White;
+            this.LblNumeAngajatCautat.Location = new System.Drawing.Point(288, 92);
+            this.LblNumeAngajatCautat.Name = "LblNumeAngajatCautat";
+            this.LblNumeAngajatCautat.Size = new System.Drawing.Size(52, 20);
+            this.LblNumeAngajatCautat.TabIndex = 34;
+            this.LblNumeAngajatCautat.Text = "Nume";
             // 
-            // BtnCautaCamera
+            // BtnCautaAngajat
             // 
-            this.BtnCautaCamera.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.BtnCautaCamera.FlatAppearance.BorderSize = 0;
-            this.BtnCautaCamera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCautaCamera.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCautaCamera.Location = new System.Drawing.Point(464, 94);
-            this.BtnCautaCamera.Name = "BtnCautaCamera";
-            this.BtnCautaCamera.Size = new System.Drawing.Size(74, 26);
-            this.BtnCautaCamera.TabIndex = 25;
-            this.BtnCautaCamera.Text = "Cauta";
-            this.BtnCautaCamera.UseVisualStyleBackColor = false;
+            this.BtnCautaAngajat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(155)))), ((int)(((byte)(118)))));
+            this.BtnCautaAngajat.FlatAppearance.BorderSize = 0;
+            this.BtnCautaAngajat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCautaAngajat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCautaAngajat.ForeColor = System.Drawing.Color.White;
+            this.BtnCautaAngajat.Location = new System.Drawing.Point(371, 191);
+            this.BtnCautaAngajat.Name = "BtnCautaAngajat";
+            this.BtnCautaAngajat.Size = new System.Drawing.Size(74, 26);
+            this.BtnCautaAngajat.TabIndex = 33;
+            this.BtnCautaAngajat.Text = "Cauta";
+            this.BtnCautaAngajat.UseVisualStyleBackColor = false;
+            this.BtnCautaAngajat.Click += new System.EventHandler(this.BtnCautaAngajat_Click);
             // 
-            // PnlDateCamera
+            // PnlDateAngajat
             // 
-            this.PnlDateCamera.Controls.Add(this.LblAvertismentModificare);
-            this.PnlDateCamera.Controls.Add(this.BtnModificaAngajat);
-            this.PnlDateCamera.Controls.Add(this.RBtnQuad);
-            this.PnlDateCamera.Controls.Add(this.RBtnTripla);
-            this.PnlDateCamera.Controls.Add(this.RBtnMatrimoniala);
-            this.PnlDateCamera.Controls.Add(this.RBtnTwin);
-            this.PnlDateCamera.Controls.Add(this.RBtnDubla);
-            this.PnlDateCamera.Controls.Add(this.RBtnSingle);
-            this.PnlDateCamera.Controls.Add(this.LblTipCamera);
-            this.PnlDateCamera.Controls.Add(this.TxtPretCamera);
-            this.PnlDateCamera.Controls.Add(this.LblPretCamera);
-            this.PnlDateCamera.Controls.Add(this.ChBxFrigider);
-            this.PnlDateCamera.Controls.Add(this.ChBxJacuzzi);
-            this.PnlDateCamera.Controls.Add(this.ChBxSeif);
-            this.PnlDateCamera.Controls.Add(this.ChBxInternet);
-            this.PnlDateCamera.Controls.Add(this.ChBxTV);
-            this.PnlDateCamera.Controls.Add(this.ChBxNiciuna);
-            this.PnlDateCamera.Controls.Add(this.LblFacilitatiCamera);
-            this.PnlDateCamera.Controls.Add(this.TxtEtajCamera);
-            this.PnlDateCamera.Controls.Add(this.LblEtajCamera);
-            this.PnlDateCamera.Controls.Add(this.TxtDimensiuneCamera);
-            this.PnlDateCamera.Controls.Add(this.LblDimensiuneCamera);
-            this.PnlDateCamera.Controls.Add(this.TxtDenumireCamera);
-            this.PnlDateCamera.Controls.Add(this.LblDenumireCamera);
-            this.PnlDateCamera.Location = new System.Drawing.Point(37, 139);
-            this.PnlDateCamera.Name = "PnlDateCamera";
-            this.PnlDateCamera.Size = new System.Drawing.Size(748, 366);
-            this.PnlDateCamera.TabIndex = 24;
-            this.PnlDateCamera.Visible = false;
+            this.PnlDateAngajat.Controls.Add(this.CbxFunctieAngajat);
+            this.PnlDateAngajat.Controls.Add(this.LblFunctieAngajat);
+            this.PnlDateAngajat.Controls.Add(this.TxtSalariuAngajat);
+            this.PnlDateAngajat.Controls.Add(this.LblSalariuAngajat);
+            this.PnlDateAngajat.Controls.Add(this.LblAvertismentModificare);
+            this.PnlDateAngajat.Controls.Add(this.BtnModificaAngajat);
+            this.PnlDateAngajat.Controls.Add(this.TxtCNPAngajat);
+            this.PnlDateAngajat.Controls.Add(this.LblCNPAngajat);
+            this.PnlDateAngajat.Controls.Add(this.TxtPrenumeAngajat);
+            this.PnlDateAngajat.Controls.Add(this.LblPrenumeAngajat);
+            this.PnlDateAngajat.Controls.Add(this.TxtNumeAngajat);
+            this.PnlDateAngajat.Controls.Add(this.LblNumeAngajat);
+            this.PnlDateAngajat.Location = new System.Drawing.Point(38, 233);
+            this.PnlDateAngajat.Name = "PnlDateAngajat";
+            this.PnlDateAngajat.Size = new System.Drawing.Size(748, 255);
+            this.PnlDateAngajat.TabIndex = 32;
+            this.PnlDateAngajat.Visible = false;
+            // 
+            // CbxFunctieAngajat
+            // 
+            this.CbxFunctieAngajat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxFunctieAngajat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbxFunctieAngajat.FormattingEnabled = true;
+            this.CbxFunctieAngajat.Items.AddRange(new object[] {
+            "Administrator",
+            "Contabil",
+            "Receptioner",
+            "Curatenie"});
+            this.CbxFunctieAngajat.Location = new System.Drawing.Point(318, 115);
+            this.CbxFunctieAngajat.Name = "CbxFunctieAngajat";
+            this.CbxFunctieAngajat.Size = new System.Drawing.Size(237, 28);
+            this.CbxFunctieAngajat.TabIndex = 50;
+            // 
+            // LblFunctieAngajat
+            // 
+            this.LblFunctieAngajat.AutoSize = true;
+            this.LblFunctieAngajat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFunctieAngajat.ForeColor = System.Drawing.Color.White;
+            this.LblFunctieAngajat.Location = new System.Drawing.Point(159, 116);
+            this.LblFunctieAngajat.Name = "LblFunctieAngajat";
+            this.LblFunctieAngajat.Size = new System.Drawing.Size(62, 20);
+            this.LblFunctieAngajat.TabIndex = 49;
+            this.LblFunctieAngajat.Text = "Functie";
+            // 
+            // TxtSalariuAngajat
+            // 
+            this.TxtSalariuAngajat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtSalariuAngajat.Location = new System.Drawing.Point(316, 151);
+            this.TxtSalariuAngajat.Name = "TxtSalariuAngajat";
+            this.TxtSalariuAngajat.Size = new System.Drawing.Size(239, 26);
+            this.TxtSalariuAngajat.TabIndex = 48;
+            // 
+            // LblSalariuAngajat
+            // 
+            this.LblSalariuAngajat.AutoSize = true;
+            this.LblSalariuAngajat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSalariuAngajat.ForeColor = System.Drawing.Color.White;
+            this.LblSalariuAngajat.Location = new System.Drawing.Point(156, 151);
+            this.LblSalariuAngajat.Name = "LblSalariuAngajat";
+            this.LblSalariuAngajat.Size = new System.Drawing.Size(86, 20);
+            this.LblSalariuAngajat.TabIndex = 47;
+            this.LblSalariuAngajat.Text = "Salariu (lei)";
             // 
             // LblAvertismentModificare
             // 
@@ -163,268 +210,100 @@ namespace InterfataUtilizator_WindowsForms
             // 
             // BtnModificaAngajat
             // 
-            this.BtnModificaAngajat.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BtnModificaAngajat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(155)))), ((int)(((byte)(118)))));
             this.BtnModificaAngajat.FlatAppearance.BorderSize = 0;
             this.BtnModificaAngajat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnModificaAngajat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnModificaAngajat.Location = new System.Drawing.Point(306, 329);
+            this.BtnModificaAngajat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModificaAngajat.ForeColor = System.Drawing.Color.White;
+            this.BtnModificaAngajat.Location = new System.Drawing.Point(319, 193);
             this.BtnModificaAngajat.Name = "BtnModificaAngajat";
             this.BtnModificaAngajat.Size = new System.Drawing.Size(94, 34);
             this.BtnModificaAngajat.TabIndex = 45;
             this.BtnModificaAngajat.Text = "Modifica";
             this.BtnModificaAngajat.UseVisualStyleBackColor = false;
+            this.BtnModificaAngajat.Click += new System.EventHandler(this.BtnModificaAngajat_Click);
             // 
-            // RBtnQuad
+            // TxtCNPAngajat
             // 
-            this.RBtnQuad.AutoSize = true;
-            this.RBtnQuad.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBtnQuad.Location = new System.Drawing.Point(307, 218);
-            this.RBtnQuad.Name = "RBtnQuad";
-            this.RBtnQuad.Size = new System.Drawing.Size(69, 24);
-            this.RBtnQuad.TabIndex = 44;
-            this.RBtnQuad.TabStop = true;
-            this.RBtnQuad.Text = "Quad";
-            this.RBtnQuad.UseVisualStyleBackColor = true;
+            this.TxtCNPAngajat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCNPAngajat.Location = new System.Drawing.Point(319, 81);
+            this.TxtCNPAngajat.Name = "TxtCNPAngajat";
+            this.TxtCNPAngajat.Size = new System.Drawing.Size(236, 26);
+            this.TxtCNPAngajat.TabIndex = 28;
             // 
-            // RBtnTripla
+            // LblCNPAngajat
             // 
-            this.RBtnTripla.AutoSize = true;
-            this.RBtnTripla.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBtnTripla.Location = new System.Drawing.Point(307, 188);
-            this.RBtnTripla.Name = "RBtnTripla";
-            this.RBtnTripla.Size = new System.Drawing.Size(63, 24);
-            this.RBtnTripla.TabIndex = 43;
-            this.RBtnTripla.TabStop = true;
-            this.RBtnTripla.Text = "Tripla";
-            this.RBtnTripla.UseVisualStyleBackColor = true;
+            this.LblCNPAngajat.AutoSize = true;
+            this.LblCNPAngajat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCNPAngajat.ForeColor = System.Drawing.Color.White;
+            this.LblCNPAngajat.Location = new System.Drawing.Point(159, 81);
+            this.LblCNPAngajat.Name = "LblCNPAngajat";
+            this.LblCNPAngajat.Size = new System.Drawing.Size(41, 20);
+            this.LblCNPAngajat.TabIndex = 27;
+            this.LblCNPAngajat.Text = "CNP";
             // 
-            // RBtnMatrimoniala
+            // TxtPrenumeAngajat
             // 
-            this.RBtnMatrimoniala.AutoSize = true;
-            this.RBtnMatrimoniala.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBtnMatrimoniala.Location = new System.Drawing.Point(306, 158);
-            this.RBtnMatrimoniala.Name = "RBtnMatrimoniala";
-            this.RBtnMatrimoniala.Size = new System.Drawing.Size(123, 24);
-            this.RBtnMatrimoniala.TabIndex = 42;
-            this.RBtnMatrimoniala.TabStop = true;
-            this.RBtnMatrimoniala.Text = "Matrimoniala";
-            this.RBtnMatrimoniala.UseVisualStyleBackColor = true;
+            this.TxtPrenumeAngajat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPrenumeAngajat.Location = new System.Drawing.Point(319, 47);
+            this.TxtPrenumeAngajat.Name = "TxtPrenumeAngajat";
+            this.TxtPrenumeAngajat.Size = new System.Drawing.Size(236, 26);
+            this.TxtPrenumeAngajat.TabIndex = 26;
             // 
-            // RBtnTwin
+            // LblPrenumeAngajat
             // 
-            this.RBtnTwin.AutoSize = true;
-            this.RBtnTwin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBtnTwin.Location = new System.Drawing.Point(202, 218);
-            this.RBtnTwin.Name = "RBtnTwin";
-            this.RBtnTwin.Size = new System.Drawing.Size(58, 24);
-            this.RBtnTwin.TabIndex = 41;
-            this.RBtnTwin.TabStop = true;
-            this.RBtnTwin.Text = "Twin";
-            this.RBtnTwin.UseVisualStyleBackColor = true;
+            this.LblPrenumeAngajat.AutoSize = true;
+            this.LblPrenumeAngajat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPrenumeAngajat.ForeColor = System.Drawing.Color.White;
+            this.LblPrenumeAngajat.Location = new System.Drawing.Point(159, 47);
+            this.LblPrenumeAngajat.Name = "LblPrenumeAngajat";
+            this.LblPrenumeAngajat.Size = new System.Drawing.Size(74, 20);
+            this.LblPrenumeAngajat.TabIndex = 25;
+            this.LblPrenumeAngajat.Text = "Prenume";
             // 
-            // RBtnDubla
+            // TxtNumeAngajat
             // 
-            this.RBtnDubla.AutoSize = true;
-            this.RBtnDubla.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBtnDubla.Location = new System.Drawing.Point(203, 188);
-            this.RBtnDubla.Name = "RBtnDubla";
-            this.RBtnDubla.Size = new System.Drawing.Size(70, 24);
-            this.RBtnDubla.TabIndex = 40;
-            this.RBtnDubla.TabStop = true;
-            this.RBtnDubla.Text = "Dubla";
-            this.RBtnDubla.UseVisualStyleBackColor = true;
+            this.TxtNumeAngajat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNumeAngajat.Location = new System.Drawing.Point(318, 13);
+            this.TxtNumeAngajat.Name = "TxtNumeAngajat";
+            this.TxtNumeAngajat.Size = new System.Drawing.Size(236, 26);
+            this.TxtNumeAngajat.TabIndex = 24;
             // 
-            // RBtnSingle
+            // LblNumeAngajat
             // 
-            this.RBtnSingle.AutoSize = true;
-            this.RBtnSingle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBtnSingle.Location = new System.Drawing.Point(203, 158);
-            this.RBtnSingle.Name = "RBtnSingle";
-            this.RBtnSingle.Size = new System.Drawing.Size(69, 24);
-            this.RBtnSingle.TabIndex = 39;
-            this.RBtnSingle.TabStop = true;
-            this.RBtnSingle.Text = "Single";
-            this.RBtnSingle.UseVisualStyleBackColor = true;
-            // 
-            // LblTipCamera
-            // 
-            this.LblTipCamera.AutoSize = true;
-            this.LblTipCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTipCamera.Location = new System.Drawing.Point(46, 155);
-            this.LblTipCamera.Name = "LblTipCamera";
-            this.LblTipCamera.Size = new System.Drawing.Size(91, 20);
-            this.LblTipCamera.TabIndex = 38;
-            this.LblTipCamera.Text = "Tip Camera";
-            // 
-            // TxtPretCamera
-            // 
-            this.TxtPretCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPretCamera.Location = new System.Drawing.Point(203, 262);
-            this.TxtPretCamera.Name = "TxtPretCamera";
-            this.TxtPretCamera.Size = new System.Drawing.Size(236, 26);
-            this.TxtPretCamera.TabIndex = 37;
-            // 
-            // LblPretCamera
-            // 
-            this.LblPretCamera.AutoSize = true;
-            this.LblPretCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPretCamera.Location = new System.Drawing.Point(43, 262);
-            this.LblPretCamera.Name = "LblPretCamera";
-            this.LblPretCamera.Size = new System.Drawing.Size(68, 20);
-            this.LblPretCamera.TabIndex = 36;
-            this.LblPretCamera.Text = "Pret (lei)";
-            // 
-            // ChBxFrigider
-            // 
-            this.ChBxFrigider.AutoSize = true;
-            this.ChBxFrigider.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChBxFrigider.Location = new System.Drawing.Point(620, 164);
-            this.ChBxFrigider.Name = "ChBxFrigider";
-            this.ChBxFrigider.Size = new System.Drawing.Size(81, 24);
-            this.ChBxFrigider.TabIndex = 35;
-            this.ChBxFrigider.Text = "Frigider";
-            this.ChBxFrigider.UseVisualStyleBackColor = true;
-            // 
-            // ChBxJacuzzi
-            // 
-            this.ChBxJacuzzi.AutoSize = true;
-            this.ChBxJacuzzi.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChBxJacuzzi.Location = new System.Drawing.Point(620, 134);
-            this.ChBxJacuzzi.Name = "ChBxJacuzzi";
-            this.ChBxJacuzzi.Size = new System.Drawing.Size(79, 24);
-            this.ChBxJacuzzi.TabIndex = 34;
-            this.ChBxJacuzzi.Text = "Jacuzzi";
-            this.ChBxJacuzzi.UseVisualStyleBackColor = true;
-            // 
-            // ChBxSeif
-            // 
-            this.ChBxSeif.AutoSize = true;
-            this.ChBxSeif.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChBxSeif.Location = new System.Drawing.Point(620, 104);
-            this.ChBxSeif.Name = "ChBxSeif";
-            this.ChBxSeif.Size = new System.Drawing.Size(53, 24);
-            this.ChBxSeif.TabIndex = 33;
-            this.ChBxSeif.Text = "Seif";
-            this.ChBxSeif.UseVisualStyleBackColor = true;
-            // 
-            // ChBxInternet
-            // 
-            this.ChBxInternet.AutoSize = true;
-            this.ChBxInternet.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChBxInternet.Location = new System.Drawing.Point(620, 74);
-            this.ChBxInternet.Name = "ChBxInternet";
-            this.ChBxInternet.Size = new System.Drawing.Size(86, 24);
-            this.ChBxInternet.TabIndex = 32;
-            this.ChBxInternet.Text = "Internet";
-            this.ChBxInternet.UseVisualStyleBackColor = true;
-            // 
-            // ChBxTV
-            // 
-            this.ChBxTV.AutoSize = true;
-            this.ChBxTV.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChBxTV.Location = new System.Drawing.Point(620, 46);
-            this.ChBxTV.Name = "ChBxTV";
-            this.ChBxTV.Size = new System.Drawing.Size(44, 24);
-            this.ChBxTV.TabIndex = 31;
-            this.ChBxTV.Text = "TV";
-            this.ChBxTV.UseVisualStyleBackColor = true;
-            // 
-            // ChBxNiciuna
-            // 
-            this.ChBxNiciuna.AutoSize = true;
-            this.ChBxNiciuna.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChBxNiciuna.Location = new System.Drawing.Point(620, 16);
-            this.ChBxNiciuna.Name = "ChBxNiciuna";
-            this.ChBxNiciuna.Size = new System.Drawing.Size(83, 24);
-            this.ChBxNiciuna.TabIndex = 30;
-            this.ChBxNiciuna.Text = "Niciuna";
-            this.ChBxNiciuna.UseVisualStyleBackColor = true;
-            // 
-            // LblFacilitatiCamera
-            // 
-            this.LblFacilitatiCamera.AutoSize = true;
-            this.LblFacilitatiCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFacilitatiCamera.Location = new System.Drawing.Point(511, 16);
-            this.LblFacilitatiCamera.Name = "LblFacilitatiCamera";
-            this.LblFacilitatiCamera.Size = new System.Drawing.Size(68, 20);
-            this.LblFacilitatiCamera.TabIndex = 29;
-            this.LblFacilitatiCamera.Text = "Facilitati";
-            // 
-            // TxtEtajCamera
-            // 
-            this.TxtEtajCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtEtajCamera.Location = new System.Drawing.Point(205, 104);
-            this.TxtEtajCamera.Name = "TxtEtajCamera";
-            this.TxtEtajCamera.Size = new System.Drawing.Size(236, 26);
-            this.TxtEtajCamera.TabIndex = 28;
-            // 
-            // LblEtajCamera
-            // 
-            this.LblEtajCamera.AutoSize = true;
-            this.LblEtajCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEtajCamera.Location = new System.Drawing.Point(45, 104);
-            this.LblEtajCamera.Name = "LblEtajCamera";
-            this.LblEtajCamera.Size = new System.Drawing.Size(99, 20);
-            this.LblEtajCamera.TabIndex = 27;
-            this.LblEtajCamera.Text = "Etaj Camera";
-            // 
-            // TxtDimensiuneCamera
-            // 
-            this.TxtDimensiuneCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDimensiuneCamera.Location = new System.Drawing.Point(205, 58);
-            this.TxtDimensiuneCamera.Name = "TxtDimensiuneCamera";
-            this.TxtDimensiuneCamera.Size = new System.Drawing.Size(236, 26);
-            this.TxtDimensiuneCamera.TabIndex = 26;
-            // 
-            // LblDimensiuneCamera
-            // 
-            this.LblDimensiuneCamera.AutoSize = true;
-            this.LblDimensiuneCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDimensiuneCamera.Location = new System.Drawing.Point(45, 58);
-            this.LblDimensiuneCamera.Name = "LblDimensiuneCamera";
-            this.LblDimensiuneCamera.Size = new System.Drawing.Size(123, 20);
-            this.LblDimensiuneCamera.TabIndex = 25;
-            this.LblDimensiuneCamera.Text = "Dimensiune(m2)";
-            // 
-            // TxtDenumireCamera
-            // 
-            this.TxtDenumireCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDenumireCamera.Location = new System.Drawing.Point(204, 12);
-            this.TxtDenumireCamera.Name = "TxtDenumireCamera";
-            this.TxtDenumireCamera.Size = new System.Drawing.Size(236, 26);
-            this.TxtDenumireCamera.TabIndex = 24;
-            // 
-            // LblDenumireCamera
-            // 
-            this.LblDenumireCamera.AutoSize = true;
-            this.LblDenumireCamera.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDenumireCamera.Location = new System.Drawing.Point(45, 13);
-            this.LblDenumireCamera.Name = "LblDenumireCamera";
-            this.LblDenumireCamera.Size = new System.Drawing.Size(79, 20);
-            this.LblDenumireCamera.TabIndex = 23;
-            this.LblDenumireCamera.Text = "Denumire";
+            this.LblNumeAngajat.AutoSize = true;
+            this.LblNumeAngajat.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNumeAngajat.ForeColor = System.Drawing.Color.White;
+            this.LblNumeAngajat.Location = new System.Drawing.Point(159, 14);
+            this.LblNumeAngajat.Name = "LblNumeAngajat";
+            this.LblNumeAngajat.Size = new System.Drawing.Size(52, 20);
+            this.LblNumeAngajat.TabIndex = 23;
+            this.LblNumeAngajat.Text = "Nume";
             // 
             // LblTitluModificareAngajat
             // 
             this.LblTitluModificareAngajat.AutoSize = true;
-            this.LblTitluModificareAngajat.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTitluModificareAngajat.Location = new System.Drawing.Point(263, 32);
+            this.LblTitluModificareAngajat.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitluModificareAngajat.ForeColor = System.Drawing.Color.White;
+            this.LblTitluModificareAngajat.Location = new System.Drawing.Point(286, 27);
             this.LblTitluModificareAngajat.Name = "LblTitluModificareAngajat";
-            this.LblTitluModificareAngajat.Size = new System.Drawing.Size(270, 33);
-            this.LblTitluModificareAngajat.TabIndex = 23;
+            this.LblTitluModificareAngajat.Size = new System.Drawing.Size(268, 32);
+            this.LblTitluModificareAngajat.TabIndex = 31;
             this.LblTitluModificareAngajat.Text = "Modificare Angajat";
             // 
             // UCModificareAngajat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
             this.Controls.Add(this.PnlModificareAngajat);
             this.Name = "UCModificareAngajat";
             this.Size = new System.Drawing.Size(824, 515);
+            this.Load += new System.EventHandler(this.UCModificareAngajat_Load);
             this.PnlModificareAngajat.ResumeLayout(false);
             this.PnlModificareAngajat.PerformLayout();
-            this.PnlDateCamera.ResumeLayout(false);
-            this.PnlDateCamera.PerformLayout();
+            this.PnlDateAngajat.ResumeLayout(false);
+            this.PnlDateAngajat.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -432,35 +311,25 @@ namespace InterfataUtilizator_WindowsForms
         #endregion
 
         private System.Windows.Forms.Panel PnlModificareAngajat;
+        private System.Windows.Forms.TextBox TxtPrenumeAngajatCautat;
+        private System.Windows.Forms.Label LblPrenumeAngajatCautat;
         private System.Windows.Forms.Label LblCautareAvertisment;
-        private System.Windows.Forms.TextBox TxtIDCamera;
-        private System.Windows.Forms.Label LblIDCamera;
-        private System.Windows.Forms.Button BtnCautaCamera;
-        private System.Windows.Forms.Panel PnlDateCamera;
+        private System.Windows.Forms.TextBox TxtNumeAngajatCautat;
+        private System.Windows.Forms.Label LblNumeAngajatCautat;
+        private System.Windows.Forms.Button BtnCautaAngajat;
+        private System.Windows.Forms.Panel PnlDateAngajat;
         private System.Windows.Forms.Label LblAvertismentModificare;
         private System.Windows.Forms.Button BtnModificaAngajat;
-        private System.Windows.Forms.RadioButton RBtnQuad;
-        private System.Windows.Forms.RadioButton RBtnTripla;
-        private System.Windows.Forms.RadioButton RBtnMatrimoniala;
-        private System.Windows.Forms.RadioButton RBtnTwin;
-        private System.Windows.Forms.RadioButton RBtnDubla;
-        private System.Windows.Forms.RadioButton RBtnSingle;
-        private System.Windows.Forms.Label LblTipCamera;
-        private System.Windows.Forms.TextBox TxtPretCamera;
-        private System.Windows.Forms.Label LblPretCamera;
-        private System.Windows.Forms.CheckBox ChBxFrigider;
-        private System.Windows.Forms.CheckBox ChBxJacuzzi;
-        private System.Windows.Forms.CheckBox ChBxSeif;
-        private System.Windows.Forms.CheckBox ChBxInternet;
-        private System.Windows.Forms.CheckBox ChBxTV;
-        private System.Windows.Forms.CheckBox ChBxNiciuna;
-        private System.Windows.Forms.Label LblFacilitatiCamera;
-        private System.Windows.Forms.TextBox TxtEtajCamera;
-        private System.Windows.Forms.Label LblEtajCamera;
-        private System.Windows.Forms.TextBox TxtDimensiuneCamera;
-        private System.Windows.Forms.Label LblDimensiuneCamera;
-        private System.Windows.Forms.TextBox TxtDenumireCamera;
-        private System.Windows.Forms.Label LblDenumireCamera;
+        private System.Windows.Forms.TextBox TxtCNPAngajat;
+        private System.Windows.Forms.Label LblCNPAngajat;
+        private System.Windows.Forms.TextBox TxtPrenumeAngajat;
+        private System.Windows.Forms.Label LblPrenumeAngajat;
+        private System.Windows.Forms.TextBox TxtNumeAngajat;
+        private System.Windows.Forms.Label LblNumeAngajat;
         private System.Windows.Forms.Label LblTitluModificareAngajat;
+        private System.Windows.Forms.ComboBox CbxFunctieAngajat;
+        private System.Windows.Forms.Label LblFunctieAngajat;
+        private System.Windows.Forms.TextBox TxtSalariuAngajat;
+        private System.Windows.Forms.Label LblSalariuAngajat;
     }
 }

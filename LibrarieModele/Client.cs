@@ -10,11 +10,14 @@ namespace LibrarieModele
         int[] ID_rezervari { get; set; }
         public static int IdUltimClient { get; set; } = 0;
 
+        private const char SEPARATOR_PRINCIPAL_FISIER = ',';
+        private const int ID_REZERVARI = 3;
+
         public Client(string _date) : base(_date)
         {
-            string[] dateAsArrayOfStrings = _date.Split(',');
+            string[] dateAsArrayOfStrings = _date.Split(SEPARATOR_PRINCIPAL_FISIER);
 
-            string[] rezervariAsArrayOfStrings = dateAsArrayOfStrings[3].Split('-');
+            string[] rezervariAsArrayOfStrings = dateAsArrayOfStrings[ID_REZERVARI].Split('-');
             
 
             ID_rezervari = new int[rezervariAsArrayOfStrings.Length];

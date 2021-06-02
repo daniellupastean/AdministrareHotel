@@ -66,6 +66,7 @@ namespace NivelAccesDate
                     {
                         Rezervare rezervareDinFisier = new Rezervare(line);
                         rezervari.Add(rezervareDinFisier);
+                        Rezervare.IdUltimaRezervare = rezervareDinFisier.ID_rezervare;
                     }
                 }
             }

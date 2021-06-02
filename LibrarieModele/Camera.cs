@@ -11,33 +11,43 @@
         public TipCamera Tip { get; set; }
         public float Pret { get; set; }
 
+        private const char SEPARATOR_PRINCIPAL_FISIER = ',';
+        private const int ID_CAMERA = 0;
+        private const int DENUMIRE = 1;
+        private const int DIMENSIUNE = 2;
+        private const int ETAJ = 3;
+        private const int FACILITATI = 4;
+        private const int TIP = 5;
+        private const int PRET = 6;
+        
+
         public Camera(string _date)
         {
-            string[] dateAsArrayOfStrings = _date.Split(',');
+            string[] dateAsArrayOfStrings = _date.Split(SEPARATOR_PRINCIPAL_FISIER);
 
-            ID_camera = int.Parse(dateAsArrayOfStrings[0]);
-            Denumire = dateAsArrayOfStrings[1];
-            if (float.TryParse(dateAsArrayOfStrings[2], out float dimensiune))
+            ID_camera = int.Parse(dateAsArrayOfStrings[ID_CAMERA]);
+            Denumire = dateAsArrayOfStrings[DENUMIRE];
+            if (float.TryParse(dateAsArrayOfStrings[DIMENSIUNE], out float dimensiune))
             {
                 Dimensiune = dimensiune;
             }
 
-            if (int.TryParse(dateAsArrayOfStrings[3], out int etaj))
+            if (int.TryParse(dateAsArrayOfStrings[ETAJ], out int etaj))
             {
                 Etaj = etaj;
             }
 
             Facilitati = (FacilitatiCamera)0;
-            string[] facilitati = dateAsArrayOfStrings[4].Split('-');
+            string[] facilitati = dateAsArrayOfStrings[FACILITATI].Split('-');
 
             foreach(string facilitate in facilitati)
             {
                 Facilitati |= (FacilitatiCamera)int.Parse(facilitate);
             }
 
-            Tip = (TipCamera)int.Parse(dateAsArrayOfStrings[5]);
+            Tip = (TipCamera)int.Parse(dateAsArrayOfStrings[TIP]);
 
-            if (float.TryParse(dateAsArrayOfStrings[6], out float pret))
+            if (float.TryParse(dateAsArrayOfStrings[PRET], out float pret))
             {
                 Pret = pret;
             }

@@ -42,11 +42,14 @@
     <Compile Include="AdministrareClienti_FisierText.cs" />
     <Compile Include="AdministrareAngajati_FisierText.cs" />
     <Compile Include="AdministrareCamere_FisierText.cs" />
+    <Compile Include="AdministrareParola_FisierText.cs" />
     <Compile Include="AdministrareRezervari_FisierText.cs" />
     <Compile Include="IStocareClienti.cs" />
     <Compile Include="IStocareAngajati.cs" />
     <Compile Include="IStocareCamere.cs" />
+    <Compile Include="IStocareParola.cs" />
     <Compile Include="IStocareRezervari.cs" />
+    <Compile Include="Password.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
