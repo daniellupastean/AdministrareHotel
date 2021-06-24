@@ -307,7 +307,7 @@ namespace InterfataUtilizator_Consola
                     angajati[i].Nume = Console.ReadLine();
                 }
                 
-                if (modificari.Contains("c"))
+                if (modificari.Contains("p"))
                 {
                     Console.Write("Introdu noul prenume: ");
                     angajati[i].Prenume = Console.ReadLine();

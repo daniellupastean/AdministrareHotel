@@ -32,7 +32,7 @@ namespace InterfataUtilizator_WindowsForms
             DtpCheckOut.MinDate = DateTime.Now;
         }
 
-        private void BtnAdaugaCamera_Click(object sender, EventArgs e)
+        private void BtnAdaugaRezervare_Click(object sender, EventArgs e)
         {
             if(DateValide())
             {

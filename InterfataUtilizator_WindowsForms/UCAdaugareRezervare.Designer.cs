@@ -176,7 +176,7 @@ namespace InterfataUtilizator_WindowsForms
             this.BtnAdaugaCamera.TabIndex = 0;
             this.BtnAdaugaCamera.Text = "Adauga";
             this.BtnAdaugaCamera.UseVisualStyleBackColor = false;
-            this.BtnAdaugaCamera.Click += new System.EventHandler(this.BtnAdaugaCamera_Click);
+            this.BtnAdaugaCamera.Click += new System.EventHandler(this.BtnAdaugaRezervare_Click);
             // 
             // UCAdaugareRezervare
             // 

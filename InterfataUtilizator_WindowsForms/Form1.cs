@@ -14,9 +14,7 @@ namespace InterfataUtilizator_WindowsForms
 
     public partial class MainForm : Form
     {
-        int mov;
-        int movX;
-        int movY;
+        
 
         ///Adaugare controale in Form
         Point locatie = new Point(32, 51);
@@ -145,6 +143,10 @@ namespace InterfataUtilizator_WindowsForms
                 adminParola.SetPassword(Password);
             }
         }
+
+        int mov;
+        int movX;
+        int movY;
 
         private void Navbar_MouseMove(object sender, MouseEventArgs e)
         {
