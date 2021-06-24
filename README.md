@@ -1,5 +1,5 @@
 ## Hotel Management System - C# Windows Forms App
-### UI Design Progect - 2021
+### UI Design Project - 2021
 
 - built in C#
 - all data about the entities created is stored in files
